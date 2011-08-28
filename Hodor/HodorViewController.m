@@ -109,6 +109,7 @@
 }
 
 - (void)levelTimerCallback:(NSTimer *)timer {
+    NSLog(@"TIMER");
 	[recorder updateMeters];
     
 	double peakPowerForChannel = pow(10, (0.05 * [recorder peakPowerForChannel:0]));
@@ -153,15 +154,7 @@
     [self.player play];
 }
 
-- (void)viewWillDisappear:(BOOL)animated {
-    NSLog(@"WILL DISAPPEAR");
-}
-- (void)viewDidDisappear:(BOOL)animated {
-    NSLog(@"DISAPPEAR");
-}
-
 - (void)viewDidUnload {
-    NSLog(@"UNLOAD");
     [self setAnimatedImages:nil];
     [self setButton:nil];
     [self setPlayer:nil];
