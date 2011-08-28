@@ -39,6 +39,7 @@
     return nil;
 }
 
+/*
 - (AVAudioPlayer *)player {
     @synchronized(player) {
         if (player == nil)
@@ -48,6 +49,7 @@
     
     return nil;
 }
+ */
 
 - (void)dealloc {
     [animatedImages release];
@@ -109,7 +111,6 @@
 }
 
 - (void)levelTimerCallback:(NSTimer *)timer {
-    NSLog(@"TIMER");
 	[recorder updateMeters];
     
 	double peakPowerForChannel = pow(10, (0.05 * [recorder peakPowerForChannel:0]));
@@ -144,13 +145,15 @@
 }
 
 - (void)sayHodor {
-    AVAudioPlayer *newPlayer =[[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"hodor%d", arc4random() % 2] ofType:@"m4a"]] error:NULL];
+    NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/hodor%d.mp3", [[NSBundle mainBundle] resourcePath], arc4random() %2]];
+
+    AVAudioPlayer *newPlayer =[[AVAudioPlayer alloc] initWithContentsOfURL:url error:NULL];
     self.player = newPlayer;
     [newPlayer release];
+    
     self.player.delegate = self;
     [self.player stop];
     [self.player prepareToPlay];
-    
     [self.player play];
 }
 
