@@ -152,6 +152,7 @@
     [newPlayer release];
     
     self.player.delegate = self;
+    self.player.volume = 1.0f;
     [self.player stop];
     [self.player prepareToPlay];
     [self.player play];
