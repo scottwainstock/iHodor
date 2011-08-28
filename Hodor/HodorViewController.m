@@ -8,15 +8,54 @@
 
 #import "HodorViewController.h"
 
+#define ALPHA         0.05
+#define IMAGE_COUNT   15
+#define IMAGE_WIDTH   240
+#define IMAGE_HEIGHT  180
+#define HEIGHT_OFFSET 100
+#define SCREEN_HEIGHT 460
+#define SCREEN_WIDTH  320
+
 @implementation HodorViewController
 
-@synthesize hodor;
+@synthesize button, listening, recorder, player, levelTimer, animatedImages, mouth;
 
-AVAudioPlayer *hodorPlayer;
+- (NSTimer *)levelTimer {
+    @synchronized(levelTimer) {
+        if (levelTimer == nil)
+            levelTimer = [[NSTimer alloc] init];
+        return levelTimer;
+    }
+    return nil;
+}
+
+- (AVAudioRecorder *)recorder {
+    @synchronized(recorder) {
+        if (recorder == nil)
+            recorder = [[AVAudioRecorder alloc] init];
+        return recorder;
+    }
+    
+    return nil;
+}
+
+/*
+- (AVAudioPlayer *)player {
+    @synchronized(player) {
+        if (player == nil)
+            player = [[AVAudioPlayer alloc] init];
+        return player;
+    }
+    
+    return nil;
+}
+ */
 
 - (void)dealloc {
-    [hodor release];
+    [animatedImages release];
+    [button release];
     [levelTimer release];
+    [player release];
     [recorder release];
     [super dealloc];
 }
@@ -29,17 +68,23 @@ AVAudioPlayer *hodorPlayer;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [hodor addTarget:self action:@selector(sayHodor) forControlEvents:UIControlEventTouchUpInside];
+    [button addTarget:self action:@selector(hodor) forControlEvents:UIControlEventTouchUpInside];
+    listening = false;
     
-    NSString *hodorPath = [[NSBundle mainBundle] pathForResource:@"hodor" ofType:@"wav"];
+    NSMutableArray *imageArray = [[NSMutableArray alloc] initWithCapacity:IMAGE_COUNT];
     
-    hodorPlayer =[[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:hodorPath] error:NULL];
+    for (int i = 0; i < IMAGE_COUNT; i++) [imageArray addObject:[UIImage imageNamed:[NSString stringWithFormat:@"mouth%d.png", i]]];
     
-    hodorPlayer.delegate = self;
-    [hodorPlayer prepareToPlay];
-    
-    NSURL *url = [NSURL fileURLWithPath:@"/dev/null"];
-    
+    self.animatedImages = [[UIImageView alloc] initWithFrame:CGRectMake(
+                                                            (SCREEN_WIDTH / 2) - (IMAGE_WIDTH / 2), 
+                                                            (SCREEN_HEIGHT / 2) - (IMAGE_HEIGHT / 2) + HEIGHT_OFFSET,
+                                                            IMAGE_WIDTH, IMAGE_HEIGHT)];
+    self.animatedImages.animationImages = [NSArray arrayWithArray:imageArray];    
+    self.animatedImages.animationDuration = 0.5;
+    self.animatedImages.animationRepeatCount = 0;
+    [self.view addSubview:self.animatedImages];
+
+    NSURL *url = [NSURL fileURLWithPath:@"/dev/null"]; 
   	NSDictionary *settings = [NSDictionary dictionaryWithObjectsAndKeys:
                               [NSNumber numberWithFloat: 44100.0],                 
                               AVSampleRateKey,
@@ -68,21 +113,57 @@ AVAudioPlayer *hodorPlayer;
 - (void)levelTimerCallback:(NSTimer *)timer {
 	[recorder updateMeters];
     
-	const double ALPHA = 0.05;
 	double peakPowerForChannel = pow(10, (0.05 * [recorder peakPowerForChannel:0]));
 	lowPassResults = ALPHA * peakPowerForChannel + (1.0 - ALPHA) * lowPassResults;	
     
 	//NSLog(@"Average input: %f Peak input: %f Low pass results: %f", [recorder averagePowerForChannel:0], [recorder peakPowerForChannel:0], lowPassResults);
-    if (lowPassResults > 0.20)
-		[self sayHodor];
+    if (lowPassResults > 0.20) {
+        listening = TRUE;
+    }
+    
+    if ((listening == TRUE) && (lowPassResults < 0.20)) {
+        [self hodor];
+        listening = FALSE;
+    }
+}
+
+- (void)hodor {
+    [self animateMouth];
+    [self sayHodor];
+}
+
+- (void)stopAnimation {
+    [self.animatedImages stopAnimating];
+    [self.mouth setHidden:NO];
+}
+
+- (void)animateMouth {
+    [self.mouth setHidden:YES];
+    self.animatedImages.startAnimating;
+    
+    [self performSelector:@selector(stopAnimation) withObject:nil afterDelay:0.5];
 }
 
 - (void)sayHodor {
-    [hodorPlayer play];
+    NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/hodor%d.mp3", [[NSBundle mainBundle] resourcePath], arc4random() %2]];
+
+    AVAudioPlayer *newPlayer =[[AVAudioPlayer alloc] initWithContentsOfURL:url error:NULL];
+    self.player = newPlayer;
+    [newPlayer release];
+    
+    self.player.delegate = self;
+    [self.player stop];
+    [self.player prepareToPlay];
+    [self.player play];
 }
 
 - (void)viewDidUnload {
-    [self setHodor:nil];
+    [self setAnimatedImages:nil];
+    [self setButton:nil];
+    [self setPlayer:nil];
+    [self setRecorder:nil];
+    [self setLevelTimer:nil];
+    [self setListening:FALSE];
     [super viewDidUnload];
 }
 

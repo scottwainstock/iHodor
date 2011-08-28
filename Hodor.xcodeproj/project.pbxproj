@@ -7,7 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8E4FBE9F140865A800AC8589 /* hodor.mov in Resources */ = {isa = PBXBuildFile; fileRef = 8E4FBE9E140865A800AC8589 /* hodor.mov */; };
+		8E410577140AAE1400DB3989 /* hodor_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E410576140AAE1400DB3989 /* hodor_background.png */; };
+		8E410589140AAEFA00DB3989 /* mouth0.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E41057A140AAEFA00DB3989 /* mouth0.png */; };
+		8E41058A140AAEFA00DB3989 /* mouth1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E41057B140AAEFA00DB3989 /* mouth1.png */; };
+		8E41058B140AAEFA00DB3989 /* mouth2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E41057C140AAEFA00DB3989 /* mouth2.png */; };
+		8E41058C140AAEFA00DB3989 /* mouth3.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E41057D140AAEFA00DB3989 /* mouth3.png */; };
+		8E41058D140AAEFA00DB3989 /* mouth4.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E41057E140AAEFA00DB3989 /* mouth4.png */; };
+		8E41058E140AAEFA00DB3989 /* mouth5.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E41057F140AAEFA00DB3989 /* mouth5.png */; };
+		8E41058F140AAEFA00DB3989 /* mouth6.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E410580140AAEFA00DB3989 /* mouth6.png */; };
+		8E410590140AAEFA00DB3989 /* mouth7.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E410581140AAEFA00DB3989 /* mouth7.png */; };
+		8E410591140AAEFA00DB3989 /* mouth8.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E410582140AAEFA00DB3989 /* mouth8.png */; };
+		8E410592140AAEFA00DB3989 /* mouth9.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E410583140AAEFA00DB3989 /* mouth9.png */; };
+		8E410593140AAEFA00DB3989 /* mouth10.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E410584140AAEFA00DB3989 /* mouth10.png */; };
+		8E410594140AAEFA00DB3989 /* mouth11.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E410585140AAEFA00DB3989 /* mouth11.png */; };
+		8E410595140AAEFA00DB3989 /* mouth12.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E410586140AAEFA00DB3989 /* mouth12.png */; };
+		8E410596140AAEFA00DB3989 /* mouth13.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E410587140AAEFA00DB3989 /* mouth13.png */; };
+		8E410597140AAEFA00DB3989 /* mouth14.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E410588140AAEFA00DB3989 /* mouth14.png */; };
+		8E4105A3140ABE4600DB3989 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E4105A2140ABE4600DB3989 /* Icon.png */; };
+		8E4105AA140ACE5700DB3989 /* hodor0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8E4105A8140ACE5500DB3989 /* hodor0.mp3 */; };
+		8E4105AB140ACE5700DB3989 /* hodor1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8E4105A9140ACE5600DB3989 /* hodor1.mp3 */; };
 		8E4FBEA11408668000AC8589 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E4FBEA01408668000AC8589 /* MediaPlayer.framework */; };
 		8E64E52D140713D500791B7B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E64E52C140713D500791B7B /* UIKit.framework */; };
 		8E64E52F140713D500791B7B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E64E52E140713D500791B7B /* Foundation.framework */; };
@@ -19,13 +37,29 @@
 		8E64E543140713D500791B7B /* HodorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E64E542140713D500791B7B /* HodorViewController.m */; };
 		8E64E546140713D500791B7B /* HodorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E64E544140713D500791B7B /* HodorViewController.xib */; };
 		8E64E54E140714FA00791B7B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E64E54D140714FA00791B7B /* Default.png */; };
-		8E64E5501407154E00791B7B /* hodor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8E64E54F1407154E00791B7B /* hodor.jpg */; };
 		8E64E55C14071CF400791B7B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E64E55B14071CF400791B7B /* AVFoundation.framework */; };
-		8E64E55E14071DC200791B7B /* hodor.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E64E55D14071DC200791B7B /* hodor.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8E4FBE9E140865A800AC8589 /* hodor.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = hodor.mov; sourceTree = "<group>"; };
+		8E410576140AAE1400DB3989 /* hodor_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hodor_background.png; sourceTree = "<group>"; };
+		8E41057A140AAEFA00DB3989 /* mouth0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mouth0.png; sourceTree = "<group>"; };
+		8E41057B140AAEFA00DB3989 /* mouth1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mouth1.png; sourceTree = "<group>"; };
+		8E41057C140AAEFA00DB3989 /* mouth2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mouth2.png; sourceTree = "<group>"; };
+		8E41057D140AAEFA00DB3989 /* mouth3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mouth3.png; sourceTree = "<group>"; };
+		8E41057E140AAEFA00DB3989 /* mouth4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mouth4.png; sourceTree = "<group>"; };
+		8E41057F140AAEFA00DB3989 /* mouth5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mouth5.png; sourceTree = "<group>"; };
+		8E410580140AAEFA00DB3989 /* mouth6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mouth6.png; sourceTree = "<group>"; };
+		8E410581140AAEFA00DB3989 /* mouth7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mouth7.png; sourceTree = "<group>"; };
+		8E410582140AAEFA00DB3989 /* mouth8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mouth8.png; sourceTree = "<group>"; };
+		8E410583140AAEFA00DB3989 /* mouth9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mouth9.png; sourceTree = "<group>"; };
+		8E410584140AAEFA00DB3989 /* mouth10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mouth10.png; sourceTree = "<group>"; };
+		8E410585140AAEFA00DB3989 /* mouth11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mouth11.png; sourceTree = "<group>"; };
+		8E410586140AAEFA00DB3989 /* mouth12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mouth12.png; sourceTree = "<group>"; };
+		8E410587140AAEFA00DB3989 /* mouth13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mouth13.png; sourceTree = "<group>"; };
+		8E410588140AAEFA00DB3989 /* mouth14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mouth14.png; sourceTree = "<group>"; };
+		8E4105A2140ABE4600DB3989 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		8E4105A8140ACE5500DB3989 /* hodor0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hodor0.mp3; sourceTree = "<group>"; };
+		8E4105A9140ACE5600DB3989 /* hodor1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hodor1.mp3; sourceTree = "<group>"; };
 		8E4FBEA01408668000AC8589 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		8E64E528140713D500791B7B /* Hodor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hodor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E64E52C140713D500791B7B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -42,9 +76,7 @@
 		8E64E542140713D500791B7B /* HodorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HodorViewController.m; sourceTree = "<group>"; };
 		8E64E545140713D500791B7B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/HodorViewController.xib; sourceTree = "<group>"; };
 		8E64E54D140714FA00791B7B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		8E64E54F1407154E00791B7B /* hodor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hodor.jpg; sourceTree = "<group>"; };
 		8E64E55B14071CF400791B7B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		8E64E55D14071DC200791B7B /* hodor.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hodor.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +95,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8E410579140AAEFA00DB3989 /* animation */ = {
+			isa = PBXGroup;
+			children = (
+				8E41057A140AAEFA00DB3989 /* mouth0.png */,
+				8E41057B140AAEFA00DB3989 /* mouth1.png */,
+				8E41057C140AAEFA00DB3989 /* mouth2.png */,
+				8E41057D140AAEFA00DB3989 /* mouth3.png */,
+				8E41057E140AAEFA00DB3989 /* mouth4.png */,
+				8E41057F140AAEFA00DB3989 /* mouth5.png */,
+				8E410580140AAEFA00DB3989 /* mouth6.png */,
+				8E410581140AAEFA00DB3989 /* mouth7.png */,
+				8E410582140AAEFA00DB3989 /* mouth8.png */,
+				8E410583140AAEFA00DB3989 /* mouth9.png */,
+				8E410584140AAEFA00DB3989 /* mouth10.png */,
+				8E410585140AAEFA00DB3989 /* mouth11.png */,
+				8E410586140AAEFA00DB3989 /* mouth12.png */,
+				8E410587140AAEFA00DB3989 /* mouth13.png */,
+				8E410588140AAEFA00DB3989 /* mouth14.png */,
+			);
+			path = animation;
+			sourceTree = "<group>";
+		};
 		8E64E51D140713D400791B7B = {
 			isa = PBXGroup;
 			children = (
@@ -121,9 +175,11 @@
 		8E64E54C140714E500791B7B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				8E4FBE9E140865A800AC8589 /* hodor.mov */,
-				8E64E55D14071DC200791B7B /* hodor.wav */,
-				8E64E54F1407154E00791B7B /* hodor.jpg */,
+				8E4105A8140ACE5500DB3989 /* hodor0.mp3 */,
+				8E4105A9140ACE5600DB3989 /* hodor1.mp3 */,
+				8E4105A2140ABE4600DB3989 /* Icon.png */,
+				8E410579140AAEFA00DB3989 /* animation */,
+				8E410576140AAE1400DB3989 /* hodor_background.png */,
 				8E64E54D140714FA00791B7B /* Default.png */,
 			);
 			name = Resources;
@@ -180,9 +236,25 @@
 				8E64E540140713D500791B7B /* MainWindow.xib in Resources */,
 				8E64E546140713D500791B7B /* HodorViewController.xib in Resources */,
 				8E64E54E140714FA00791B7B /* Default.png in Resources */,
-				8E64E5501407154E00791B7B /* hodor.jpg in Resources */,
-				8E64E55E14071DC200791B7B /* hodor.wav in Resources */,
-				8E4FBE9F140865A800AC8589 /* hodor.mov in Resources */,
+				8E410577140AAE1400DB3989 /* hodor_background.png in Resources */,
+				8E410589140AAEFA00DB3989 /* mouth0.png in Resources */,
+				8E41058A140AAEFA00DB3989 /* mouth1.png in Resources */,
+				8E41058B140AAEFA00DB3989 /* mouth2.png in Resources */,
+				8E41058C140AAEFA00DB3989 /* mouth3.png in Resources */,
+				8E41058D140AAEFA00DB3989 /* mouth4.png in Resources */,
+				8E41058E140AAEFA00DB3989 /* mouth5.png in Resources */,
+				8E41058F140AAEFA00DB3989 /* mouth6.png in Resources */,
+				8E410590140AAEFA00DB3989 /* mouth7.png in Resources */,
+				8E410591140AAEFA00DB3989 /* mouth8.png in Resources */,
+				8E410592140AAEFA00DB3989 /* mouth9.png in Resources */,
+				8E410593140AAEFA00DB3989 /* mouth10.png in Resources */,
+				8E410594140AAEFA00DB3989 /* mouth11.png in Resources */,
+				8E410595140AAEFA00DB3989 /* mouth12.png in Resources */,
+				8E410596140AAEFA00DB3989 /* mouth13.png in Resources */,
+				8E410597140AAEFA00DB3989 /* mouth14.png in Resources */,
+				8E4105A3140ABE4600DB3989 /* Icon.png in Resources */,
+				8E4105AA140ACE5700DB3989 /* hodor0.mp3 in Resources */,
+				8E4105AB140ACE5700DB3989 /* hodor1.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
