@@ -12,17 +12,31 @@
 #import <CoreAudio/CoreAudioTypes.h>
 #import <MediaPlayer/MediaPlayer.h>
 
+
 @interface HodorViewController : UIViewController <AVAudioPlayerDelegate> {
-    UIButton *hodor;
+    UIButton *button;
     AVAudioRecorder *recorder;
+    AVAudioPlayer *player;
     MPMoviePlayerController *moviePlayerController;
     NSTimer *levelTimer;
+    UIImageView *animatedImages;
+    UIImageView *mouth;
+    
     double lowPassResults;
+    bool listening;
 }
 
-@property (nonatomic, retain) IBOutlet UIButton *hodor;
+@property (nonatomic) bool listening;
+@property (nonatomic, retain) UIImageView *animatedImages;
+@property (nonatomic, retain) NSTimer *levelTimer;
+@property (nonatomic, retain) AVAudioPlayer *player;
+@property (nonatomic, retain) AVAudioRecorder *recorder;
+@property (nonatomic, retain) IBOutlet UIImageView *mouth;
+@property (nonatomic, retain) IBOutlet UIButton *button;
 
+- (void)hodor;
 - (void)sayHodor;
+- (void)animateMouth;
 - (void)levelTimerCallback:(NSTimer *)timer;
 
 @end
