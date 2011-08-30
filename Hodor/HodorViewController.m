@@ -10,8 +10,8 @@
 
 #define ALPHA         0.05
 #define IMAGE_COUNT   15
-#define IMAGE_WIDTH   200
-#define IMAGE_HEIGHT  90
+#define IMAGE_WIDTH   180
+#define IMAGE_HEIGHT  70
 #define HEIGHT_OFFSET 60
 #define SCREEN_HEIGHT 460
 #define SCREEN_WIDTH  320
@@ -66,9 +66,9 @@
     }
 
     self.animatedImages = [[UIImageView alloc] initWithFrame:CGRectMake(
-                                                            (SCREEN_WIDTH / 2) - (IMAGE_WIDTH / 2), 
-                                                            (SCREEN_HEIGHT / 2) - (IMAGE_HEIGHT / 2) + HEIGHT_OFFSET,
-                                                            IMAGE_WIDTH, IMAGE_HEIGHT)];
+                                                        (SCREEN_WIDTH / 2) - (IMAGE_WIDTH / 2), 
+                                                        (SCREEN_HEIGHT / 2) - (IMAGE_HEIGHT /2) + HEIGHT_OFFSET,
+                                                        IMAGE_WIDTH, IMAGE_HEIGHT)];
     self.animatedImages.animationImages = [NSArray arrayWithArray:imageArray];
     self.animatedImages.animationDuration = 0.5;
     self.animatedImages.animationRepeatCount = 1;
