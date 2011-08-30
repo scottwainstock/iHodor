@@ -10,15 +10,15 @@
 
 #define ALPHA         0.05
 #define IMAGE_COUNT   15
-#define IMAGE_WIDTH   240
-#define IMAGE_HEIGHT  180
-#define HEIGHT_OFFSET 100
+#define IMAGE_WIDTH   200
+#define IMAGE_HEIGHT  90
+#define HEIGHT_OFFSET 60
 #define SCREEN_HEIGHT 460
 #define SCREEN_WIDTH  320
 
 @implementation HodorViewController
 
-@synthesize button, listening, recorder, player, levelTimer, animatedImages, mouth;
+@synthesize button, listening, recorder, player, levelTimer, animatedImages;
 
 - (NSTimer *)levelTimer {
     @synchronized(levelTimer) {
@@ -38,18 +38,6 @@
     
     return nil;
 }
-
-/*
-- (AVAudioPlayer *)player {
-    @synchronized(player) {
-        if (player == nil)
-            player = [[AVAudioPlayer alloc] init];
-        return player;
-    }
-    
-    return nil;
-}
- */
 
 - (void)dealloc {
     [animatedImages release];
@@ -73,15 +61,18 @@
     
     NSMutableArray *imageArray = [[NSMutableArray alloc] initWithCapacity:IMAGE_COUNT];
     
-    for (int i = 0; i < IMAGE_COUNT; i++) [imageArray addObject:[UIImage imageNamed:[NSString stringWithFormat:@"mouth%d.png", i]]];
-    
+    for (int i = 0; i < IMAGE_COUNT; i++) {
+        [imageArray addObject:[UIImage imageNamed:[NSString stringWithFormat:@"mouth%d.png", i]]];
+    }
+
     self.animatedImages = [[UIImageView alloc] initWithFrame:CGRectMake(
                                                             (SCREEN_WIDTH / 2) - (IMAGE_WIDTH / 2), 
                                                             (SCREEN_HEIGHT / 2) - (IMAGE_HEIGHT / 2) + HEIGHT_OFFSET,
                                                             IMAGE_WIDTH, IMAGE_HEIGHT)];
-    self.animatedImages.animationImages = [NSArray arrayWithArray:imageArray];    
+    self.animatedImages.animationImages = [NSArray arrayWithArray:imageArray];
     self.animatedImages.animationDuration = 0.5;
-    self.animatedImages.animationRepeatCount = 0;
+    self.animatedImages.animationRepeatCount = 1;
+    self.animatedImages.image = [imageArray objectAtIndex:0];
     [self.view addSubview:self.animatedImages];
 
     NSURL *url = [NSURL fileURLWithPath:@"/dev/null"]; 
@@ -132,16 +123,8 @@
     [self sayHodor];
 }
 
-- (void)stopAnimation {
-    [self.animatedImages stopAnimating];
-    [self.mouth setHidden:NO];
-}
-
 - (void)animateMouth {
-    [self.mouth setHidden:YES];
-    self.animatedImages.startAnimating;
-    
-    [self performSelector:@selector(stopAnimation) withObject:nil afterDelay:0.5];
+    [self.animatedImages startAnimating];    
 }
 
 - (void)sayHodor {

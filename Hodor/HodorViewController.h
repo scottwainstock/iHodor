@@ -20,7 +20,6 @@
     MPMoviePlayerController *moviePlayerController;
     NSTimer *levelTimer;
     UIImageView *animatedImages;
-    UIImageView *mouth;
     
     double lowPassResults;
     bool listening;
@@ -31,7 +30,6 @@
 @property (nonatomic, retain) NSTimer *levelTimer;
 @property (nonatomic, retain) AVAudioPlayer *player;
 @property (nonatomic, retain) AVAudioRecorder *recorder;
-@property (nonatomic, retain) IBOutlet UIImageView *mouth;
 @property (nonatomic, retain) IBOutlet UIButton *button;
 
 - (void)hodor;

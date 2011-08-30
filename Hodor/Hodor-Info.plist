@@ -13,6 +13,7 @@
 	<key>CFBundleIconFiles</key>
 	<array>
 		<string>Icon.png</string>
+		<string>Icon_retina.png</string>
 	</array>
 	<key>CFBundleIdentifier</key>
 	<string>com.smt.beefbrain.${PRODUCT_NAME:rfc1034identifier}</string>
@@ -30,10 +31,12 @@
 	<string>1.0</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-        <key>UIApplicationExitsOnSuspend</key>
-        <true/>
 	<key>NSMainNibFile</key>
 	<string>MainWindow</string>
+	<key>UIApplicationExitsOnSuspend</key>
+	<true/>
+        <key>UIPrerenderedIcon</key>
+        <true/>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
