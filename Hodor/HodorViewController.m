@@ -75,7 +75,7 @@
     self.animatedImages.image = [imageArray objectAtIndex:0];
     [self.view addSubview:self.animatedImages];
 
-    NSURL *url = [NSURL fileURLWithPath:@"/dev/null"]; 
+    NSURL *url = [NSURL fileURLWithPath:[NSTemporaryDirectory() stringByAppendingPathComponent: [NSString stringWithFormat: @"recordedSound.%@", @"caf"]]];
   	NSDictionary *settings = [NSDictionary dictionaryWithObjectsAndKeys:
                               [NSNumber numberWithFloat: 44100.0],                 
                               AVSampleRateKey,
@@ -86,8 +86,11 @@
                               [NSNumber numberWithInt: AVAudioQualityMax],        
                               AVEncoderAudioQualityKey,
                               nil];
-    
   	NSError *error;
+    AVAudioSession * audioSession = [AVAudioSession sharedInstance];
+    [audioSession setCategory:AVAudioSessionCategoryPlayAndRecord error: &error];
+    [audioSession setActive:YES error: &error];
+    
   	recorder = [[AVAudioRecorder alloc] initWithURL:url settings:settings error:&error];
     
   	if (recorder) {
@@ -124,6 +127,7 @@
 }
 
 - (void)animateMouth {
+    [self.animatedImages stopAnimating];
     [self.animatedImages startAnimating];    
 }
 
