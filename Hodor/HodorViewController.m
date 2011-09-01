@@ -8,43 +8,21 @@
 
 #import "HodorViewController.h"
 
-#define ALPHA         0.05
 #define IMAGE_COUNT   15
-#define IMAGE_WIDTH   180
-#define IMAGE_HEIGHT  70
-#define HEIGHT_OFFSET 60
+#define IMAGE_WIDTH   175
+#define IMAGE_HEIGHT  65
+#define HEIGHT_OFFSET 55
 #define SCREEN_HEIGHT 460
 #define SCREEN_WIDTH  320
 
 @implementation HodorViewController
 
-@synthesize button, listening, recorder, player, levelTimer, animatedImages;
-
-- (NSTimer *)levelTimer {
-    @synchronized(levelTimer) {
-        if (levelTimer == nil)
-            levelTimer = [[NSTimer alloc] init];
-        return levelTimer;
-    }
-    return nil;
-}
-
-- (AVAudioRecorder *)recorder {
-    @synchronized(recorder) {
-        if (recorder == nil)
-            recorder = [[AVAudioRecorder alloc] init];
-        return recorder;
-    }
-    
-    return nil;
-}
+@synthesize button, player, animatedImages;
 
 - (void)dealloc {
     [animatedImages release];
     [button release];
-    [levelTimer release];
     [player release];
-    [recorder release];
     [super dealloc];
 }
 
@@ -56,8 +34,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [button addTarget:self action:@selector(hodor) forControlEvents:UIControlEventTouchUpInside];
-    listening = false;
+    [button addTarget:self action:@selector(hodor) forControlEvents:UIControlEventTouchDown];
     
     NSMutableArray *imageArray = [[NSMutableArray alloc] initWithCapacity:IMAGE_COUNT];
     
@@ -74,48 +51,6 @@
     self.animatedImages.animationRepeatCount = 1;
     self.animatedImages.image = [imageArray objectAtIndex:0];
     [self.view addSubview:self.animatedImages];
-
-    NSURL *url = [NSURL fileURLWithPath:@"/dev/null"]; 
-  	NSDictionary *settings = [NSDictionary dictionaryWithObjectsAndKeys:
-                              [NSNumber numberWithFloat: 44100.0],                 
-                              AVSampleRateKey,
-                              [NSNumber numberWithInt: kAudioFormatAppleLossless], 
-                              AVFormatIDKey,
-                              [NSNumber numberWithInt: 1],                       
-                              AVNumberOfChannelsKey,
-                              [NSNumber numberWithInt: AVAudioQualityMax],        
-                              AVEncoderAudioQualityKey,
-                              nil];
-    
-  	NSError *error;
-  	recorder = [[AVAudioRecorder alloc] initWithURL:url settings:settings error:&error];
-    
-  	if (recorder) {
-  		[recorder prepareToRecord];
-  		recorder.meteringEnabled = YES;
-  		[recorder record];
-        levelTimer = [NSTimer scheduledTimerWithTimeInterval: 0.03 target: self selector: @selector(levelTimerCallback:) userInfo: nil repeats: YES];
-
-  	} else {
-  		NSLog(@"ERROR: %@", [error description]);
-    }
-}
-
-- (void)levelTimerCallback:(NSTimer *)timer {
-	[recorder updateMeters];
-    
-	double peakPowerForChannel = pow(10, (0.05 * [recorder peakPowerForChannel:0]));
-	lowPassResults = ALPHA * peakPowerForChannel + (1.0 - ALPHA) * lowPassResults;	
-    
-	//NSLog(@"Average input: %f Peak input: %f Low pass results: %f", [recorder averagePowerForChannel:0], [recorder peakPowerForChannel:0], lowPassResults);
-    if (lowPassResults > 0.20) {
-        listening = TRUE;
-    }
-    
-    if ((listening == TRUE) && (lowPassResults < 0.20)) {
-        [self hodor];
-        listening = FALSE;
-    }
 }
 
 - (void)hodor {
@@ -124,6 +59,7 @@
 }
 
 - (void)animateMouth {
+    [self.animatedImages stopAnimating];
     [self.animatedImages startAnimating];    
 }
 
@@ -145,9 +81,6 @@
     [self setAnimatedImages:nil];
     [self setButton:nil];
     [self setPlayer:nil];
-    [self setRecorder:nil];
-    [self setLevelTimer:nil];
-    [self setListening:FALSE];
     [super viewDidUnload];
 }
 
