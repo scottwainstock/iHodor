@@ -34,7 +34,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //[button addTarget:self action:@selector(hodor) forControlEvents:UIControlEventTouchUpInside];
     [button addTarget:self action:@selector(hodor) forControlEvents:UIControlEventTouchDown];
     
     NSMutableArray *imageArray = [[NSMutableArray alloc] initWithCapacity:IMAGE_COUNT];
