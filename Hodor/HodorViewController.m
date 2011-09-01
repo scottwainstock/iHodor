@@ -9,9 +9,9 @@
 #import "HodorViewController.h"
 
 #define IMAGE_COUNT   15
-#define IMAGE_WIDTH   180
-#define IMAGE_HEIGHT  70
-#define HEIGHT_OFFSET 60
+#define IMAGE_WIDTH   175
+#define IMAGE_HEIGHT  65
+#define HEIGHT_OFFSET 55
 #define SCREEN_HEIGHT 460
 #define SCREEN_WIDTH  320
 
