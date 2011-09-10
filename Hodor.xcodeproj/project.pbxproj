@@ -49,6 +49,8 @@
 		8ED897E6141C21F80026A0F4 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED897E4141C21F80026A0F4 /* AboutViewController.m */; };
 		8ED897E7141C21F80026A0F4 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ED897E5141C21F80026A0F4 /* AboutViewController.xib */; };
 		8ED897EA141C25860026A0F4 /* back_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ED897E9141C25860026A0F4 /* back_icon.png */; };
+		8ED897EE141C266E0026A0F4 /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED897EC141C266E0026A0F4 /* HelpViewController.m */; };
+		8ED897EF141C266E0026A0F4 /* HelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ED897ED141C266E0026A0F4 /* HelpViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,6 +102,9 @@
 		8ED897E4141C21F80026A0F4 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		8ED897E5141C21F80026A0F4 /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
 		8ED897E9141C25860026A0F4 /* back_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = back_icon.png; path = Resources/back_icon.png; sourceTree = "<group>"; };
+		8ED897EB141C266E0026A0F4 /* HelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpViewController.h; sourceTree = "<group>"; };
+		8ED897EC141C266E0026A0F4 /* HelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpViewController.m; sourceTree = "<group>"; };
+		8ED897ED141C266E0026A0F4 /* HelpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HelpViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +184,9 @@
 				8E64E541140713D500791B7B /* HodorViewController.h */,
 				8E64E542140713D500791B7B /* HodorViewController.m */,
 				8E64E544140713D500791B7B /* HodorViewController.xib */,
+				8ED897EB141C266E0026A0F4 /* HelpViewController.h */,
+				8ED897EC141C266E0026A0F4 /* HelpViewController.m */,
+				8ED897ED141C266E0026A0F4 /* HelpViewController.xib */,
 				8ED897E3141C21F80026A0F4 /* AboutViewController.h */,
 				8ED897E4141C21F80026A0F4 /* AboutViewController.m */,
 				8ED897E5141C21F80026A0F4 /* AboutViewController.xib */,
@@ -301,6 +309,7 @@
 				8E06BB72141ADD76009F32AF /* About_Normal.png in Resources */,
 				8ED897E7141C21F80026A0F4 /* AboutViewController.xib in Resources */,
 				8ED897EA141C25860026A0F4 /* back_icon.png in Resources */,
+				8ED897EF141C266E0026A0F4 /* HelpViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +324,7 @@
 				8E64E53D140713D500791B7B /* HodorAppDelegate.m in Sources */,
 				8E64E543140713D500791B7B /* HodorViewController.m in Sources */,
 				8ED897E6141C21F80026A0F4 /* AboutViewController.m in Sources */,
+				8ED897EE141C266E0026A0F4 /* HelpViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,7 @@
 
 #import "HodorViewController.h"
 #import "AboutViewController.h"
+#import "HelpViewController.h"
 
 @implementation HodorViewController
 
@@ -19,11 +20,12 @@
     AboutViewController *aboutViewController = [[AboutViewController alloc] init];
     [self.navigationController pushViewController:aboutViewController animated:YES];
     [aboutViewController release];
-    NSLog(@"ABOUT");
 }
 
 - (IBAction)helpButtonPressed:(id)sender {
-    NSLog(@"HELP");
+    HelpViewController *helpViewController = [[HelpViewController alloc] init];
+    [self.navigationController pushViewController:helpViewController animated:YES];
+    [helpViewController release];
 }
 
 - (void)dealloc {
