@@ -15,7 +15,7 @@
 
 @synthesize window=_window;
 @synthesize viewController=_viewController;
-@synthesize recorder, listening, levelTimer;
+@synthesize recorder, listening, levelTimer, navigationController;
 
 - (AVAudioRecorder *)recorder {
     @synchronized(recorder) {
@@ -48,7 +48,7 @@
     }
     
     if ((listening == TRUE) && (lowPassResults < 0.20)) {
-        [(HodorViewController *)self.window.rootViewController hodor];
+        //[(HodorViewController *)self.window.rootViewController hodor];
         listening = FALSE;
     }
 }
@@ -56,39 +56,17 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions { 
     sleep(1);
 
+    navigationController = [[UINavigationController alloc] init];
+    [navigationController setNavigationBarHidden:YES];
+    
+    [navigationController pushViewController:self.viewController animated:YES];
     self.window.rootViewController = self.viewController;
+    
+    [self.window addSubview:navigationController.view];
     [self.window makeKeyAndVisible];
     
     [[UIApplication sharedApplication] setStatusBarHidden:YES];
     
-    NSError *error;
-    NSURL *url = [NSURL fileURLWithPath:[NSTemporaryDirectory() stringByAppendingPathComponent: [NSString stringWithFormat: @"recordedSound.%@", @"caf"]]];
-  	NSDictionary *settings = [NSDictionary dictionaryWithObjectsAndKeys:
-                              [NSNumber numberWithFloat: 44100.0],                 
-                              AVSampleRateKey,
-                              [NSNumber numberWithInt: kAudioFormatAppleLossless], 
-                              AVFormatIDKey,
-                              [NSNumber numberWithInt: 1],                       
-                              AVNumberOfChannelsKey,
-                              [NSNumber numberWithInt: AVAudioQualityMax],        
-                              AVEncoderAudioQualityKey,
-                              nil];
-    AVAudioSession * audioSession = [AVAudioSession sharedInstance];
-    [audioSession setCategory:AVAudioSessionCategoryPlayAndRecord error: &error];
-    [audioSession setActive:YES error: &error];
-    
-  	recorder = [[AVAudioRecorder alloc] initWithURL:url settings:settings error:&error];
-    
-  	if (recorder) {
-  		[recorder prepareToRecord];
-  		recorder.meteringEnabled = YES;
-  		[recorder record];
-        levelTimer = [NSTimer scheduledTimerWithTimeInterval: 0.01 target: self selector: @selector(levelTimerCallback:) userInfo: nil repeats: YES];
-        
-  	} else {
-  		NSLog(@"ERROR: %@", [error description]);
-    }
-
     return YES;
 }
 
@@ -115,6 +93,7 @@
     [recorder release];
     [_window release];
     [_viewController release];
+    [navigationController release];
     [super dealloc];
 }
 

@@ -17,8 +17,11 @@
     
     bool listening;
     double lowPassResults;
+    
+    UINavigationController *navigationController;
 }
 
+@property (nonatomic, retain) UINavigationController *navigationController;
 @property (nonatomic) bool listening;
 @property (nonatomic, retain) NSTimer *levelTimer;
 @property (nonatomic, retain) AVAudioRecorder *recorder;

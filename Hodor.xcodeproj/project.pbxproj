@@ -46,6 +46,9 @@
 		8E64E543140713D500791B7B /* HodorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E64E542140713D500791B7B /* HodorViewController.m */; };
 		8E64E546140713D500791B7B /* HodorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E64E544140713D500791B7B /* HodorViewController.xib */; };
 		8E64E55C14071CF400791B7B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E64E55B14071CF400791B7B /* AVFoundation.framework */; };
+		8ED897E6141C21F80026A0F4 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED897E4141C21F80026A0F4 /* AboutViewController.m */; };
+		8ED897E7141C21F80026A0F4 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ED897E5141C21F80026A0F4 /* AboutViewController.xib */; };
+		8ED897EA141C25860026A0F4 /* back_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ED897E9141C25860026A0F4 /* back_icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,6 +96,10 @@
 		8E64E542140713D500791B7B /* HodorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HodorViewController.m; sourceTree = "<group>"; };
 		8E64E545140713D500791B7B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/HodorViewController.xib; sourceTree = "<group>"; };
 		8E64E55B14071CF400791B7B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		8ED897E3141C21F80026A0F4 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		8ED897E4141C21F80026A0F4 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		8ED897E5141C21F80026A0F4 /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
+		8ED897E9141C25860026A0F4 /* back_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = back_icon.png; path = Resources/back_icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,13 +173,16 @@
 		8E64E532140713D500791B7B /* Hodor */ = {
 			isa = PBXGroup;
 			children = (
-				8E64E54C140714E500791B7B /* Resources */,
 				8E64E53B140713D500791B7B /* HodorAppDelegate.h */,
 				8E64E53C140713D500791B7B /* HodorAppDelegate.m */,
 				8E64E53E140713D500791B7B /* MainWindow.xib */,
 				8E64E541140713D500791B7B /* HodorViewController.h */,
 				8E64E542140713D500791B7B /* HodorViewController.m */,
 				8E64E544140713D500791B7B /* HodorViewController.xib */,
+				8ED897E3141C21F80026A0F4 /* AboutViewController.h */,
+				8ED897E4141C21F80026A0F4 /* AboutViewController.m */,
+				8ED897E5141C21F80026A0F4 /* AboutViewController.xib */,
+				8E64E54C140714E500791B7B /* Resources */,
 				8E64E533140713D500791B7B /* Supporting Files */,
 			);
 			path = Hodor;
@@ -192,6 +202,7 @@
 		8E64E54C140714E500791B7B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8ED897E9141C25860026A0F4 /* back_icon.png */,
 				8E06BB3A141ADD76009F32AF /* Icon.png */,
 				8E06BB3B141ADD76009F32AF /* Icon_retina.png */,
 				8E06BB3C141ADD76009F32AF /* home_background.png */,
@@ -288,6 +299,8 @@
 				8E06BB70141ADD76009F32AF /* mouth9.png in Resources */,
 				8E06BB71141ADD76009F32AF /* About_Rollover.png in Resources */,
 				8E06BB72141ADD76009F32AF /* About_Normal.png in Resources */,
+				8ED897E7141C21F80026A0F4 /* AboutViewController.xib in Resources */,
+				8ED897EA141C25860026A0F4 /* back_icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +314,7 @@
 				8E64E53A140713D500791B7B /* main.m in Sources */,
 				8E64E53D140713D500791B7B /* HodorAppDelegate.m in Sources */,
 				8E64E543140713D500791B7B /* HodorViewController.m in Sources */,
+				8ED897E6141C21F80026A0F4 /* AboutViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
