@@ -8,6 +8,10 @@
 
 #import "HodorAppDelegate.h"
 #import "HodorViewController.h"
+#import "TalkerViewController.h"
+#import <AVFoundation/AVAudioPlayer.h>
+#import <AVFoundation/AVAudioSession.h>
+#import <CoreAudio/CoreAudioTypes.h>
 
 #define ALPHA 0.05
 
@@ -15,7 +19,16 @@
 
 @synthesize window=_window;
 @synthesize viewController=_viewController;
-@synthesize recorder, listening, levelTimer;
+@synthesize recorder, navigationController, levelTimer, listening;
+
+- (NSTimer *)levelTimer {
+    @synchronized(levelTimer) {
+        if (levelTimer == nil)
+            levelTimer = [[NSTimer alloc] init];
+        return levelTimer;
+    }
+    return nil;
+}
 
 - (AVAudioRecorder *)recorder {
     @synchronized(recorder) {
@@ -24,15 +37,6 @@
         return recorder;
     }
     
-    return nil;
-}
-
-- (NSTimer *)levelTimer {
-    @synchronized(levelTimer) {
-        if (levelTimer == nil)
-            levelTimer = [[NSTimer alloc] init];
-        return levelTimer;
-    }
     return nil;
 }
 
@@ -47,19 +51,21 @@
         listening = TRUE;
     }
     
-    if ((listening == TRUE) && (lowPassResults < 0.20)) {
-        [(HodorViewController *)self.window.rootViewController hodor];
+    TalkerViewController *talkerViewController = nil;
+    for (id controller in self.navigationController.viewControllers) {
+        if ([controller isKindOfClass:[TalkerViewController class]]) {
+            talkerViewController = controller;
+        }
+    }
+    
+    if ((talkerViewController != nil) && (listening == TRUE) && (lowPassResults < 0.20)) {
+        [talkerViewController hodor];
         listening = FALSE;
     }
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions { 
     sleep(1);
-
-    self.window.rootViewController = self.viewController;
-    [self.window makeKeyAndVisible];
-    
-    [[UIApplication sharedApplication] setStatusBarHidden:YES];
     
     NSError *error;
     NSURL *url = [NSURL fileURLWithPath:[NSTemporaryDirectory() stringByAppendingPathComponent: [NSString stringWithFormat: @"recordedSound.%@", @"caf"]]];
@@ -73,7 +79,7 @@
                               [NSNumber numberWithInt: AVAudioQualityMax],        
                               AVEncoderAudioQualityKey,
                               nil];
-    AVAudioSession * audioSession = [AVAudioSession sharedInstance];
+    AVAudioSession *audioSession = [AVAudioSession sharedInstance];
     [audioSession setCategory:AVAudioSessionCategoryPlayAndRecord error: &error];
     [audioSession setActive:YES error: &error];
     
@@ -82,39 +88,52 @@
   	if (recorder) {
   		[recorder prepareToRecord];
   		recorder.meteringEnabled = YES;
-  		[recorder record];
-        levelTimer = [NSTimer scheduledTimerWithTimeInterval: 0.01 target: self selector: @selector(levelTimerCallback:) userInfo: nil repeats: YES];
-        
   	} else {
   		NSLog(@"ERROR: %@", [error description]);
     }
 
+    navigationController = [[UINavigationController alloc] init];
+    [navigationController setNavigationBarHidden:YES];
+    [navigationController setToolbarHidden:YES];
+    [navigationController setHidesBottomBarWhenPushed:YES];
+    
+    [navigationController pushViewController:self.viewController animated:YES];
+    self.window.rootViewController = self.viewController;
+    
+    [self.window addSubview:navigationController.view];
+    [self.window makeKeyAndVisible];
+    
+    [[UIApplication sharedApplication] setStatusBarHidden:YES];
+    
     return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
+    [levelTimer invalidate];
     [recorder pause];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-    [recorder record];
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
+    levelTimer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(levelTimerCallback:) userInfo:nil repeats:YES];
+    
+    [recorder record];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
 }
 
-- (void)dealloc
-{
+- (void)dealloc {
     [levelTimer release];
     [recorder release];
     [_window release];
     [_viewController release];
+    [navigationController release];
     [super dealloc];
 }
 

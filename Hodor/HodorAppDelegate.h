@@ -12,8 +12,9 @@
 @class HodorViewController;
 
 @interface HodorAppDelegate : NSObject <UIApplicationDelegate> {
-    AVAudioRecorder *recorder;
     NSTimer *levelTimer;
+    AVAudioRecorder *recorder;
+    UINavigationController *navigationController;
     
     bool listening;
     double lowPassResults;
@@ -21,6 +22,7 @@
 
 @property (nonatomic) bool listening;
 @property (nonatomic, retain) NSTimer *levelTimer;
+@property (nonatomic, retain) UINavigationController *navigationController;
 @property (nonatomic, retain) AVAudioRecorder *recorder;
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet HodorViewController *viewController;

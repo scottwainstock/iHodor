@@ -7,22 +7,31 @@
 //
 
 #import "HodorViewController.h"
-
-#define IMAGE_COUNT   15
-#define IMAGE_WIDTH   175
-#define IMAGE_HEIGHT  65
-#define HEIGHT_OFFSET 55
-#define SCREEN_HEIGHT 460
-#define SCREEN_WIDTH  320
+#import "AboutViewController.h"
+#import "HelpViewController.h"
+#import "TalkerViewController.h"
 
 @implementation HodorViewController
 
-@synthesize button, player, animatedImages;
+- (IBAction)goButtonPressed:(id)sender {
+    TalkerViewController *talkerViewController = [[TalkerViewController alloc] init];
+    [self.navigationController pushViewController:talkerViewController animated:YES];
+    [talkerViewController release];
+}
+
+- (IBAction)aboutButtonPressed:(id)sender {
+    AboutViewController *aboutViewController = [[AboutViewController alloc] init];
+    [self.navigationController pushViewController:aboutViewController animated:YES];
+    [aboutViewController release];
+}
+
+- (IBAction)helpButtonPressed:(id)sender {
+    HelpViewController *helpViewController = [[HelpViewController alloc] init];
+    [self.navigationController pushViewController:helpViewController animated:YES];
+    [helpViewController release];
+}
 
 - (void)dealloc {
-    [animatedImages release];
-    [button release];
-    [player release];
     [super dealloc];
 }
 
@@ -34,53 +43,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [button addTarget:self action:@selector(hodor) forControlEvents:UIControlEventTouchDown];
-    
-    NSMutableArray *imageArray = [[NSMutableArray alloc] initWithCapacity:IMAGE_COUNT];
-    
-    for (int i = 0; i < IMAGE_COUNT; i++) {
-        [imageArray addObject:[UIImage imageNamed:[NSString stringWithFormat:@"mouth%d.png", i]]];
-    }
-
-    self.animatedImages = [[UIImageView alloc] initWithFrame:CGRectMake(
-                                                        (SCREEN_WIDTH / 2) - (IMAGE_WIDTH / 2), 
-                                                        (SCREEN_HEIGHT / 2) - (IMAGE_HEIGHT /2) + HEIGHT_OFFSET,
-                                                        IMAGE_WIDTH, IMAGE_HEIGHT)];
-    self.animatedImages.animationImages = [NSArray arrayWithArray:imageArray];
-    self.animatedImages.animationDuration = 0.5;
-    self.animatedImages.animationRepeatCount = 1;
-    self.animatedImages.image = [imageArray objectAtIndex:0];
-    [self.view addSubview:self.animatedImages];
-}
-
-- (void)hodor {
-    [self animateMouth];
-    [self sayHodor];
-}
-
-- (void)animateMouth {
-    [self.animatedImages stopAnimating];
-    [self.animatedImages startAnimating];    
-}
-
-- (void)sayHodor {
-    NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/hodor%d.mp3", [[NSBundle mainBundle] resourcePath], arc4random() %2]];
-
-    AVAudioPlayer *newPlayer =[[AVAudioPlayer alloc] initWithContentsOfURL:url error:NULL];
-    self.player = newPlayer;
-    [newPlayer release];
-    
-    self.player.delegate = self;
-    self.player.volume = 1.0f;
-    [self.player stop];
-    [self.player prepareToPlay];
-    [self.player play];
 }
 
 - (void)viewDidUnload {
-    [self setAnimatedImages:nil];
-    [self setButton:nil];
-    [self setPlayer:nil];
     [super viewDidUnload];
 }
 
