@@ -51,14 +51,14 @@
         listening = TRUE;
     }
     
-    TalkerViewController *talkerViewController;
+    TalkerViewController *talkerViewController = nil;
     for (id controller in self.navigationController.viewControllers) {
         if ([controller isKindOfClass:[TalkerViewController class]]) {
             talkerViewController = controller;
         }
     }
     
-    if ((listening == TRUE) && (lowPassResults < 0.20)) {
+    if ((talkerViewController != nil) && (listening == TRUE) && (lowPassResults < 0.20)) {
         [talkerViewController hodor];
         listening = FALSE;
     }
