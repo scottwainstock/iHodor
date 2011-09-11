@@ -14,7 +14,7 @@
 
 @interface TalkerViewController : UIViewController <AVAudioPlayerDelegate> {
     AVAudioPlayer *player;
-    UIImageView *animatedImages;    
+    UIImageView *animatedImages;
 }
 
 @property (nonatomic, retain) AVAudioPlayer *player;

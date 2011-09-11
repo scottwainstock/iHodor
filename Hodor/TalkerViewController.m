@@ -7,6 +7,7 @@
 //
 
 #import "TalkerViewController.h"
+#import "HodorAppDelegate.h"
 
 #define IMAGE_COUNT   15
 #define IMAGE_WIDTH   175
@@ -18,6 +19,8 @@
 @synthesize player, animatedImages;
 
 - (IBAction)backButtonPressed:(id)sender {
+    HodorAppDelegate *app = (HodorAppDelegate *) [[UIApplication sharedApplication] delegate];
+    [app.levelTimer invalidate];
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
@@ -87,6 +90,16 @@
     self.animatedImages.animationRepeatCount = 1;
     self.animatedImages.image = [imageArray objectAtIndex:0];
     [self.view addSubview:self.animatedImages];
+    
+    HodorAppDelegate *app = (HodorAppDelegate *) [[UIApplication sharedApplication] delegate];
+    
+    [app.recorder record];
+    app.levelTimer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(levelTimerCallback:) userInfo:nil repeats:YES];
+}
+
+- (void)levelTimerCallback:(NSTimer *)timer {
+    HodorAppDelegate *app = (HodorAppDelegate *) [[UIApplication sharedApplication] delegate];
+    [app levelTimerCallback:timer];
 }
 
 - (void)viewDidUnload {
