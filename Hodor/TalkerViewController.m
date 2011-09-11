@@ -12,7 +12,7 @@
 #define IMAGE_COUNT   15
 #define IMAGE_WIDTH   175
 #define IMAGE_HEIGHT  65
-#define HEIGHT_OFFSET 55
+#define HEIGHT_OFFSET 50
 
 @implementation TalkerViewController
 
@@ -50,6 +50,11 @@
     [self.player stop];
     [self.player prepareToPlay];
     [self.player play];
+}
+
+- (void)levelTimerCallback:(NSTimer *)timer {
+    HodorAppDelegate *app = (HodorAppDelegate *) [[UIApplication sharedApplication] delegate];
+    [app levelTimerCallback:timer];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -92,14 +97,10 @@
     [self.view addSubview:self.animatedImages];
     
     HodorAppDelegate *app = (HodorAppDelegate *) [[UIApplication sharedApplication] delegate];
-    
     [app.recorder record];
     app.levelTimer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(levelTimerCallback:) userInfo:nil repeats:YES];
-}
-
-- (void)levelTimerCallback:(NSTimer *)timer {
-    HodorAppDelegate *app = (HodorAppDelegate *) [[UIApplication sharedApplication] delegate];
-    [app levelTimerCallback:timer];
+    
+    [imageArray release];
 }
 
 - (void)viewDidUnload {
