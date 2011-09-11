@@ -58,6 +58,7 @@
 
     navigationController = [[UINavigationController alloc] init];
     [navigationController setNavigationBarHidden:YES];
+    [navigationController setToolbarHidden:YES];
     
     [navigationController pushViewController:self.viewController animated:YES];
     self.window.rootViewController = self.viewController;

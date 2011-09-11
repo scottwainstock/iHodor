@@ -9,11 +9,14 @@
 #import "HodorViewController.h"
 #import "AboutViewController.h"
 #import "HelpViewController.h"
+#import "TalkerViewController.h"
 
 @implementation HodorViewController
 
 - (IBAction)goButtonPressed:(id)sender {
-    NSLog(@"GO");
+    TalkerViewController *talkerViewController = [[TalkerViewController alloc] init];
+    [self.navigationController pushViewController:talkerViewController animated:YES];
+    [talkerViewController release];
 }
 
 - (IBAction)aboutButtonPressed:(id)sender {

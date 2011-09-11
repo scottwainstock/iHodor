@@ -51,6 +51,8 @@
 		8ED897EA141C25860026A0F4 /* back_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ED897E9141C25860026A0F4 /* back_icon.png */; };
 		8ED897EE141C266E0026A0F4 /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED897EC141C266E0026A0F4 /* HelpViewController.m */; };
 		8ED897EF141C266E0026A0F4 /* HelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ED897ED141C266E0026A0F4 /* HelpViewController.xib */; };
+		8ED89803141C2A270026A0F4 /* TalkerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED89801141C2A260026A0F4 /* TalkerViewController.m */; };
+		8ED89804141C2A270026A0F4 /* TalkerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ED89802141C2A270026A0F4 /* TalkerViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -105,6 +107,9 @@
 		8ED897EB141C266E0026A0F4 /* HelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpViewController.h; sourceTree = "<group>"; };
 		8ED897EC141C266E0026A0F4 /* HelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpViewController.m; sourceTree = "<group>"; };
 		8ED897ED141C266E0026A0F4 /* HelpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HelpViewController.xib; sourceTree = "<group>"; };
+		8ED89800141C2A260026A0F4 /* TalkerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TalkerViewController.h; sourceTree = "<group>"; };
+		8ED89801141C2A260026A0F4 /* TalkerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TalkerViewController.m; sourceTree = "<group>"; };
+		8ED89802141C2A270026A0F4 /* TalkerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TalkerViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +195,9 @@
 				8ED897E3141C21F80026A0F4 /* AboutViewController.h */,
 				8ED897E4141C21F80026A0F4 /* AboutViewController.m */,
 				8ED897E5141C21F80026A0F4 /* AboutViewController.xib */,
+				8ED89800141C2A260026A0F4 /* TalkerViewController.h */,
+				8ED89801141C2A260026A0F4 /* TalkerViewController.m */,
+				8ED89802141C2A270026A0F4 /* TalkerViewController.xib */,
 				8E64E54C140714E500791B7B /* Resources */,
 				8E64E533140713D500791B7B /* Supporting Files */,
 			);
@@ -310,6 +318,7 @@
 				8ED897E7141C21F80026A0F4 /* AboutViewController.xib in Resources */,
 				8ED897EA141C25860026A0F4 /* back_icon.png in Resources */,
 				8ED897EF141C266E0026A0F4 /* HelpViewController.xib in Resources */,
+				8ED89804141C2A270026A0F4 /* TalkerViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,6 +334,7 @@
 				8E64E543140713D500791B7B /* HodorViewController.m in Sources */,
 				8ED897E6141C21F80026A0F4 /* AboutViewController.m in Sources */,
 				8ED897EE141C266E0026A0F4 /* HelpViewController.m in Sources */,
+				8ED89803141C2A270026A0F4 /* TalkerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
