@@ -12,5 +12,6 @@
 }
 
 - (IBAction)backButtonPressed:(id)sender;
+- (IBAction)aboutButtonPressed:(id)sender;
 
 @end

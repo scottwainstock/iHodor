@@ -14,6 +14,10 @@
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
+- (IBAction)aboutButtonPressed:(id)sender {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"http://beefbrain.com"]];
+}
+
 - (void)dealloc {
     [super dealloc];
 }
