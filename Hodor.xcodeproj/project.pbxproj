@@ -198,8 +198,8 @@
 		8ED89800141C2A260026A0F4 /* TalkerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TalkerViewController.h; sourceTree = "<group>"; };
 		8ED89801141C2A260026A0F4 /* TalkerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TalkerViewController.m; sourceTree = "<group>"; };
 		8ED89802141C2A270026A0F4 /* TalkerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TalkerViewController.xib; sourceTree = "<group>"; };
-		8EEC10F11440D7A200556697 /* icon-retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-retina.png"; sourceTree = "<group>"; };
-		8EEC10F41440D7B600556697 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		8EEC10F11440D7A200556697 /* icon-retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-retina.png"; path = "../icon-retina.png"; sourceTree = "<group>"; };
+		8EEC10F41440D7B600556697 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -269,8 +269,6 @@
 		8E64E51D140713D400791B7B = {
 			isa = PBXGroup;
 			children = (
-				8EEC10F41440D7B600556697 /* icon.png */,
-				8EEC10F11440D7A200556697 /* icon-retina.png */,
 				8E64E532140713D500791B7B /* Hodor */,
 				8E64E52B140713D500791B7B /* Frameworks */,
 				8E64E529140713D500791B7B /* Products */,
@@ -328,6 +326,8 @@
 				8E64E535140713D500791B7B /* InfoPlist.strings */,
 				8E64E538140713D500791B7B /* Hodor-Prefix.pch */,
 				8E64E539140713D500791B7B /* main.m */,
+				8EEC10F41440D7B600556697 /* icon.png */,
+				8EEC10F11440D7A200556697 /* icon-retina.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
