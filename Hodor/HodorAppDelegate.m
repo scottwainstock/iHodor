@@ -13,8 +13,6 @@
 #import <AVFoundation/AVAudioSession.h>
 #import <CoreAudio/CoreAudioTypes.h>
 
-#define ALPHA 0.05
-
 @implementation HodorAppDelegate
 
 @synthesize window=_window;
@@ -46,17 +44,14 @@
 	double peakPowerForChannel = pow(10, (0.05 * [recorder peakPowerForChannel:0]));
 	lowPassResults = ALPHA * peakPowerForChannel + (1.0 - ALPHA) * lowPassResults;	
     
-	NSLog(@"Average input: %f Peak input: %f Low pass results: %f", [recorder averagePowerForChannel:0], [recorder peakPowerForChannel:0], lowPassResults);
-    if (lowPassResults > 0.20) {
+	//NSLog(@"Average input: %f Peak input: %f Low pass results: %f", [recorder averagePowerForChannel:0], [recorder peakPowerForChannel:0], lowPassResults);
+    if (lowPassResults > 0.20)
         listening = TRUE;
-    }
     
     TalkerViewController *talkerViewController = nil;
-    for (id controller in self.navigationController.viewControllers) {
-        if ([controller isKindOfClass:[TalkerViewController class]]) {
+    for (id controller in self.navigationController.viewControllers)
+        if ([controller isKindOfClass:[TalkerViewController class]])
             talkerViewController = controller;
-        }
-    }
     
     if ((talkerViewController != nil) && (listening == TRUE) && (lowPassResults < 0.20)) {
         [talkerViewController hodor];
@@ -87,7 +82,7 @@
     
   	if (recorder) {
   		[recorder prepareToRecord];
-  		recorder.meteringEnabled = YES;
+  		[recorder setMeteringEnabled:YES];
   	} else {
   		NSLog(@"ERROR: %@", [error description]);
     }
@@ -98,7 +93,7 @@
     [navigationController setHidesBottomBarWhenPushed:YES];
     
     [navigationController pushViewController:self.viewController animated:YES];
-    self.window.rootViewController = self.viewController;
+    [self.window setRootViewController:self.viewController];
     
     [self.window addSubview:navigationController.view];
     [self.window makeKeyAndVisible];

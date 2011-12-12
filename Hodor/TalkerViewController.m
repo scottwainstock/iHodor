@@ -9,11 +9,6 @@
 #import "TalkerViewController.h"
 #import "HodorAppDelegate.h"
 
-#define IMAGE_COUNT   15
-#define IMAGE_WIDTH   175
-#define IMAGE_HEIGHT  65
-#define HEIGHT_OFFSET 50
-
 @implementation TalkerViewController
 
 @synthesize player, animatedImages;
@@ -42,11 +37,11 @@
     NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/hodor%d.mp3", [[NSBundle mainBundle] resourcePath], arc4random() %2]];
     
     AVAudioPlayer *newPlayer =[[AVAudioPlayer alloc] initWithContentsOfURL:url error:NULL];
-    self.player = newPlayer;
+    [self setPlayer:newPlayer];
     [newPlayer release];
     
-    self.player.delegate = self;
-    self.player.volume = 1.0f;
+    [self.player setDelegate:self];
+    [self.player setVolume:1.0f];
     [self.player stop];
     [self.player prepareToPlay];
     [self.player play];
@@ -59,8 +54,6 @@
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-    }
     return self;
 }
 
@@ -90,10 +83,10 @@
         ([UIScreen mainScreen].bounds.size.height / 2) - (IMAGE_HEIGHT /2) + HEIGHT_OFFSET,
         IMAGE_WIDTH, IMAGE_HEIGHT
     )];
-    self.animatedImages.animationImages = [NSArray arrayWithArray:imageArray];
-    self.animatedImages.animationDuration = 0.5;
-    self.animatedImages.animationRepeatCount = 1;
-    self.animatedImages.image = [imageArray objectAtIndex:0];
+    [self.animatedImages setAnimationImages:[NSArray arrayWithArray:imageArray]];
+    [self.animatedImages setAnimationDuration:0.5];
+    [self.animatedImages setAnimationRepeatCount:1];
+    [self.animatedImages setImage:[imageArray objectAtIndex:0]];
     [self.view addSubview:self.animatedImages];
     
     HodorAppDelegate *app = (HodorAppDelegate *) [[UIApplication sharedApplication] delegate];

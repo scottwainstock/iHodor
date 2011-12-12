@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVAudioRecorder.h>
 
+#define ALPHA 0.05
+
 @class HodorViewController;
 
 @interface HodorAppDelegate : NSObject <UIApplicationDelegate> {

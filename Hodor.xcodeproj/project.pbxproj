@@ -79,6 +79,7 @@
 		8E4D36BE143C11BC00CB57D7 /* mouth14@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E4D36A0143C11BC00CB57D7 /* mouth14@2x.png */; };
 		8E4D36DF143C15E800CB57D7 /* icon-retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E4D36DD143C15E800CB57D7 /* icon-retina.png */; };
 		8E4D36E0143C15E800CB57D7 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E4D36DE143C15E800CB57D7 /* icon.png */; };
+		8E4F09F71453E5C800986D91 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E4F09F61453E5C800986D91 /* iAd.framework */; };
 		8E4FBEA11408668000AC8589 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E4FBEA01408668000AC8589 /* MediaPlayer.framework */; };
 		8E64E52D140713D500791B7B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E64E52C140713D500791B7B /* UIKit.framework */; };
 		8E64E52F140713D500791B7B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E64E52E140713D500791B7B /* Foundation.framework */; };
@@ -173,6 +174,7 @@
 		8E4D36A0143C11BC00CB57D7 /* mouth14@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mouth14@2x.png"; sourceTree = "<group>"; };
 		8E4D36DD143C15E800CB57D7 /* icon-retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-retina.png"; sourceTree = "<group>"; };
 		8E4D36DE143C15E800CB57D7 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		8E4F09F61453E5C800986D91 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		8E4FBEA01408668000AC8589 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		8E64E528140713D500791B7B /* Hodor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hodor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E64E52C140713D500791B7B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -207,6 +209,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E4F09F71453E5C800986D91 /* iAd.framework in Frameworks */,
 				8E4FBEA11408668000AC8589 /* MediaPlayer.framework in Frameworks */,
 				8E64E55C14071CF400791B7B /* AVFoundation.framework in Frameworks */,
 				8E64E52D140713D500791B7B /* UIKit.framework in Frameworks */,
@@ -286,6 +289,7 @@
 		8E64E52B140713D500791B7B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8E4F09F61453E5C800986D91 /* iAd.framework */,
 				8E4FBEA01408668000AC8589 /* MediaPlayer.framework */,
 				8E64E55B14071CF400791B7B /* AVFoundation.framework */,
 				8E64E52C140713D500791B7B /* UIKit.framework */,

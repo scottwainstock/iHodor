@@ -50,6 +50,7 @@
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="391157976"/>
 						<bool key="IBUIOpaque">NO</bool>
+						<string key="IBUIContentStretch">{{0, 0}, {0, 0}}</string>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
@@ -58,7 +59,6 @@
 							<double key="NSSize">15</double>
 							<int key="NSfFlags">16</int>
 						</object>
-						<int key="IBUIButtonType">1</int>
 						<bool key="IBUIAdjustsImageWhenHighlighted">NO</bool>
 						<object class="NSColor" key="IBUIHighlightedTitleColor" id="300704762">
 							<int key="NSColorSpace">3</int>
@@ -110,7 +110,7 @@
 				<reference key="NSNextKeyView" ref="726487459"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
-					<bytes key="NSWhite">MCAwAA</bytes>
+					<bytes key="NSWhite">MAA</bytes>
 				</object>
 				<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
