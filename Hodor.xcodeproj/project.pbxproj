@@ -97,8 +97,6 @@
 		8ED897EF141C266E0026A0F4 /* HelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ED897ED141C266E0026A0F4 /* HelpViewController.xib */; };
 		8ED89803141C2A270026A0F4 /* TalkerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED89801141C2A260026A0F4 /* TalkerViewController.m */; };
 		8ED89804141C2A270026A0F4 /* TalkerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ED89802141C2A270026A0F4 /* TalkerViewController.xib */; };
-		8EEC10F21440D7A200556697 /* icon-retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EEC10F11440D7A200556697 /* icon-retina.png */; };
-		8EEC10F51440D7B600556697 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EEC10F41440D7B600556697 /* icon.png */; };
 		8EEFE0211495A62D00D3429B /* HodorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEFE0201495A62C00D3429B /* HodorViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -201,8 +199,6 @@
 		8ED89800141C2A260026A0F4 /* TalkerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TalkerViewController.h; sourceTree = "<group>"; };
 		8ED89801141C2A260026A0F4 /* TalkerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TalkerViewController.m; sourceTree = "<group>"; };
 		8ED89802141C2A270026A0F4 /* TalkerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TalkerViewController.xib; sourceTree = "<group>"; };
-		8EEC10F11440D7A200556697 /* icon-retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-retina.png"; path = "../icon-retina.png"; sourceTree = "<group>"; };
-		8EEC10F41440D7B600556697 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../icon.png; sourceTree = "<group>"; };
 		8EEFE01F1495A62C00D3429B /* HodorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HodorViewController.h; sourceTree = "<group>"; };
 		8EEFE0201495A62C00D3429B /* HodorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HodorViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -331,8 +327,6 @@
 				8E64E535140713D500791B7B /* InfoPlist.strings */,
 				8E64E538140713D500791B7B /* Hodor-Prefix.pch */,
 				8E64E539140713D500791B7B /* main.m */,
-				8EEC10F41440D7B600556697 /* icon.png */,
-				8EEC10F11440D7A200556697 /* icon-retina.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -523,8 +517,6 @@
 				8E257D93143C1F480085EF3B /* Default@2x.png in Resources */,
 				8E257D9B143C1FC30085EF3B /* hodor0.mp3 in Resources */,
 				8E257D9C143C1FC30085EF3B /* hodor1.mp3 in Resources */,
-				8EEC10F21440D7A200556697 /* icon-retina.png in Resources */,
-				8EEC10F51440D7B600556697 /* icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
