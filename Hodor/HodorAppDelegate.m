@@ -7,7 +7,7 @@
 //
 
 #import "HodorAppDelegate.h"
-#import "HodorViewController.h"
+#import "HodorMainMenuViewController.h"
 #import "TalkerViewController.h"
 #import <AVFoundation/AVAudioPlayer.h>
 #import <AVFoundation/AVAudioSession.h>
@@ -109,20 +109,15 @@
     [recorder pause];
 }
 
-- (void)applicationDidBecomeActive:(UIApplication *)application {
-}
-
-- (void)applicationDidEnterBackground:(UIApplication *)application {
-}
-
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     levelTimer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(levelTimerCallback:) userInfo:nil repeats:YES];
     
     [recorder record];
 }
 
-- (void)applicationWillTerminate:(UIApplication *)application {
-}
+- (void)applicationWillTerminate:(UIApplication *)application {}
+- (void)applicationDidBecomeActive:(UIApplication *)application {}
+- (void)applicationDidEnterBackground:(UIApplication *)application {}
 
 - (void)dealloc {
     [levelTimer release];

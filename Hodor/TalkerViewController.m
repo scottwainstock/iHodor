@@ -16,7 +16,7 @@
 - (IBAction)backButtonPressed:(id)sender {
     HodorAppDelegate *app = (HodorAppDelegate *) [[UIApplication sharedApplication] delegate];
     [app.levelTimer invalidate];
-    [self.navigationController popToRootViewControllerAnimated:YES];
+    [super backButtonPressed:sender];
 }
 
 - (IBAction)hodorPressed:(id)sender {
@@ -63,10 +63,6 @@
     [super dealloc];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
-
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad {
@@ -100,10 +96,6 @@
     [super viewDidUnload];
     [self setAnimatedImages:nil];
     [self setPlayer:nil];
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
 @end

@@ -10,34 +10,8 @@
 
 @implementation AboutViewController
 
-- (IBAction)backButtonPressed:(id)sender {
-    [self.navigationController popToRootViewControllerAnimated:YES];
-}
-
 - (IBAction)aboutButtonPressed:(id)sender {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"http://beefbrain.com"]];
-}
-
-- (void)dealloc {
-    [super dealloc];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
-
-#pragma mark - View lifecycle
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-}
-
-- (void)viewDidUnload {
-    [super viewDidUnload];
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
 @end

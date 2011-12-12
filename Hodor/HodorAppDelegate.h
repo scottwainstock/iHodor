@@ -11,7 +11,7 @@
 
 #define ALPHA 0.05
 
-@class HodorViewController;
+@class HodorMainMenuViewController;
 
 @interface HodorAppDelegate : NSObject <UIApplicationDelegate> {
     NSTimer *levelTimer;
@@ -27,7 +27,7 @@
 @property (nonatomic, retain) UINavigationController *navigationController;
 @property (nonatomic, retain) AVAudioRecorder *recorder;
 @property (nonatomic, retain) IBOutlet UIWindow *window;
-@property (nonatomic, retain) IBOutlet HodorViewController *viewController;
+@property (nonatomic, retain) IBOutlet HodorMainMenuViewController *viewController;
 
 - (void)levelTimerCallback:(NSTimer *)timer;
 
