@@ -7,6 +7,7 @@
 //
 
 #import "AboutViewController.h"
+#import "HodorAppDelegate.h"
 
 @implementation AboutViewController
 
@@ -15,7 +16,7 @@
 }
 
 - (IBAction)iscabButtonPressed:(id)sender {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"http://itunes.apple.com/us/app/iscab/id480510644?ls=1&mt=8"]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:ISCAB_URL]];
 }
 
 @end

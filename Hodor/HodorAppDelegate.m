@@ -7,7 +7,6 @@
 //
 
 #import "HodorAppDelegate.h"
-#import "HodorMainMenuViewController.h"
 #import "TalkerViewController.h"
 #import <AVFoundation/AVAudioPlayer.h>
 #import <AVFoundation/AVAudioSession.h>
@@ -93,7 +92,6 @@
     [navigationController setHidesBottomBarWhenPushed:YES];
     
     [navigationController pushViewController:self.viewController animated:YES];
-    [self.window setRootViewController:self.viewController];
     
     [self.window addSubview:navigationController.view];
     [self.window makeKeyAndVisible];

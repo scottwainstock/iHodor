@@ -69,6 +69,14 @@
 		8E2027FC14B0FBA400185E98 /* Help@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E2027BE14B0FBA400185E98 /* Help@2x.png */; };
 		8E2027FD14B0FBA400185E98 /* Home.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8E2027BF14B0FBA400185E98 /* Home.jpg */; };
 		8E2027FE14B0FBA400185E98 /* Home@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8E2027C014B0FBA400185E98 /* Home@2x.jpg */; };
+		8E20280314B109B700185E98 /* IscabAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E20280114B109AF00185E98 /* IscabAdViewController.m */; };
+		8E20280414B109B700185E98 /* IscabAdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E20280214B109B100185E98 /* IscabAdViewController.xib */; };
+		8E20280B14B10AF900185E98 /* Ad.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8E20280514B10AF500185E98 /* Ad.jpg */; };
+		8E20280C14B10AF900185E98 /* Ad@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8E20280614B10AF600185E98 /* Ad@2x.jpg */; };
+		8E20280D14B10AF900185E98 /* Skip_Tap.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E20280714B10AF600185E98 /* Skip_Tap.png */; };
+		8E20280E14B10AF900185E98 /* Skip_Tap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E20280814B10AF700185E98 /* Skip_Tap@2x.png */; };
+		8E20280F14B10AF900185E98 /* Skip.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E20280914B10AF800185E98 /* Skip.png */; };
+		8E20281014B10AF900185E98 /* Skip@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E20280A14B10AF800185E98 /* Skip@2x.png */; };
 		8E257D92143C1F480085EF3B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E257D90143C1F480085EF3B /* Default.png */; };
 		8E257D93143C1F480085EF3B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E257D91143C1F480085EF3B /* Default@2x.png */; };
 		8E257D9B143C1FC30085EF3B /* hodor0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8E257D99143C1FC30085EF3B /* hodor0.mp3 */; };
@@ -85,7 +93,7 @@
 		8E64E53D140713D500791B7B /* HodorAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E64E53C140713D500791B7B /* HodorAppDelegate.m */; };
 		8E64E540140713D500791B7B /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E64E53E140713D500791B7B /* MainWindow.xib */; };
 		8E64E543140713D500791B7B /* HodorMainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E64E542140713D500791B7B /* HodorMainMenuViewController.m */; };
-		8E64E546140713D500791B7B /* HodorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E64E544140713D500791B7B /* HodorViewController.xib */; };
+		8E64E546140713D500791B7B /* HodorMainMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E64E544140713D500791B7B /* HodorMainMenuViewController.xib */; };
 		8E64E55C14071CF400791B7B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E64E55B14071CF400791B7B /* AVFoundation.framework */; };
 		8ED897E6141C21F80026A0F4 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED897E4141C21F80026A0F4 /* AboutViewController.m */; };
 		8ED897E7141C21F80026A0F4 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ED897E5141C21F80026A0F4 /* AboutViewController.xib */; };
@@ -159,6 +167,15 @@
 		8E2027BE14B0FBA400185E98 /* Help@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Help@2x.png"; path = "Resources/Help@2x.png"; sourceTree = "<group>"; };
 		8E2027BF14B0FBA400185E98 /* Home.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Home.jpg; path = Resources/Home.jpg; sourceTree = "<group>"; };
 		8E2027C014B0FBA400185E98 /* Home@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Home@2x.jpg"; path = "Resources/Home@2x.jpg"; sourceTree = "<group>"; };
+		8E20280014B109AE00185E98 /* IscabAdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IscabAdViewController.h; sourceTree = "<group>"; };
+		8E20280114B109AF00185E98 /* IscabAdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IscabAdViewController.m; sourceTree = "<group>"; };
+		8E20280214B109B100185E98 /* IscabAdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IscabAdViewController.xib; sourceTree = "<group>"; };
+		8E20280514B10AF500185E98 /* Ad.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Ad.jpg; path = Resources/Ad.jpg; sourceTree = "<group>"; };
+		8E20280614B10AF600185E98 /* Ad@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Ad@2x.jpg"; path = "Resources/Ad@2x.jpg"; sourceTree = "<group>"; };
+		8E20280714B10AF600185E98 /* Skip_Tap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Skip_Tap.png; path = Resources/Skip_Tap.png; sourceTree = "<group>"; };
+		8E20280814B10AF700185E98 /* Skip_Tap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Skip_Tap@2x.png"; path = "Resources/Skip_Tap@2x.png"; sourceTree = "<group>"; };
+		8E20280914B10AF800185E98 /* Skip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Skip.png; path = Resources/Skip.png; sourceTree = "<group>"; };
+		8E20280A14B10AF800185E98 /* Skip@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Skip@2x.png"; path = "Resources/Skip@2x.png"; sourceTree = "<group>"; };
 		8E257D90143C1F480085EF3B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Resources/Default.png; sourceTree = "<group>"; };
 		8E257D91143C1F480085EF3B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Resources/Default@2x.png"; sourceTree = "<group>"; };
 		8E257D99143C1FC30085EF3B /* hodor0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = hodor0.mp3; path = Resources/hodor0.mp3; sourceTree = "<group>"; };
@@ -180,7 +197,7 @@
 		8E64E53F140713D500791B7B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
 		8E64E541140713D500791B7B /* HodorMainMenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HodorMainMenuViewController.h; sourceTree = "<group>"; };
 		8E64E542140713D500791B7B /* HodorMainMenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HodorMainMenuViewController.m; sourceTree = "<group>"; };
-		8E64E545140713D500791B7B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/HodorViewController.xib; sourceTree = "<group>"; };
+		8E64E545140713D500791B7B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/HodorMainMenuViewController.xib; sourceTree = "<group>"; };
 		8E64E55B14071CF400791B7B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		8ED897E3141C21F80026A0F4 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		8ED897E4141C21F80026A0F4 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
@@ -314,6 +331,8 @@
 				8ED89801141C2A260026A0F4 /* TalkerViewController.m */,
 				8EEFE01F1495A62C00D3429B /* HodorViewController.h */,
 				8EEFE0201495A62C00D3429B /* HodorViewController.m */,
+				8E20280014B109AE00185E98 /* IscabAdViewController.h */,
+				8E20280114B109AF00185E98 /* IscabAdViewController.m */,
 				8EEFE01E1495A4D800D3429B /* xibs */,
 				8E64E54C140714E500791B7B /* Resources */,
 				8E64E533140713D500791B7B /* Supporting Files */,
@@ -338,6 +357,12 @@
 				8E2027FF14B1032B00185E98 /* sound */,
 				8E4D36DC143C15E800CB57D7 /* icons */,
 				8E20278814B0FBA200185E98 /* animation */,
+				8E20280514B10AF500185E98 /* Ad.jpg */,
+				8E20280614B10AF600185E98 /* Ad@2x.jpg */,
+				8E20280714B10AF600185E98 /* Skip_Tap.png */,
+				8E20280814B10AF700185E98 /* Skip_Tap@2x.png */,
+				8E20280914B10AF800185E98 /* Skip.png */,
+				8E20280A14B10AF800185E98 /* Skip@2x.png */,
 				8E20278214B0FBA200185E98 /* About_Tap.png */,
 				8E20278314B0FBA200185E98 /* About_Tap@2x.png */,
 				8E20278414B0FBA200185E98 /* About.jpg */,
@@ -379,7 +404,8 @@
 		8EEFE01E1495A4D800D3429B /* xibs */ = {
 			isa = PBXGroup;
 			children = (
-				8E64E544140713D500791B7B /* HodorViewController.xib */,
+				8E20280214B109B100185E98 /* IscabAdViewController.xib */,
+				8E64E544140713D500791B7B /* HodorMainMenuViewController.xib */,
 				8ED897ED141C266E0026A0F4 /* HelpViewController.xib */,
 				8ED897E5141C21F80026A0F4 /* AboutViewController.xib */,
 				8ED89802141C2A270026A0F4 /* TalkerViewController.xib */,
@@ -437,7 +463,7 @@
 			files = (
 				8E64E537140713D500791B7B /* InfoPlist.strings in Resources */,
 				8E64E540140713D500791B7B /* MainWindow.xib in Resources */,
-				8E64E546140713D500791B7B /* HodorViewController.xib in Resources */,
+				8E64E546140713D500791B7B /* HodorMainMenuViewController.xib in Resources */,
 				8ED897E7141C21F80026A0F4 /* AboutViewController.xib in Resources */,
 				8ED897EF141C266E0026A0F4 /* HelpViewController.xib in Resources */,
 				8ED89804141C2A270026A0F4 /* TalkerViewController.xib in Resources */,
@@ -509,6 +535,13 @@
 				8E2027FC14B0FBA400185E98 /* Help@2x.png in Resources */,
 				8E2027FD14B0FBA400185E98 /* Home.jpg in Resources */,
 				8E2027FE14B0FBA400185E98 /* Home@2x.jpg in Resources */,
+				8E20280414B109B700185E98 /* IscabAdViewController.xib in Resources */,
+				8E20280B14B10AF900185E98 /* Ad.jpg in Resources */,
+				8E20280C14B10AF900185E98 /* Ad@2x.jpg in Resources */,
+				8E20280D14B10AF900185E98 /* Skip_Tap.png in Resources */,
+				8E20280E14B10AF900185E98 /* Skip_Tap@2x.png in Resources */,
+				8E20280F14B10AF900185E98 /* Skip.png in Resources */,
+				8E20281014B10AF900185E98 /* Skip@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,6 +559,7 @@
 				8ED897EE141C266E0026A0F4 /* HelpViewController.m in Sources */,
 				8ED89803141C2A270026A0F4 /* TalkerViewController.m in Sources */,
 				8EEFE0211495A62D00D3429B /* HodorViewController.m in Sources */,
+				8E20280314B109B700185E98 /* IscabAdViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,12 +582,12 @@
 			name = MainWindow.xib;
 			sourceTree = "<group>";
 		};
-		8E64E544140713D500791B7B /* HodorViewController.xib */ = {
+		8E64E544140713D500791B7B /* HodorMainMenuViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				8E64E545140713D500791B7B /* en */,
 			);
-			name = HodorViewController.xib;
+			name = HodorMainMenuViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

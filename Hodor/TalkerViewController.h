@@ -23,8 +23,8 @@
     UIImageView *animatedImages;
 }
 
-@property (nonatomic, retain) AVAudioPlayer *player;
-@property (nonatomic, retain) UIImageView *animatedImages;
+@property(nonatomic, retain) AVAudioPlayer *player;
+@property(nonatomic, retain) UIImageView *animatedImages;
 
 - (void)hodor;
 - (void)animateMouth;
