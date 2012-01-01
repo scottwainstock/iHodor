@@ -13,5 +13,6 @@
 }
 
 - (IBAction)aboutButtonPressed:(id)sender;
+- (IBAction)iscabButtonPressed:(id)sender;
 
 @end

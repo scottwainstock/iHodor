@@ -14,4 +14,8 @@
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"http://beefbrain.com"]];
 }
 
+- (IBAction)iscabButtonPressed:(id)sender {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"http://itunes.apple.com/us/app/iscab/id480510644?ls=1&mt=8"]];
+}
+
 @end

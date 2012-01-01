@@ -16,7 +16,7 @@
 #define IMAGE_COUNT   15
 #define IMAGE_WIDTH   175
 #define IMAGE_HEIGHT  65
-#define HEIGHT_OFFSET 50
+#define HEIGHT_OFFSET 55
 
 @interface TalkerViewController : HodorViewController <AVAudioPlayerDelegate> {
     AVAudioPlayer *player;
