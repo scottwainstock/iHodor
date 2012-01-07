@@ -15,8 +15,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8E64E527140713D500791B7B"
                BuildableName = "Hodor.app"
-               BlueprintName = "Hodor"
-               ReferencedContainer = "container:Hodor.xcodeproj">
+               BlueprintName = "iHodor"
+               ReferencedContainer = "container:iHodor.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -42,8 +42,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8E64E527140713D500791B7B"
             BuildableName = "Hodor.app"
-            BlueprintName = "Hodor"
-            ReferencedContainer = "container:Hodor.xcodeproj">
+            BlueprintName = "iHodor"
+            ReferencedContainer = "container:iHodor.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -61,8 +61,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8E64E527140713D500791B7B"
             BuildableName = "Hodor.app"
-            BlueprintName = "Hodor"
-            ReferencedContainer = "container:Hodor.xcodeproj">
+            BlueprintName = "iHodor"
+            ReferencedContainer = "container:iHodor.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

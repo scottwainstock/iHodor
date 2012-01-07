@@ -97,6 +97,7 @@
 		8E64E543140713D500791B7B /* HodorMainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E64E542140713D500791B7B /* HodorMainMenuViewController.m */; };
 		8E64E546140713D500791B7B /* HodorMainMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E64E544140713D500791B7B /* HodorMainMenuViewController.xib */; };
 		8E64E55C14071CF400791B7B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E64E55B14071CF400791B7B /* AVFoundation.framework */; };
+		8E65A4A114B8EA0900F44092 /* iHodor-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E65A4A014B8EA0900F44092 /* iHodor-Info.plist */; };
 		8ED897E6141C21F80026A0F4 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED897E4141C21F80026A0F4 /* AboutViewController.m */; };
 		8ED897E7141C21F80026A0F4 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ED897E5141C21F80026A0F4 /* AboutViewController.xib */; };
 		8ED897EE141C266E0026A0F4 /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED897EC141C266E0026A0F4 /* HelpViewController.m */; };
@@ -188,13 +189,12 @@
 		8E4D36DE143C15E800CB57D7 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		8E4F09F61453E5C800986D91 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		8E4FBEA01408668000AC8589 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
-		8E64E528140713D500791B7B /* Hodor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hodor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E64E528140713D500791B7B /* iHodor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iHodor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E64E52C140713D500791B7B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8E64E52E140713D500791B7B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8E64E530140713D500791B7B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		8E64E534140713D500791B7B /* Hodor-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Hodor-Info.plist"; sourceTree = "<group>"; };
 		8E64E536140713D500791B7B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		8E64E538140713D500791B7B /* Hodor-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Hodor-Prefix.pch"; sourceTree = "<group>"; };
+		8E64E538140713D500791B7B /* iHodor-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iHodor-Prefix.pch"; sourceTree = "<group>"; };
 		8E64E539140713D500791B7B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8E64E53B140713D500791B7B /* HodorAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HodorAppDelegate.h; sourceTree = "<group>"; };
 		8E64E53C140713D500791B7B /* HodorAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HodorAppDelegate.m; sourceTree = "<group>"; };
@@ -203,6 +203,7 @@
 		8E64E542140713D500791B7B /* HodorMainMenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HodorMainMenuViewController.m; sourceTree = "<group>"; };
 		8E64E545140713D500791B7B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/HodorMainMenuViewController.xib; sourceTree = "<group>"; };
 		8E64E55B14071CF400791B7B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		8E65A4A014B8EA0900F44092 /* iHodor-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "iHodor-Info.plist"; sourceTree = SOURCE_ROOT; };
 		8ED897E3141C21F80026A0F4 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		8ED897E4141C21F80026A0F4 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		8ED897E5141C21F80026A0F4 /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
@@ -302,7 +303,7 @@
 		8E64E529140713D500791B7B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8E64E528140713D500791B7B /* Hodor.app */,
+				8E64E528140713D500791B7B /* iHodor.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -347,9 +348,9 @@
 		8E64E533140713D500791B7B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				8E64E534140713D500791B7B /* Hodor-Info.plist */,
+				8E65A4A014B8EA0900F44092 /* iHodor-Info.plist */,
 				8E64E535140713D500791B7B /* InfoPlist.strings */,
-				8E64E538140713D500791B7B /* Hodor-Prefix.pch */,
+				8E64E538140713D500791B7B /* iHodor-Prefix.pch */,
 				8E64E539140713D500791B7B /* main.m */,
 			);
 			name = "Supporting Files";
@@ -423,9 +424,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8E64E527140713D500791B7B /* Hodor */ = {
+		8E64E527140713D500791B7B /* iHodor */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8E64E549140713D500791B7B /* Build configuration list for PBXNativeTarget "Hodor" */;
+			buildConfigurationList = 8E64E549140713D500791B7B /* Build configuration list for PBXNativeTarget "iHodor" */;
 			buildPhases = (
 				8E64E524140713D500791B7B /* Sources */,
 				8E64E525140713D500791B7B /* Frameworks */,
@@ -435,9 +436,9 @@
 			);
 			dependencies = (
 			);
-			name = Hodor;
+			name = iHodor;
 			productName = Hodor;
-			productReference = 8E64E528140713D500791B7B /* Hodor.app */;
+			productReference = 8E64E528140713D500791B7B /* iHodor.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -445,7 +446,7 @@
 /* Begin PBXProject section */
 		8E64E51F140713D400791B7B /* Project object */ = {
 			isa = PBXProject;
-			buildConfigurationList = 8E64E522140713D400791B7B /* Build configuration list for PBXProject "Hodor" */;
+			buildConfigurationList = 8E64E522140713D400791B7B /* Build configuration list for PBXProject "iHodor" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -457,7 +458,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8E64E527140713D500791B7B /* Hodor */,
+				8E64E527140713D500791B7B /* iHodor */,
 			);
 		};
 /* End PBXProject section */
@@ -550,6 +551,7 @@
 				8E20281014B10AF900185E98 /* Skip@2x.png in Resources */,
 				8E14008C14B7CCC4008A430A /* Back-Face.png in Resources */,
 				8E14008D14B7CCC4008A430A /* Back-Face@2x.png in Resources */,
+				8E65A4A114B8EA0900F44092 /* iHodor-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -648,10 +650,10 @@
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Hodor/Hodor-Prefix.pch";
-				INFOPLIST_FILE = "Hodor/Hodor-Info.plist";
+				GCC_PREFIX_HEADER = "Hodor/iHodor-Prefix.pch";
+				INFOPLIST_FILE = "iHodor-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = iHodor;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -667,10 +669,10 @@
 					"\"$(SRCROOT)\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Hodor/Hodor-Prefix.pch";
-				INFOPLIST_FILE = "Hodor/Hodor-Info.plist";
+				GCC_PREFIX_HEADER = "Hodor/iHodor-Prefix.pch";
+				INFOPLIST_FILE = "iHodor-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = iHodor;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
@@ -680,7 +682,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8E64E522140713D400791B7B /* Build configuration list for PBXProject "Hodor" */ = {
+		8E64E522140713D400791B7B /* Build configuration list for PBXProject "iHodor" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8E64E547140713D500791B7B /* Debug */,
@@ -689,7 +691,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8E64E549140713D500791B7B /* Build configuration list for PBXNativeTarget "Hodor" */ = {
+		8E64E549140713D500791B7B /* Build configuration list for PBXNativeTarget "iHodor" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8E64E54A140713D500791B7B /* Debug */,
