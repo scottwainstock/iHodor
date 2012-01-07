@@ -12,6 +12,7 @@
 @interface IscabAdViewController : HodorViewController {
 }
 
+- (IBAction)iscabButtonPressed:(id)sender;
 - (IBAction)skipButtonPressed:(id)sender;
 
 @end
