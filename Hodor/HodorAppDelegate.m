@@ -15,6 +15,7 @@
 @implementation HodorAppDelegate
 
 @synthesize window=_window;
+@synthesize viewController=_viewController;
 @synthesize recorder, navigationController, levelTimer, listening;
 
 - (NSTimer *)levelTimer {
@@ -81,10 +82,17 @@
   		[recorder prepareToRecord];
   		[recorder setMeteringEnabled:YES];
   	}
-    
-    self.window.rootViewController = navigationController;
-    [self.window makeKeyAndVisible];
 
+    navigationController = [[UINavigationController alloc] init];
+    [navigationController setNavigationBarHidden:YES];
+    [navigationController setToolbarHidden:YES];
+    [navigationController setHidesBottomBarWhenPushed:YES];
+    
+    [navigationController pushViewController:self.viewController animated:YES];
+    
+    [self.window addSubview:navigationController.view];
+    [self.window makeKeyAndVisible];
+    
     [[UIApplication sharedApplication] setStatusBarHidden:YES];
     [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayAndRecord error:nil];
     
@@ -120,7 +128,7 @@
     [levelTimer release];
     [recorder release];
     [_window release];
-    [navigationController release];
+    [_viewController release];
     [super dealloc];
 }
 

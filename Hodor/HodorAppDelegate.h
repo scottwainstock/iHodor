@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVAudioRecorder.h>
+#import "IscabAdViewController.h"
 
 #define TIMER_INTERVAL 0.01
 #define ALPHA 0.05
@@ -24,9 +25,10 @@
 
 @property(nonatomic) bool listening;
 @property(nonatomic, retain) NSTimer *levelTimer;
+@property(nonatomic, retain) UINavigationController *navigationController;
 @property(nonatomic, retain) AVAudioRecorder *recorder;
-@property(nonatomic, retain) IBOutlet UINavigationController *navigationController;
 @property(nonatomic, retain) IBOutlet UIWindow *window;
+@property(nonatomic, retain) IBOutlet IscabAdViewController *viewController;
 
 - (void)levelTimerCallback:(NSTimer *)timer;
 - (void)beginListening;
