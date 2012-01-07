@@ -10,15 +10,22 @@
 #import <AVFoundation/AVAudioRecorder.h>
 #import "IscabAdViewController.h"
 
+#define IMAGE_WIDTH   175
+#define IMAGE_HEIGHT  65
+#define HEIGHT_OFFSET 55
+
+#define MOUTH_ANIMATION_IMAGE_COUNT 15
 #define MINIMUM_LOW_PASS_LEVEL 0.20
 #define TIMER_INTERVAL 0.01
 #define ALPHA 0.05
+
 #define ISCAB_URL @"http://itunes.apple.com/us/app/iscab/id480510644?ls=1&mt=8"
 
 @interface HodorAppDelegate : NSObject <UIApplicationDelegate> {
     NSTimer *levelTimer;
     AVAudioRecorder *recorder;
     UINavigationController *navigationController;
+    UIImageView *animatedImages;
     
     bool listening;
     double lowPassResults;
@@ -28,6 +35,7 @@
 @property(nonatomic, retain) NSTimer *levelTimer;
 @property(nonatomic, retain) UINavigationController *navigationController;
 @property(nonatomic, retain) AVAudioRecorder *recorder;
+@property(nonatomic, retain) UIImageView *animatedImages;
 @property(nonatomic, retain) IBOutlet UIWindow *window;
 @property(nonatomic, retain) IBOutlet IscabAdViewController *viewController;
 
