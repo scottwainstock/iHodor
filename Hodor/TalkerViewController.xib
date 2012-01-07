@@ -102,7 +102,7 @@
 						<reference key="IBUISelectedBackgroundImage" ref="1057130838"/>
 						<object class="NSCustomResource" key="IBUINormalBackgroundImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">Back.png</string>
+							<string key="NSResourceName">Back-Face.png</string>
 						</object>
 					</object>
 				</object>
@@ -306,7 +306,7 @@
 			<bool key="EncodedWithXMLCoder">YES</bool>
 			<object class="NSArray" key="dict.sortedKeys">
 				<bool key="EncodedWithXMLCoder">YES</bool>
-				<string>Back.png</string>
+				<string>Back-Face.png</string>
 				<string>Back_Tap.png</string>
 				<string>face.jpg</string>
 			</object>
