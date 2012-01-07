@@ -11,7 +11,7 @@
 
 @implementation TalkerViewController
 
-@synthesize player, animatedImages;
+@synthesize player;
 
 - (IBAction)backButtonPressed:(id)sender {
     HodorAppDelegate *app = (HodorAppDelegate *)[[UIApplication sharedApplication] delegate];
@@ -30,8 +30,10 @@
 }
 
 - (void)animateMouth {
-    [self.animatedImages stopAnimating];
-    [self.animatedImages startAnimating];    
+    HodorAppDelegate *app = (HodorAppDelegate *)[[UIApplication sharedApplication] delegate];
+
+    [app.animatedImages stopAnimating];
+    [app.animatedImages startAnimating];    
 }
 
 - (void)sayHodor {
@@ -49,12 +51,11 @@
 }
 
 - (void)levelTimerCallback:(NSTimer *)timer {
-    HodorAppDelegate *app = (HodorAppDelegate *) [[UIApplication sharedApplication] delegate];
+    HodorAppDelegate *app = (HodorAppDelegate *)[[UIApplication sharedApplication] delegate];
     [app levelTimerCallback:timer];
 }
 
 - (void)dealloc {
-    [animatedImages release];
     [player release];
     [super dealloc];
 }
@@ -62,25 +63,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSMutableArray *imageArray = [[NSMutableArray alloc] initWithCapacity:IMAGE_COUNT];
-    for (int i = 0; i < IMAGE_COUNT; i++)
-        [imageArray addObject:[UIImage imageNamed:[NSString stringWithFormat:@"mouth%d.png", i]]];
-    
-    self.animatedImages = [[UIImageView alloc] initWithFrame:CGRectMake(
-        ([UIScreen mainScreen].bounds.size.width / 2) - (IMAGE_WIDTH / 2), 
-        ([UIScreen mainScreen].bounds.size.height / 2) - (IMAGE_HEIGHT /2) + HEIGHT_OFFSET,
-        IMAGE_WIDTH, IMAGE_HEIGHT
-    )];
-    [self.animatedImages setAnimationImages:[NSArray arrayWithArray:imageArray]];
-    [self.animatedImages setAnimationDuration:0.5];
-    [self.animatedImages setAnimationRepeatCount:1];
-    [self.animatedImages setImage:[imageArray objectAtIndex:0]];
-    [self.view addSubview:self.animatedImages];
-    
     HodorAppDelegate *app = (HodorAppDelegate *)[[UIApplication sharedApplication] delegate];
-    [app beginListening];
+    [self.view addSubview:app.animatedImages];
     
-    [imageArray release];
+    [app beginListening];    
 }
 
 @end

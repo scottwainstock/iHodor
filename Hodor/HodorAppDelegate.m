@@ -16,7 +16,7 @@
 
 @synthesize window=_window;
 @synthesize viewController=_viewController;
-@synthesize recorder, navigationController, levelTimer, listening;
+@synthesize recorder, navigationController, levelTimer, listening, animatedImages;
 
 - (NSTimer *)levelTimer {
     @synchronized(levelTimer) {
@@ -80,8 +80,28 @@
   	if (recorder) {
   		[recorder prepareToRecord];
   		[recorder setMeteringEnabled:YES];
+        
+        //start and then immediately pause to push off weird slowdown issue to app initialization
+        [recorder record];
+        [recorder pause];
   	}
-
+    
+    NSMutableArray *imageArray = [[NSMutableArray alloc] init];
+    for (int i = 0; i < MOUTH_ANIMATION_IMAGE_COUNT; i++)
+        [imageArray addObject:[UIImage imageNamed:[NSString stringWithFormat:@"mouth%d.png", i]]];
+    
+    self.animatedImages = [[UIImageView alloc] initWithFrame:CGRectMake(
+        ([UIScreen mainScreen].bounds.size.width / 2) - (IMAGE_WIDTH / 2), 
+        ([UIScreen mainScreen].bounds.size.height / 2) - (IMAGE_HEIGHT /2) + HEIGHT_OFFSET,
+        IMAGE_WIDTH, IMAGE_HEIGHT
+    )];
+    [self.animatedImages setAnimationImages:[NSArray arrayWithArray:imageArray]];
+    [self.animatedImages setAnimationDuration:0.5];
+    [self.animatedImages setAnimationRepeatCount:1];
+    [self.animatedImages setImage:[imageArray objectAtIndex:0]];
+    
+    [imageArray release];
+    
     navigationController = [[UINavigationController alloc] init];
     [navigationController setNavigationBarHidden:YES];
     [navigationController setToolbarHidden:YES];
@@ -122,6 +142,7 @@
 }
 
 - (void)dealloc {
+    [animatedImages release];
     [levelTimer release];
     [recorder release];
     [_window release];
