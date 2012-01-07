@@ -14,8 +14,9 @@
 @synthesize player, animatedImages;
 
 - (IBAction)backButtonPressed:(id)sender {
-    HodorAppDelegate *app = (HodorAppDelegate *) [[UIApplication sharedApplication] delegate];
-    [app.levelTimer invalidate];
+    HodorAppDelegate *app = (HodorAppDelegate *)[[UIApplication sharedApplication] delegate];
+    [app pauseListening];
+
     [super backButtonPressed:sender];
 }
 
@@ -52,27 +53,18 @@
     [app levelTimerCallback:timer];
 }
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    return self;
-}
-
 - (void)dealloc {
     [animatedImages release];
     [player release];
     [super dealloc];
 }
 
-#pragma mark - View lifecycle
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     NSMutableArray *imageArray = [[NSMutableArray alloc] initWithCapacity:IMAGE_COUNT];
-    
-    for (int i = 0; i < IMAGE_COUNT; i++) {
+    for (int i = 0; i < IMAGE_COUNT; i++)
         [imageArray addObject:[UIImage imageNamed:[NSString stringWithFormat:@"mouth%d.png", i]]];
-    }
     
     self.animatedImages = [[UIImageView alloc] initWithFrame:CGRectMake(
         ([UIScreen mainScreen].bounds.size.width / 2) - (IMAGE_WIDTH / 2), 
@@ -85,17 +77,10 @@
     [self.animatedImages setImage:[imageArray objectAtIndex:0]];
     [self.view addSubview:self.animatedImages];
     
-    HodorAppDelegate *app = (HodorAppDelegate *) [[UIApplication sharedApplication] delegate];
-    [app.recorder record];
-    app.levelTimer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(levelTimerCallback:) userInfo:nil repeats:YES];
+    HodorAppDelegate *app = (HodorAppDelegate *)[[UIApplication sharedApplication] delegate];
+    [app beginListening];
     
     [imageArray release];
-}
-
-- (void)viewDidUnload {
-    [super viewDidUnload];
-    [self setAnimatedImages:nil];
-    [self setPlayer:nil];
 }
 
 @end

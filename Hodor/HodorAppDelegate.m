@@ -23,6 +23,7 @@
             levelTimer = [[NSTimer alloc] init];
         return levelTimer;
     }
+    
     return nil;
 }
 
@@ -79,10 +80,8 @@
   	if (recorder) {
   		[recorder prepareToRecord];
   		[recorder setMeteringEnabled:YES];
-  	} else {
-  		NSLog(@"ERROR: %@", [error description]);
-    }
-
+  	}
+    
     self.window.rootViewController = navigationController;
     [self.window makeKeyAndVisible];
 
@@ -92,20 +91,30 @@
     return YES;
 }
 
-- (void)applicationWillResignActive:(UIApplication *)application {
+- (void)beginListening {
+    NSLog(@"BEGIN LISTENING");
+    levelTimer = [NSTimer scheduledTimerWithTimeInterval:TIMER_INTERVAL target:self selector:@selector(levelTimerCallback:) userInfo:nil repeats:YES];
+    [recorder record];
+}
+
+- (void)pauseListening {
+    NSLog(@"PAUSE LISTENING");
     [levelTimer invalidate];
     [recorder pause];
 }
 
-- (void)applicationWillEnterForeground:(UIApplication *)application {
-    levelTimer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(levelTimerCallback:) userInfo:nil repeats:YES];
-    
-    [recorder record];
+- (void)applicationWillResignActive:(UIApplication *)application {
+    if (
+        [[self.navigationController visibleViewController] isKindOfClass:[TalkerViewController class]] &&
+        [levelTimer isValid]
+    )
+        [self pauseListening];
 }
 
-- (void)applicationWillTerminate:(UIApplication *)application {}
-- (void)applicationDidBecomeActive:(UIApplication *)application {}
-- (void)applicationDidEnterBackground:(UIApplication *)application {}
+- (void)applicationWillEnterForeground:(UIApplication *)application {
+    if ([[self.navigationController visibleViewController] isKindOfClass:[TalkerViewController class]])
+        [self beginListening];
+}
 
 - (void)dealloc {
     [levelTimer release];

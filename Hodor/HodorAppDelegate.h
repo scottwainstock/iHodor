@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVAudioRecorder.h>
 
+#define TIMER_INTERVAL 0.01
 #define ALPHA 0.05
 #define ISCAB_URL @"http://itunes.apple.com/us/app/iscab/id480510644?ls=1&mt=8"
 
@@ -28,5 +29,7 @@
 @property(nonatomic, retain) IBOutlet UIWindow *window;
 
 - (void)levelTimerCallback:(NSTimer *)timer;
+- (void)beginListening;
+- (void)pauseListening;
 
 @end
