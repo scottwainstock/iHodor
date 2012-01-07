@@ -41,19 +41,18 @@
 - (void)levelTimerCallback:(NSTimer *)timer {
 	[recorder updateMeters];
     
-	double peakPowerForChannel = pow(10, (0.05 * [recorder peakPowerForChannel:0]));
+	double peakPowerForChannel = pow(10, (ALPHA * [recorder peakPowerForChannel:0]));
 	lowPassResults = ALPHA * peakPowerForChannel + (1.0 - ALPHA) * lowPassResults;	
     
-	//NSLog(@"Average input: %f Peak input: %f Low pass results: %f", [recorder averagePowerForChannel:0], [recorder peakPowerForChannel:0], lowPassResults);
-    if (lowPassResults > 0.20)
+	//NSLog(@"Low pass results: %f", lowPassResults);
+    if (lowPassResults > MINIMUM_LOW_PASS_LEVEL)
         listening = TRUE;
     
     TalkerViewController *talkerViewController = nil;
-    for (id controller in self.navigationController.viewControllers)
-        if ([controller isKindOfClass:[TalkerViewController class]])
-            talkerViewController = controller;
+    if ([[self.navigationController visibleViewController] isKindOfClass:[TalkerViewController class]])
+        talkerViewController = (TalkerViewController *)[self.navigationController visibleViewController];
     
-    if ((talkerViewController != nil) && (listening == TRUE) && (lowPassResults < 0.20)) {
+    if ((talkerViewController != nil) && (listening == TRUE) && (lowPassResults < MINIMUM_LOW_PASS_LEVEL)) {
         [talkerViewController hodor];
         listening = FALSE;
     }
@@ -100,13 +99,11 @@
 }
 
 - (void)beginListening {
-    NSLog(@"BEGIN LISTENING");
     levelTimer = [NSTimer scheduledTimerWithTimeInterval:TIMER_INTERVAL target:self selector:@selector(levelTimerCallback:) userInfo:nil repeats:YES];
     [recorder record];
 }
 
 - (void)pauseListening {
-    NSLog(@"PAUSE LISTENING");
     [levelTimer invalidate];
     [recorder pause];
 }

@@ -10,6 +10,7 @@
 #import <AVFoundation/AVAudioRecorder.h>
 #import "IscabAdViewController.h"
 
+#define MINIMUM_LOW_PASS_LEVEL 0.20
 #define TIMER_INTERVAL 0.01
 #define ALPHA 0.05
 #define ISCAB_URL @"http://itunes.apple.com/us/app/iscab/id480510644?ls=1&mt=8"
