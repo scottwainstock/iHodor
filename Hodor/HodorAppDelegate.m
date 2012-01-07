@@ -80,6 +80,10 @@
   	if (recorder) {
   		[recorder prepareToRecord];
   		[recorder setMeteringEnabled:YES];
+        
+        //start and then immediately pause to push off weird slowdown issue to app initialization
+        [recorder record];
+        [recorder pause];
   	}
     
     NSMutableArray *imageArray = [[NSMutableArray alloc] init];
@@ -97,7 +101,7 @@
     [self.animatedImages setImage:[imageArray objectAtIndex:0]];
     
     [imageArray release];
-
+    
     navigationController = [[UINavigationController alloc] init];
     [navigationController setNavigationBarHidden:YES];
     [navigationController setToolbarHidden:YES];
