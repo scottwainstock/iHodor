@@ -2,7 +2,7 @@
 //  HodorViewController.h
 //  Hodor
 //
-//  Created by Scott Wainstock on 8/25/11.
+//  Created by Scott Wainstock on 12/11/11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
@@ -11,8 +11,6 @@
 @interface HodorViewController : UIViewController {
 }
 
-- (IBAction)goButtonPressed:(id)sender;
-- (IBAction)aboutButtonPressed:(id)sender;
-- (IBAction)helpButtonPressed:(id)sender;
+- (IBAction)backButtonPressed:(id)sender;
 
 @end

@@ -11,14 +11,20 @@
 #import <AVFoundation/AVAudioSession.h>
 #import <CoreAudio/CoreAudioTypes.h>
 #import <MediaPlayer/MediaPlayer.h>
+#import "HodorViewController.h"
 
-@interface TalkerViewController : UIViewController <AVAudioPlayerDelegate> {
+#define IMAGE_COUNT   15
+#define IMAGE_WIDTH   175
+#define IMAGE_HEIGHT  65
+#define HEIGHT_OFFSET 55
+
+@interface TalkerViewController : HodorViewController <AVAudioPlayerDelegate> {
     AVAudioPlayer *player;
     UIImageView *animatedImages;
 }
 
-@property (nonatomic, retain) AVAudioPlayer *player;
-@property (nonatomic, retain) UIImageView *animatedImages;
+@property(nonatomic, retain) AVAudioPlayer *player;
+@property(nonatomic, retain) UIImageView *animatedImages;
 
 - (void)hodor;
 - (void)animateMouth;

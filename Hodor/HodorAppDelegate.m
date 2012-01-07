@@ -7,13 +7,10 @@
 //
 
 #import "HodorAppDelegate.h"
-#import "HodorViewController.h"
 #import "TalkerViewController.h"
 #import <AVFoundation/AVAudioPlayer.h>
 #import <AVFoundation/AVAudioSession.h>
 #import <CoreAudio/CoreAudioTypes.h>
-
-#define ALPHA 0.05
 
 @implementation HodorAppDelegate
 
@@ -27,6 +24,7 @@
             levelTimer = [[NSTimer alloc] init];
         return levelTimer;
     }
+    
     return nil;
 }
 
@@ -43,30 +41,24 @@
 - (void)levelTimerCallback:(NSTimer *)timer {
 	[recorder updateMeters];
     
-	double peakPowerForChannel = pow(10, (0.05 * [recorder peakPowerForChannel:0]));
+	double peakPowerForChannel = pow(10, (ALPHA * [recorder peakPowerForChannel:0]));
 	lowPassResults = ALPHA * peakPowerForChannel + (1.0 - ALPHA) * lowPassResults;	
     
-	NSLog(@"Average input: %f Peak input: %f Low pass results: %f", [recorder averagePowerForChannel:0], [recorder peakPowerForChannel:0], lowPassResults);
-    if (lowPassResults > 0.20) {
+	//NSLog(@"Low pass results: %f", lowPassResults);
+    if (lowPassResults > MINIMUM_LOW_PASS_LEVEL)
         listening = TRUE;
-    }
     
     TalkerViewController *talkerViewController = nil;
-    for (id controller in self.navigationController.viewControllers) {
-        if ([controller isKindOfClass:[TalkerViewController class]]) {
-            talkerViewController = controller;
-        }
-    }
+    if ([[self.navigationController visibleViewController] isKindOfClass:[TalkerViewController class]])
+        talkerViewController = (TalkerViewController *)[self.navigationController visibleViewController];
     
-    if ((talkerViewController != nil) && (listening == TRUE) && (lowPassResults < 0.20)) {
+    if ((talkerViewController != nil) && (listening == TRUE) && (lowPassResults < MINIMUM_LOW_PASS_LEVEL)) {
         [talkerViewController hodor];
         listening = FALSE;
     }
 }
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions { 
-    sleep(1);
-    
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {     
     NSError *error;
     NSURL *url = [NSURL fileURLWithPath:[NSTemporaryDirectory() stringByAppendingPathComponent: [NSString stringWithFormat: @"recordedSound.%@", @"caf"]]];
   	NSDictionary *settings = [NSDictionary dictionaryWithObjectsAndKeys:
@@ -87,10 +79,8 @@
     
   	if (recorder) {
   		[recorder prepareToRecord];
-  		recorder.meteringEnabled = YES;
-  	} else {
-  		NSLog(@"ERROR: %@", [error description]);
-    }
+  		[recorder setMeteringEnabled:YES];
+  	}
 
     navigationController = [[UINavigationController alloc] init];
     [navigationController setNavigationBarHidden:YES];
@@ -98,7 +88,6 @@
     [navigationController setHidesBottomBarWhenPushed:YES];
     
     [navigationController pushViewController:self.viewController animated:YES];
-    self.window.rootViewController = self.viewController;
     
     [self.window addSubview:navigationController.view];
     [self.window makeKeyAndVisible];
@@ -109,24 +98,27 @@
     return YES;
 }
 
-- (void)applicationWillResignActive:(UIApplication *)application {
+- (void)beginListening {
+    levelTimer = [NSTimer scheduledTimerWithTimeInterval:TIMER_INTERVAL target:self selector:@selector(levelTimerCallback:) userInfo:nil repeats:YES];
+    [recorder record];
+}
+
+- (void)pauseListening {
     [levelTimer invalidate];
     [recorder pause];
 }
 
-- (void)applicationDidBecomeActive:(UIApplication *)application {
-}
-
-- (void)applicationDidEnterBackground:(UIApplication *)application {
+- (void)applicationWillResignActive:(UIApplication *)application {
+    if (
+        [[self.navigationController visibleViewController] isKindOfClass:[TalkerViewController class]] &&
+        [levelTimer isValid]
+    )
+        [self pauseListening];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
-    levelTimer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(levelTimerCallback:) userInfo:nil repeats:YES];
-    
-    [recorder record];
-}
-
-- (void)applicationWillTerminate:(UIApplication *)application {
+    if ([[self.navigationController visibleViewController] isKindOfClass:[TalkerViewController class]])
+        [self beginListening];
 }
 
 - (void)dealloc {
@@ -134,7 +126,6 @@
     [recorder release];
     [_window release];
     [_viewController release];
-    [navigationController release];
     [super dealloc];
 }
 

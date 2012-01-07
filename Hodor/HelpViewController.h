@@ -7,10 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HodorViewController.h"
 
-@interface HelpViewController : UIViewController {
+@interface HelpViewController : HodorViewController {
 }
-
-- (IBAction)backButtonPressed:(id)sender;
 
 @end
