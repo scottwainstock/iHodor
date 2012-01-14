@@ -105,7 +105,6 @@
 		8E64E543140713D500791B7B /* HodorMainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E64E542140713D500791B7B /* HodorMainMenuViewController.m */; };
 		8E64E546140713D500791B7B /* HodorMainMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E64E544140713D500791B7B /* HodorMainMenuViewController.xib */; };
 		8E64E55C14071CF400791B7B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E64E55B14071CF400791B7B /* AVFoundation.framework */; };
-		8E65A4A114B8EA0900F44092 /* iHodor-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E65A4A014B8EA0900F44092 /* iHodor-Info.plist */; };
 		8ED897E6141C21F80026A0F4 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED897E4141C21F80026A0F4 /* AboutViewController.m */; };
 		8ED897E7141C21F80026A0F4 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ED897E5141C21F80026A0F4 /* AboutViewController.xib */; };
 		8ED897EE141C266E0026A0F4 /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED897EC141C266E0026A0F4 /* HelpViewController.m */; };
@@ -197,6 +196,7 @@
 		8E2338D714C0FF780066EC4E /* hodor4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = hodor4.mp3; path = Resources/hodor4.mp3; sourceTree = "<group>"; };
 		8E2338D814C0FF780066EC4E /* hodor3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = hodor3.mp3; path = Resources/hodor3.mp3; sourceTree = "<group>"; };
 		8E2338D914C0FF780066EC4E /* hodor2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = hodor2.mp3; path = Resources/hodor2.mp3; sourceTree = "<group>"; };
+		8E2338E314C102500066EC4E /* iHodor-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "iHodor-Info.plist"; sourceTree = SOURCE_ROOT; };
 		8E257D90143C1F480085EF3B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Resources/Default.png; sourceTree = "<group>"; };
 		8E257D91143C1F480085EF3B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Resources/Default@2x.png"; sourceTree = "<group>"; };
 		8E257D99143C1FC30085EF3B /* hodor0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = hodor0.mp3; path = Resources/hodor0.mp3; sourceTree = "<group>"; };
@@ -219,7 +219,6 @@
 		8E64E542140713D500791B7B /* HodorMainMenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HodorMainMenuViewController.m; sourceTree = "<group>"; };
 		8E64E545140713D500791B7B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/HodorMainMenuViewController.xib; sourceTree = "<group>"; };
 		8E64E55B14071CF400791B7B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		8E65A4A014B8EA0900F44092 /* iHodor-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "iHodor-Info.plist"; sourceTree = SOURCE_ROOT; };
 		8ED897E3141C21F80026A0F4 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		8ED897E4141C21F80026A0F4 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		8ED897E5141C21F80026A0F4 /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
@@ -372,7 +371,7 @@
 		8E64E533140713D500791B7B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				8E65A4A014B8EA0900F44092 /* iHodor-Info.plist */,
+				8E2338E314C102500066EC4E /* iHodor-Info.plist */,
 				8E64E535140713D500791B7B /* InfoPlist.strings */,
 				8E64E538140713D500791B7B /* iHodor-Prefix.pch */,
 				8E64E539140713D500791B7B /* main.m */,
@@ -575,7 +574,6 @@
 				8E20281014B10AF900185E98 /* Skip@2x.png in Resources */,
 				8E14008C14B7CCC4008A430A /* Back-Face.png in Resources */,
 				8E14008D14B7CCC4008A430A /* Back-Face@2x.png in Resources */,
-				8E65A4A114B8EA0900F44092 /* iHodor-Info.plist in Resources */,
 				8E2338DA14C0FF780066EC4E /* hodor6.mp3 in Resources */,
 				8E2338DB14C0FF780066EC4E /* hodor9.mp3 in Resources */,
 				8E2338DC14C0FF780066EC4E /* hodor8.mp3 in Resources */,

@@ -44,7 +44,7 @@
     [newPlayer release];
     
     [self.player setDelegate:self];
-    [self.player setVolume:1.0f];
+    [self.player setVolume:1.5f];
     [self.player stop];
     [self.player prepareToPlay];
     [self.player play];
