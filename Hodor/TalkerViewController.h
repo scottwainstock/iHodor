@@ -13,6 +13,8 @@
 #import <MediaPlayer/MediaPlayer.h>
 #import "HodorViewController.h"
 
+#define NUMBER_OF_HODOR_SOUNDS 10
+
 @interface TalkerViewController : HodorViewController <AVAudioPlayerDelegate> {
     AVAudioPlayer *player;
 }
