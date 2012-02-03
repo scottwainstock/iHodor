@@ -79,18 +79,8 @@
 		8E20280E14B10AF900185E98 /* Skip_Tap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E20280814B10AF700185E98 /* Skip_Tap@2x.png */; };
 		8E20280F14B10AF900185E98 /* Skip.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E20280914B10AF800185E98 /* Skip.png */; };
 		8E20281014B10AF900185E98 /* Skip@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E20280A14B10AF800185E98 /* Skip@2x.png */; };
-		8E2338DA14C0FF780066EC4E /* hodor6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8E2338D214C0FF780066EC4E /* hodor6.mp3 */; };
-		8E2338DB14C0FF780066EC4E /* hodor9.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8E2338D314C0FF780066EC4E /* hodor9.mp3 */; };
-		8E2338DC14C0FF780066EC4E /* hodor8.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8E2338D414C0FF780066EC4E /* hodor8.mp3 */; };
-		8E2338DD14C0FF780066EC4E /* hodor7.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8E2338D514C0FF780066EC4E /* hodor7.mp3 */; };
-		8E2338DE14C0FF780066EC4E /* hodor5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8E2338D614C0FF780066EC4E /* hodor5.mp3 */; };
-		8E2338DF14C0FF780066EC4E /* hodor4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8E2338D714C0FF780066EC4E /* hodor4.mp3 */; };
-		8E2338E014C0FF780066EC4E /* hodor3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8E2338D814C0FF780066EC4E /* hodor3.mp3 */; };
-		8E2338E114C0FF780066EC4E /* hodor2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8E2338D914C0FF780066EC4E /* hodor2.mp3 */; };
 		8E257D92143C1F480085EF3B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E257D90143C1F480085EF3B /* Default.png */; };
 		8E257D93143C1F480085EF3B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E257D91143C1F480085EF3B /* Default@2x.png */; };
-		8E257D9B143C1FC30085EF3B /* hodor0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8E257D99143C1FC30085EF3B /* hodor0.mp3 */; };
-		8E257D9C143C1FC30085EF3B /* hodor1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8E257D9A143C1FC30085EF3B /* hodor1.mp3 */; };
 		8E4D36DF143C15E800CB57D7 /* icon-retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E4D36DD143C15E800CB57D7 /* icon-retina.png */; };
 		8E4D36E0143C15E800CB57D7 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E4D36DE143C15E800CB57D7 /* icon.png */; };
 		8E4F09F71453E5C800986D91 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E4F09F61453E5C800986D91 /* iAd.framework */; };
@@ -105,6 +95,12 @@
 		8E64E543140713D500791B7B /* HodorMainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E64E542140713D500791B7B /* HodorMainMenuViewController.m */; };
 		8E64E546140713D500791B7B /* HodorMainMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E64E544140713D500791B7B /* HodorMainMenuViewController.xib */; };
 		8E64E55C14071CF400791B7B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E64E55B14071CF400791B7B /* AVFoundation.framework */; };
+		8EB12C3114DBA6B4005A3A4D /* hodor0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8EB12C2C14DBA6B4005A3A4D /* hodor0.mp3 */; };
+		8EB12C3214DBA6B4005A3A4D /* hodor1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8EB12C2D14DBA6B4005A3A4D /* hodor1.mp3 */; };
+		8EB12C3314DBA6B4005A3A4D /* hodor2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8EB12C2E14DBA6B4005A3A4D /* hodor2.mp3 */; };
+		8EB12C3414DBA6B4005A3A4D /* hodor3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8EB12C2F14DBA6B4005A3A4D /* hodor3.mp3 */; };
+		8EB12C3514DBA6B4005A3A4D /* hodor4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8EB12C3014DBA6B4005A3A4D /* hodor4.mp3 */; };
+		8EB12C3B14DBA795005A3A4D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EB12C3A14DBA795005A3A4D /* AudioToolbox.framework */; };
 		8ED897E6141C21F80026A0F4 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED897E4141C21F80026A0F4 /* AboutViewController.m */; };
 		8ED897E7141C21F80026A0F4 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ED897E5141C21F80026A0F4 /* AboutViewController.xib */; };
 		8ED897EE141C266E0026A0F4 /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED897EC141C266E0026A0F4 /* HelpViewController.m */; };
@@ -188,19 +184,9 @@
 		8E20280814B10AF700185E98 /* Skip_Tap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Skip_Tap@2x.png"; path = "Resources/Skip_Tap@2x.png"; sourceTree = "<group>"; };
 		8E20280914B10AF800185E98 /* Skip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Skip.png; path = Resources/Skip.png; sourceTree = "<group>"; };
 		8E20280A14B10AF800185E98 /* Skip@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Skip@2x.png"; path = "Resources/Skip@2x.png"; sourceTree = "<group>"; };
-		8E2338D214C0FF780066EC4E /* hodor6.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = hodor6.mp3; path = Resources/hodor6.mp3; sourceTree = "<group>"; };
-		8E2338D314C0FF780066EC4E /* hodor9.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = hodor9.mp3; path = Resources/hodor9.mp3; sourceTree = "<group>"; };
-		8E2338D414C0FF780066EC4E /* hodor8.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = hodor8.mp3; path = Resources/hodor8.mp3; sourceTree = "<group>"; };
-		8E2338D514C0FF780066EC4E /* hodor7.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = hodor7.mp3; path = Resources/hodor7.mp3; sourceTree = "<group>"; };
-		8E2338D614C0FF780066EC4E /* hodor5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = hodor5.mp3; path = Resources/hodor5.mp3; sourceTree = "<group>"; };
-		8E2338D714C0FF780066EC4E /* hodor4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = hodor4.mp3; path = Resources/hodor4.mp3; sourceTree = "<group>"; };
-		8E2338D814C0FF780066EC4E /* hodor3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = hodor3.mp3; path = Resources/hodor3.mp3; sourceTree = "<group>"; };
-		8E2338D914C0FF780066EC4E /* hodor2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = hodor2.mp3; path = Resources/hodor2.mp3; sourceTree = "<group>"; };
 		8E2338E314C102500066EC4E /* iHodor-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "iHodor-Info.plist"; sourceTree = SOURCE_ROOT; };
 		8E257D90143C1F480085EF3B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Resources/Default.png; sourceTree = "<group>"; };
 		8E257D91143C1F480085EF3B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Resources/Default@2x.png"; sourceTree = "<group>"; };
-		8E257D99143C1FC30085EF3B /* hodor0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = hodor0.mp3; path = Resources/hodor0.mp3; sourceTree = "<group>"; };
-		8E257D9A143C1FC30085EF3B /* hodor1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = hodor1.mp3; path = Resources/hodor1.mp3; sourceTree = "<group>"; };
 		8E4D36DD143C15E800CB57D7 /* icon-retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-retina.png"; sourceTree = "<group>"; };
 		8E4D36DE143C15E800CB57D7 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		8E4F09F61453E5C800986D91 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
@@ -219,6 +205,12 @@
 		8E64E542140713D500791B7B /* HodorMainMenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HodorMainMenuViewController.m; sourceTree = "<group>"; };
 		8E64E545140713D500791B7B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/HodorMainMenuViewController.xib; sourceTree = "<group>"; };
 		8E64E55B14071CF400791B7B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		8EB12C2C14DBA6B4005A3A4D /* hodor0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = hodor0.mp3; path = Resources/hodor0.mp3; sourceTree = "<group>"; };
+		8EB12C2D14DBA6B4005A3A4D /* hodor1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = hodor1.mp3; path = Resources/hodor1.mp3; sourceTree = "<group>"; };
+		8EB12C2E14DBA6B4005A3A4D /* hodor2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = hodor2.mp3; path = Resources/hodor2.mp3; sourceTree = "<group>"; };
+		8EB12C2F14DBA6B4005A3A4D /* hodor3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = hodor3.mp3; path = Resources/hodor3.mp3; sourceTree = "<group>"; };
+		8EB12C3014DBA6B4005A3A4D /* hodor4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = hodor4.mp3; path = Resources/hodor4.mp3; sourceTree = "<group>"; };
+		8EB12C3A14DBA795005A3A4D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		8ED897E3141C21F80026A0F4 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		8ED897E4141C21F80026A0F4 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		8ED897E5141C21F80026A0F4 /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
@@ -237,6 +229,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EB12C3B14DBA795005A3A4D /* AudioToolbox.framework in Frameworks */,
 				8E4F09F71453E5C800986D91 /* iAd.framework in Frameworks */,
 				8E4FBEA11408668000AC8589 /* MediaPlayer.framework in Frameworks */,
 				8E64E55C14071CF400791B7B /* AVFoundation.framework in Frameworks */,
@@ -290,16 +283,11 @@
 		8E2027FF14B1032B00185E98 /* sound */ = {
 			isa = PBXGroup;
 			children = (
-				8E2338D214C0FF780066EC4E /* hodor6.mp3 */,
-				8E2338D314C0FF780066EC4E /* hodor9.mp3 */,
-				8E2338D414C0FF780066EC4E /* hodor8.mp3 */,
-				8E2338D514C0FF780066EC4E /* hodor7.mp3 */,
-				8E2338D614C0FF780066EC4E /* hodor5.mp3 */,
-				8E2338D714C0FF780066EC4E /* hodor4.mp3 */,
-				8E2338D814C0FF780066EC4E /* hodor3.mp3 */,
-				8E2338D914C0FF780066EC4E /* hodor2.mp3 */,
-				8E257D99143C1FC30085EF3B /* hodor0.mp3 */,
-				8E257D9A143C1FC30085EF3B /* hodor1.mp3 */,
+				8EB12C2C14DBA6B4005A3A4D /* hodor0.mp3 */,
+				8EB12C2D14DBA6B4005A3A4D /* hodor1.mp3 */,
+				8EB12C2E14DBA6B4005A3A4D /* hodor2.mp3 */,
+				8EB12C2F14DBA6B4005A3A4D /* hodor3.mp3 */,
+				8EB12C3014DBA6B4005A3A4D /* hodor4.mp3 */,
 			);
 			name = sound;
 			sourceTree = "<group>";
@@ -334,6 +322,7 @@
 		8E64E52B140713D500791B7B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8EB12C3A14DBA795005A3A4D /* AudioToolbox.framework */,
 				8E4F09F61453E5C800986D91 /* iAd.framework */,
 				8E4FBEA01408668000AC8589 /* MediaPlayer.framework */,
 				8E64E55B14071CF400791B7B /* AVFoundation.framework */,
@@ -501,8 +490,6 @@
 				8E4D36E0143C15E800CB57D7 /* icon.png in Resources */,
 				8E257D92143C1F480085EF3B /* Default.png in Resources */,
 				8E257D93143C1F480085EF3B /* Default@2x.png in Resources */,
-				8E257D9B143C1FC30085EF3B /* hodor0.mp3 in Resources */,
-				8E257D9C143C1FC30085EF3B /* hodor1.mp3 in Resources */,
 				8E2027C114B0FBA400185E98 /* About_Tap.png in Resources */,
 				8E2027C214B0FBA400185E98 /* About_Tap@2x.png in Resources */,
 				8E2027C314B0FBA400185E98 /* About.jpg in Resources */,
@@ -574,14 +561,11 @@
 				8E20281014B10AF900185E98 /* Skip@2x.png in Resources */,
 				8E14008C14B7CCC4008A430A /* Back-Face.png in Resources */,
 				8E14008D14B7CCC4008A430A /* Back-Face@2x.png in Resources */,
-				8E2338DA14C0FF780066EC4E /* hodor6.mp3 in Resources */,
-				8E2338DB14C0FF780066EC4E /* hodor9.mp3 in Resources */,
-				8E2338DC14C0FF780066EC4E /* hodor8.mp3 in Resources */,
-				8E2338DD14C0FF780066EC4E /* hodor7.mp3 in Resources */,
-				8E2338DE14C0FF780066EC4E /* hodor5.mp3 in Resources */,
-				8E2338DF14C0FF780066EC4E /* hodor4.mp3 in Resources */,
-				8E2338E014C0FF780066EC4E /* hodor3.mp3 in Resources */,
-				8E2338E114C0FF780066EC4E /* hodor2.mp3 in Resources */,
+				8EB12C3114DBA6B4005A3A4D /* hodor0.mp3 in Resources */,
+				8EB12C3214DBA6B4005A3A4D /* hodor1.mp3 in Resources */,
+				8EB12C3314DBA6B4005A3A4D /* hodor2.mp3 in Resources */,
+				8EB12C3414DBA6B4005A3A4D /* hodor3.mp3 in Resources */,
+				8EB12C3514DBA6B4005A3A4D /* hodor4.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
