@@ -81,8 +81,6 @@
 		8E20281014B10AF900185E98 /* Skip@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E20280A14B10AF800185E98 /* Skip@2x.png */; };
 		8E257D92143C1F480085EF3B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E257D90143C1F480085EF3B /* Default.png */; };
 		8E257D93143C1F480085EF3B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E257D91143C1F480085EF3B /* Default@2x.png */; };
-		8E4D36DF143C15E800CB57D7 /* icon-retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E4D36DD143C15E800CB57D7 /* icon-retina.png */; };
-		8E4D36E0143C15E800CB57D7 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E4D36DE143C15E800CB57D7 /* icon.png */; };
 		8E4F09F71453E5C800986D91 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E4F09F61453E5C800986D91 /* iAd.framework */; };
 		8E4FBEA11408668000AC8589 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E4FBEA01408668000AC8589 /* MediaPlayer.framework */; };
 		8E64E52D140713D500791B7B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E64E52C140713D500791B7B /* UIKit.framework */; };
@@ -108,6 +106,8 @@
 		8ED89803141C2A270026A0F4 /* TalkerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED89801141C2A260026A0F4 /* TalkerViewController.m */; };
 		8ED89804141C2A270026A0F4 /* TalkerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ED89802141C2A270026A0F4 /* TalkerViewController.xib */; };
 		8EEFE0211495A62D00D3429B /* HodorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEFE0201495A62C00D3429B /* HodorViewController.m */; };
+		8EFD9A4514E062C3001328CF /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EFD9A4314E062C3001328CF /* Icon.png */; };
+		8EFD9A4614E062C3001328CF /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EFD9A4414E062C3001328CF /* Icon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -187,8 +187,6 @@
 		8E2338E314C102500066EC4E /* iHodor-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "iHodor-Info.plist"; sourceTree = SOURCE_ROOT; };
 		8E257D90143C1F480085EF3B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Resources/Default.png; sourceTree = "<group>"; };
 		8E257D91143C1F480085EF3B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Resources/Default@2x.png"; sourceTree = "<group>"; };
-		8E4D36DD143C15E800CB57D7 /* icon-retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-retina.png"; sourceTree = "<group>"; };
-		8E4D36DE143C15E800CB57D7 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		8E4F09F61453E5C800986D91 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		8E4FBEA01408668000AC8589 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		8E64E528140713D500791B7B /* iHodor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iHodor.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -222,6 +220,8 @@
 		8ED89802141C2A270026A0F4 /* TalkerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TalkerViewController.xib; sourceTree = "<group>"; };
 		8EEFE01F1495A62C00D3429B /* HodorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HodorViewController.h; sourceTree = "<group>"; };
 		8EEFE0201495A62C00D3429B /* HodorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HodorViewController.m; sourceTree = "<group>"; };
+		8EFD9A4314E062C3001328CF /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = SOURCE_ROOT; };
+		8EFD9A4414E062C3001328CF /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -295,8 +295,8 @@
 		8E4D36DC143C15E800CB57D7 /* icons */ = {
 			isa = PBXGroup;
 			children = (
-				8E4D36DD143C15E800CB57D7 /* icon-retina.png */,
-				8E4D36DE143C15E800CB57D7 /* icon.png */,
+				8EFD9A4314E062C3001328CF /* Icon.png */,
+				8EFD9A4414E062C3001328CF /* Icon@2x.png */,
 			);
 			name = icons;
 			path = Resources/icons;
@@ -486,8 +486,6 @@
 				8ED897E7141C21F80026A0F4 /* AboutViewController.xib in Resources */,
 				8ED897EF141C266E0026A0F4 /* HelpViewController.xib in Resources */,
 				8ED89804141C2A270026A0F4 /* TalkerViewController.xib in Resources */,
-				8E4D36DF143C15E800CB57D7 /* icon-retina.png in Resources */,
-				8E4D36E0143C15E800CB57D7 /* icon.png in Resources */,
 				8E257D92143C1F480085EF3B /* Default.png in Resources */,
 				8E257D93143C1F480085EF3B /* Default@2x.png in Resources */,
 				8E2027C114B0FBA400185E98 /* About_Tap.png in Resources */,
@@ -566,6 +564,8 @@
 				8EB12C3314DBA6B4005A3A4D /* hodor2.mp3 in Resources */,
 				8EB12C3414DBA6B4005A3A4D /* hodor3.mp3 in Resources */,
 				8EB12C3514DBA6B4005A3A4D /* hodor4.mp3 in Resources */,
+				8EFD9A4514E062C3001328CF /* Icon.png in Resources */,
+				8EFD9A4614E062C3001328CF /* Icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
