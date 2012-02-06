@@ -183,7 +183,7 @@
         [self pauseListening];
 }
 
-- (void)applicationWillEnterForeground:(UIApplication *)application {
+- (void)applicationDidBecomeActive:(UIApplication *)application {
     if ([[self.navigationController visibleViewController] isKindOfClass:[TalkerViewController class]])
         [self beginListening];
 }
