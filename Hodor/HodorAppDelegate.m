@@ -11,18 +11,27 @@
 #import <AVFoundation/AVAudioPlayer.h>
 #import <AVFoundation/AVAudioSession.h>
 #import <CoreAudio/CoreAudioTypes.h>
+#import <AudioToolbox/AudioServices.h>
 
 @implementation HodorAppDelegate
 
-@synthesize window=_window;
-@synthesize viewController=_viewController;
-@synthesize recorder, navigationController, levelTimer, listening, animatedImages;
+@synthesize window=_window, viewController=_viewController, player, recorder, navigationController, levelTimer, listening, talking, animatedImages;
 
 - (NSTimer *)levelTimer {
     @synchronized(levelTimer) {
         if (levelTimer == nil)
             levelTimer = [[NSTimer alloc] init];
         return levelTimer;
+    }
+    
+    return nil;
+}
+
+- (AVAudioPlayer *)player {
+    @synchronized(player) {
+        if (player == nil)
+            player = [[AVAudioPlayer alloc] init];
+        return player;
     }
     
     return nil;
@@ -38,44 +47,52 @@
     return nil;
 }
 
+- (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag {
+    talking = false;
+    [self beginListening];
+}
+
 - (void)levelTimerCallback:(NSTimer *)timer {
 	[recorder updateMeters];
     
 	double peakPowerForChannel = pow(10, (ALPHA * [recorder peakPowerForChannel:0]));
 	lowPassResults = ALPHA * peakPowerForChannel + (1.0 - ALPHA) * lowPassResults;	
     
-	//NSLog(@"Low pass results: %f", lowPassResults);
     if (lowPassResults > MINIMUM_LOW_PASS_LEVEL)
         listening = TRUE;
-    
+        
     TalkerViewController *talkerViewController = nil;
     if ([[self.navigationController visibleViewController] isKindOfClass:[TalkerViewController class]])
         talkerViewController = (TalkerViewController *)[self.navigationController visibleViewController];
     
-    if ((talkerViewController != nil) && (listening == TRUE) && (lowPassResults < MINIMUM_LOW_PASS_LEVEL)) {
-        [talkerViewController hodor];
+    if ((talkerViewController != nil) && listening && (lowPassResults < MINIMUM_LOW_PASS_LEVEL)) {
+        [self hodor];
         listening = FALSE;
+        lowPassResults = 0.0f;
     }
 }
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {     
-    NSError *error;
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     NSURL *url = [NSURL fileURLWithPath:[NSTemporaryDirectory() stringByAppendingPathComponent: [NSString stringWithFormat: @"recordedSound.%@", @"caf"]]];
   	NSDictionary *settings = [NSDictionary dictionaryWithObjectsAndKeys:
-                              [NSNumber numberWithFloat: 44100.0],                 
-                              AVSampleRateKey,
-                              [NSNumber numberWithInt: kAudioFormatAppleLossless], 
-                              AVFormatIDKey,
-                              [NSNumber numberWithInt: 1],                       
-                              AVNumberOfChannelsKey,
-                              [NSNumber numberWithInt: AVAudioQualityMax],        
-                              AVEncoderAudioQualityKey,
-                              nil];
-    AVAudioSession *audioSession = [AVAudioSession sharedInstance];
-    [audioSession setCategory:AVAudioSessionCategoryPlayAndRecord error: &error];
-    [audioSession setActive:YES error: &error];
+        [NSNumber numberWithFloat:44100.0],                 AVSampleRateKey,
+        [NSNumber numberWithInt:kAudioFormatAppleLossless], AVFormatIDKey,
+        [NSNumber numberWithInt:1],                         AVNumberOfChannelsKey,
+        [NSNumber numberWithInt:AVAudioQualityMax],         AVEncoderAudioQualityKey,
+        nil
+    ];
     
-  	recorder = [[AVAudioRecorder alloc] initWithURL:url settings:settings error:&error];
+    AVAudioSession *audioSession = [AVAudioSession sharedInstance];
+    
+    [audioSession setCategory:[audioSession inputIsAvailable] ? AVAudioSessionCategoryPlayAndRecord : AVAudioSessionCategoryPlayback error:nil];
+    
+    [audioSession setActive:YES error:nil];
+    [audioSession setDelegate:self];
+    
+    UInt32 audioRouteOverride = kAudioSessionOverrideAudioRoute_Speaker;
+    AudioSessionSetProperty(kAudioSessionProperty_OverrideAudioRoute, sizeof(audioRouteOverride), &audioRouteOverride);
+
+  	recorder = [[AVAudioRecorder alloc] initWithURL:url settings:settings error:nil];
     
   	if (recorder) {
   		[recorder prepareToRecord];
@@ -111,11 +128,26 @@
     
     [self.window addSubview:navigationController.view];
     [self.window makeKeyAndVisible];
-    
+        
     [[UIApplication sharedApplication] setStatusBarHidden:YES];
-    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayAndRecord error:nil];
     
     return YES;
+}
+
+- (void)sayHodor {
+    [self pauseListening];
+
+    NSString *soundFile = [[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"hodor%d", arc4random() % NUMBER_OF_HODOR_SOUNDS] ofType:@"mp3"];
+    NSURL *url = [[NSURL alloc] initFileURLWithPath:soundFile];
+    
+    self.player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
+    
+    [url release];
+        
+    [player setDelegate:self];
+    [player stop];
+    [player prepareToPlay];
+    [player play];
 }
 
 - (void)beginListening {
@@ -126,6 +158,21 @@
 - (void)pauseListening {
     [levelTimer invalidate];
     [recorder pause];
+}
+
+- (void)hodor {
+    if (talking) {
+        return;
+    }
+    
+    talking = true;
+    [self animateMouth];
+    [self sayHodor];
+}
+
+- (void)animateMouth {
+    [self.animatedImages stopAnimating];
+    [self.animatedImages startAnimating];    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -145,6 +192,7 @@
     [animatedImages release];
     [levelTimer release];
     [recorder release];
+    [player release];
     [_window release];
     [_viewController release];
     [super dealloc];
