@@ -32,11 +32,13 @@
     UINavigationController *navigationController;
     UIImageView *animatedImages;
 
+    bool talking;
     bool listening;
     double lowPassResults;
 }
 
 @property(nonatomic) bool listening;
+@property(nonatomic) bool talking;
 @property(nonatomic, retain) NSTimer *levelTimer;
 @property(nonatomic, retain) UINavigationController *navigationController;
 @property(nonatomic, retain) AVAudioRecorder *recorder;

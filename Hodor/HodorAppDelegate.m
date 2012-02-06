@@ -15,9 +15,7 @@
 
 @implementation HodorAppDelegate
 
-@synthesize window=_window;
-@synthesize viewController=_viewController;
-@synthesize player, recorder, navigationController, levelTimer, listening, animatedImages;
+@synthesize window=_window, viewController=_viewController, player, recorder, navigationController, levelTimer, listening, talking, animatedImages;
 
 - (NSTimer *)levelTimer {
     @synchronized(levelTimer) {
@@ -49,23 +47,28 @@
     return nil;
 }
 
+- (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag {
+    talking = false;
+    [self beginListening];
+}
+
 - (void)levelTimerCallback:(NSTimer *)timer {
 	[recorder updateMeters];
     
 	double peakPowerForChannel = pow(10, (ALPHA * [recorder peakPowerForChannel:0]));
 	lowPassResults = ALPHA * peakPowerForChannel + (1.0 - ALPHA) * lowPassResults;	
     
-	//NSLog(@"Low pass results: %f", lowPassResults);
     if (lowPassResults > MINIMUM_LOW_PASS_LEVEL)
         listening = TRUE;
-    
+        
     TalkerViewController *talkerViewController = nil;
     if ([[self.navigationController visibleViewController] isKindOfClass:[TalkerViewController class]])
         talkerViewController = (TalkerViewController *)[self.navigationController visibleViewController];
     
-    if ((talkerViewController != nil) && (listening == TRUE) && (lowPassResults < MINIMUM_LOW_PASS_LEVEL)) {
+    if ((talkerViewController != nil) && listening && (lowPassResults < MINIMUM_LOW_PASS_LEVEL)) {
         [self hodor];
         listening = FALSE;
+        lowPassResults = 0.0f;
     }
 }
 
@@ -131,11 +134,15 @@
     return YES;
 }
 
-- (void)sayHodor {    
+- (void)sayHodor {
+    [self pauseListening];
+
     NSString *soundFile = [[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"hodor%d", arc4random() % NUMBER_OF_HODOR_SOUNDS] ofType:@"mp3"];
     NSURL *url = [[NSURL alloc] initFileURLWithPath:soundFile];
     
     self.player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
+    
+    [url release];
         
     [player setDelegate:self];
     [player stop];
@@ -154,6 +161,11 @@
 }
 
 - (void)hodor {
+    if (talking) {
+        return;
+    }
+    
+    talking = true;
     [self animateMouth];
     [self sayHodor];
 }
