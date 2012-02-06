@@ -14,6 +14,9 @@
 HodorAppDelegate *app;
 
 - (IBAction)backButtonPressed:(id)sender {
+    if (app.talking)
+        return;
+    
     [app pauseListening];
 
     [super backButtonPressed:sender];
