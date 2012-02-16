@@ -458,6 +458,9 @@
 /* Begin PBXProject section */
 		8E64E51F140713D400791B7B /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
 			buildConfigurationList = 8E64E522140713D400791B7B /* Build configuration list for PBXProject "iHodor" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
@@ -621,8 +624,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Scott Wainstock";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Scott Wainstock";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Scott Wainstock (DP435AHE8B)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Scott Wainstock (DP435AHE8B)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
@@ -631,8 +634,8 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				PROVISIONING_PROFILE = "C1328E54-F7DA-400B-913A-2DDFD7403827";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "C1328E54-F7DA-400B-913A-2DDFD7403827";
+				PROVISIONING_PROFILE = "9DBDA858-CC87-431A-BE45-CD38E2E9E15D";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "9DBDA858-CC87-431A-BE45-CD38E2E9E15D";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -641,16 +644,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Scott Wainstock";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Scott Wainstock";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Scott Wainstock (DP435AHE8B)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Scott Wainstock (DP435AHE8B)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "C1328E54-F7DA-400B-913A-2DDFD7403827";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "C1328E54-F7DA-400B-913A-2DDFD7403827";
+				PROVISIONING_PROFILE = "9DBDA858-CC87-431A-BE45-CD38E2E9E15D";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "9DBDA858-CC87-431A-BE45-CD38E2E9E15D";
 				SDKROOT = iphoneos;
 			};
 			name = Release;
@@ -667,6 +670,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Hodor/iHodor-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "iHodor-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = iHodor;
@@ -686,6 +690,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Hodor/iHodor-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "iHodor-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = iHodor;
