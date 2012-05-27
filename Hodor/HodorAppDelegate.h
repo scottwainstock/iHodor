@@ -3,6 +3,7 @@
 #import <AVFoundation/AVAudioPlayer.h>
 #import <AVFoundation/AVAudioSession.h>
 #import "IscabAdViewController.h"
+#import "TestFlight.h"
 
 #define NUMBER_OF_HODOR_SOUNDS 5
 

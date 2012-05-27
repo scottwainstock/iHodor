@@ -83,8 +83,6 @@
 		8E257D93143C1F480085EF3B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E257D91143C1F480085EF3B /* Default@2x.png */; };
 		8E4F09F71453E5C800986D91 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E4F09F61453E5C800986D91 /* iAd.framework */; };
 		8E4FBEA11408668000AC8589 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E4FBEA01408668000AC8589 /* MediaPlayer.framework */; };
-		8E5F5AB51571D6BA0095E9BC /* hodor_and_bran.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8E5F5AB31571D6BA0095E9BC /* hodor_and_bran.jpg */; };
-		8E5F5AB61571D6BA0095E9BC /* hodor_and_bran@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8E5F5AB41571D6BA0095E9BC /* hodor_and_bran@2x.jpg */; };
 		8E5F5ABB1571D79A0095E9BC /* HodorAndBranTalkerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5F5AB91571D79A0095E9BC /* HodorAndBranTalkerViewController.m */; };
 		8E5F5ABC1571D79A0095E9BC /* HodorAndBranTalkerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E5F5ABA1571D79A0095E9BC /* HodorAndBranTalkerViewController.xib */; };
 		8E5F5AC01571D8420095E9BC /* TalkerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5F5ABE1571D8420095E9BC /* TalkerViewController.m */; };
@@ -144,6 +142,12 @@
 		8ED897EF141C266E0026A0F4 /* HelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ED897ED141C266E0026A0F4 /* HelpViewController.xib */; };
 		8ED89803141C2A270026A0F4 /* HodorTalkerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED89801141C2A260026A0F4 /* HodorTalkerViewController.m */; };
 		8ED89804141C2A270026A0F4 /* HodorTalkerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ED89802141C2A270026A0F4 /* HodorTalkerViewController.xib */; };
+		8EDD80511572A9DD00A350FC /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EDD804D1572A9DD00A350FC /* libTestFlight.a */; };
+		8EDD80521572A9DD00A350FC /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8EDD804E1572A9DD00A350FC /* README.txt */; };
+		8EDD80531572A9DD00A350FC /* release_notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8EDD804F1572A9DD00A350FC /* release_notes.txt */; };
+		8EDD80551572AA2300A350FC /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EDD80541572AA2300A350FC /* libz.dylib */; };
+		8EDD80581572B29800A350FC /* hodor_and_bran.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8EDD80561572B29800A350FC /* hodor_and_bran.jpg */; };
+		8EDD80591572B29800A350FC /* hodor_and_bran@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8EDD80571572B29800A350FC /* hodor_and_bran@2x.jpg */; };
 		8EEFE0211495A62D00D3429B /* HodorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEFE0201495A62C00D3429B /* HodorViewController.m */; };
 		8EFD9A4514E062C3001328CF /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EFD9A4314E062C3001328CF /* Icon.png */; };
 		8EFD9A4614E062C3001328CF /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EFD9A4414E062C3001328CF /* Icon@2x.png */; };
@@ -228,8 +232,6 @@
 		8E257D91143C1F480085EF3B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Resources/Default@2x.png"; sourceTree = "<group>"; };
 		8E4F09F61453E5C800986D91 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		8E4FBEA01408668000AC8589 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
-		8E5F5AB31571D6BA0095E9BC /* hodor_and_bran.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = hodor_and_bran.jpg; path = ../../../Desktop/hodor_and_bran.jpg; sourceTree = "<group>"; };
-		8E5F5AB41571D6BA0095E9BC /* hodor_and_bran@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "hodor_and_bran@2x.jpg"; path = "../../../Desktop/hodor_and_bran@2x.jpg"; sourceTree = "<group>"; };
 		8E5F5AB81571D79A0095E9BC /* HodorAndBranTalkerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HodorAndBranTalkerViewController.h; sourceTree = "<group>"; };
 		8E5F5AB91571D79A0095E9BC /* HodorAndBranTalkerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HodorAndBranTalkerViewController.m; sourceTree = "<group>"; };
 		8E5F5ABA1571D79A0095E9BC /* HodorAndBranTalkerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HodorAndBranTalkerViewController.xib; sourceTree = "<group>"; };
@@ -298,6 +300,13 @@
 		8ED89800141C2A260026A0F4 /* HodorTalkerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HodorTalkerViewController.h; sourceTree = "<group>"; };
 		8ED89801141C2A260026A0F4 /* HodorTalkerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HodorTalkerViewController.m; sourceTree = "<group>"; };
 		8ED89802141C2A270026A0F4 /* HodorTalkerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HodorTalkerViewController.xib; sourceTree = "<group>"; };
+		8EDD804D1572A9DD00A350FC /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
+		8EDD804E1572A9DD00A350FC /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		8EDD804F1572A9DD00A350FC /* release_notes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.txt; sourceTree = "<group>"; };
+		8EDD80501572A9DD00A350FC /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
+		8EDD80541572AA2300A350FC /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		8EDD80561572B29800A350FC /* hodor_and_bran.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = hodor_and_bran.jpg; path = Resources/hodor_and_bran.jpg; sourceTree = "<group>"; };
+		8EDD80571572B29800A350FC /* hodor_and_bran@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "hodor_and_bran@2x.jpg"; path = "Resources/hodor_and_bran@2x.jpg"; sourceTree = "<group>"; };
 		8EEFE01F1495A62C00D3429B /* HodorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HodorViewController.h; sourceTree = "<group>"; };
 		8EEFE0201495A62C00D3429B /* HodorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HodorViewController.m; sourceTree = "<group>"; };
 		8EFD9A4314E062C3001328CF /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = SOURCE_ROOT; };
@@ -309,6 +318,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EDD80551572AA2300A350FC /* libz.dylib in Frameworks */,
 				8EB12C3B14DBA795005A3A4D /* AudioToolbox.framework in Frameworks */,
 				8E4F09F71453E5C800986D91 /* iAd.framework in Frameworks */,
 				8E4FBEA11408668000AC8589 /* MediaPlayer.framework in Frameworks */,
@@ -316,6 +326,7 @@
 				8E64E52D140713D500791B7B /* UIKit.framework in Frameworks */,
 				8E64E52F140713D500791B7B /* Foundation.framework in Frameworks */,
 				8E64E531140713D500791B7B /* CoreGraphics.framework in Frameworks */,
+				8EDD80511572A9DD00A350FC /* libTestFlight.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +443,7 @@
 		8E64E52B140713D500791B7B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8EDD80541572AA2300A350FC /* libz.dylib */,
 				8EB12C3A14DBA795005A3A4D /* AudioToolbox.framework */,
 				8E4F09F61453E5C800986D91 /* iAd.framework */,
 				8E4FBEA01408668000AC8589 /* MediaPlayer.framework */,
@@ -466,6 +478,7 @@
 				8E20280114B109AF00185E98 /* IscabAdViewController.m */,
 				8EEFE01E1495A4D800D3429B /* xibs */,
 				8E64E54C140714E500791B7B /* Resources */,
+				8EDD804A1572A9C100A350FC /* Vendor */,
 				8E64E533140713D500791B7B /* Supporting Files */,
 			);
 			path = Hodor;
@@ -488,12 +501,12 @@
 				8E2027FF14B1032B00185E98 /* sound */,
 				8E4D36DC143C15E800CB57D7 /* icons */,
 				8E20278814B0FBA200185E98 /* animation */,
+				8EDD80561572B29800A350FC /* hodor_and_bran.jpg */,
+				8EDD80571572B29800A350FC /* hodor_and_bran@2x.jpg */,
 				8E5F5AC21571DEB30095E9BC /* Share.png */,
 				8E5F5ACA1571DF380095E9BC /* Share@2x.png */,
 				8E5F5ACB1571DF380095E9BC /* Share-Tap@2x.png */,
 				8E5F5AC31571DEB30095E9BC /* Share-Tap.png */,
-				8E5F5AB31571D6BA0095E9BC /* hodor_and_bran.jpg */,
-				8E5F5AB41571D6BA0095E9BC /* hodor_and_bran@2x.jpg */,
 				8E14008A14B7CCC4008A430A /* Back-Face.png */,
 				8E14008B14B7CCC4008A430A /* Back-Face@2x.png */,
 				8E20280514B10AF500185E98 /* Ad.jpg */,
@@ -538,6 +551,25 @@
 				8E257D91143C1F480085EF3B /* Default@2x.png */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		8EDD804A1572A9C100A350FC /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				8EDD804C1572A9DD00A350FC /* TestFlightSDK1.0 */,
+			);
+			name = Vendor;
+			sourceTree = "<group>";
+		};
+		8EDD804C1572A9DD00A350FC /* TestFlightSDK1.0 */ = {
+			isa = PBXGroup;
+			children = (
+				8EDD804D1572A9DD00A350FC /* libTestFlight.a */,
+				8EDD804E1572A9DD00A350FC /* README.txt */,
+				8EDD804F1572A9DD00A350FC /* release_notes.txt */,
+				8EDD80501572A9DD00A350FC /* TestFlight.h */,
+			);
+			path = TestFlightSDK1.0;
 			sourceTree = "<group>";
 		};
 		8EEFE01E1495A4D800D3429B /* xibs */ = {
@@ -690,8 +722,6 @@
 				8EB12C3514DBA6B4005A3A4D /* hodor4.mp3 in Resources */,
 				8EFD9A4514E062C3001328CF /* Icon.png in Resources */,
 				8EFD9A4614E062C3001328CF /* Icon@2x.png in Resources */,
-				8E5F5AB51571D6BA0095E9BC /* hodor_and_bran.jpg in Resources */,
-				8E5F5AB61571D6BA0095E9BC /* hodor_and_bran@2x.jpg in Resources */,
 				8E5F5ABC1571D79A0095E9BC /* HodorAndBranTalkerViewController.xib in Resources */,
 				8E5F5AC61571DEB30095E9BC /* Share.png in Resources */,
 				8E5F5AC71571DEB30095E9BC /* Share-Tap.png in Resources */,
@@ -727,6 +757,10 @@
 				8E5F5B071571EFC50095E9BC /* small_mouth1.png in Resources */,
 				8E5F5B081571EFC50095E9BC /* small_mouth0@2x.png in Resources */,
 				8E5F5B091571EFC50095E9BC /* small_mouth0.png in Resources */,
+				8EDD80521572A9DD00A350FC /* README.txt in Resources */,
+				8EDD80531572A9DD00A350FC /* release_notes.txt in Resources */,
+				8EDD80581572B29800A350FC /* hodor_and_bran.jpg in Resources */,
+				8EDD80591572B29800A350FC /* hodor_and_bran@2x.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -833,6 +867,10 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "iHodor-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Hodor/TestFlightSDK1.0\"",
+				);
 				PRODUCT_NAME = iHodor;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -857,6 +895,10 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "iHodor-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Hodor/TestFlightSDK1.0\"",
+				);
 				PRODUCT_NAME = iHodor;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;

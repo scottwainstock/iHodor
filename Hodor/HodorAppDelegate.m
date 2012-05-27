@@ -5,6 +5,8 @@
 #import <CoreAudio/CoreAudioTypes.h>
 #import <AudioToolbox/AudioServices.h>
 
+#define NSLog TFLog
+
 @implementation HodorAppDelegate
 
 @synthesize window=_window, viewController=_viewController, player, recorder, navigationController, levelTimer, listening, talking, animatedImages;
@@ -65,6 +67,8 @@
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [TestFlight takeOff:@"1490ac07669932a8fe9d25f54c3ef63e_OTQwNTIyMDEyLTA1LTI3IDAxOjUzOjA3LjA4OTYzMg"];
+
     NSURL *url = [NSURL fileURLWithPath:[NSTemporaryDirectory() stringByAppendingPathComponent: [NSString stringWithFormat: @"recordedSound.%@", @"caf"]]];
   	NSDictionary *settings = [NSDictionary dictionaryWithObjectsAndKeys:
         [NSNumber numberWithFloat:44100.0],                 AVSampleRateKey,
