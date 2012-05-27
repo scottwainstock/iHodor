@@ -1,20 +1,14 @@
-//
-//  HodorViewController.m
-//  Hodor
-//
-//  Created by Scott Wainstock on 8/25/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
-//
-
 #import "HodorMainMenuViewController.h"
 #import "AboutViewController.h"
 #import "HelpViewController.h"
-#import "TalkerViewController.h"
+#import "HodorTalkerViewController.h"
+#import "HodorAndBranTalkerViewController.h"
 
 @implementation HodorMainMenuViewController
 
 - (IBAction)goButtonPressed:(id)sender {
-    TalkerViewController *talkerViewController = [[TalkerViewController alloc] init];
+    //HodorTalkerViewController *talkerViewController = [[HodorTalkerViewController alloc] init];
+    HodorAndBranTalkerViewController *talkerViewController = [[HodorAndBranTalkerViewController alloc] init];
     [self.navigationController pushViewController:talkerViewController animated:YES];
     [talkerViewController release];
 }

@@ -1,11 +1,3 @@
-//
-//  HodorViewController.m
-//  Hodor
-//
-//  Created by Scott Wainstock on 12/11/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
-//
-
 #import "HodorViewController.h"
 
 @implementation HodorViewController
