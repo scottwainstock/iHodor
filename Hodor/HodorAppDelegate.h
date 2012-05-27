@@ -14,9 +14,7 @@
 
 #define NUMBER_OF_HODOR_SOUNDS 5
 
-#define IMAGE_WIDTH   175
-#define IMAGE_HEIGHT  65
-#define HEIGHT_OFFSET 55
+#define HEIGHT_OFFSET       55
 
 #define MOUTH_ANIMATION_IMAGE_COUNT 15
 #define MINIMUM_LOW_PASS_LEVEL 0.40
@@ -53,5 +51,6 @@
 - (void)sayHodor;
 - (void)hodor;
 - (void)animateMouth;
+- (void)initializeMouthWithImages:(NSMutableArray *)images dimensions:(CGRect)dimensions;
 
 @end
