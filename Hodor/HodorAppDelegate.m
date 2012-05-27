@@ -1,11 +1,3 @@
-//
-//  HodorAppDelegate.m
-//  Hodor
-//
-//  Created by Scott Wainstock on 8/25/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
-//
-
 #import "HodorAppDelegate.h"
 #import "TalkerViewController.h"
 #import <AVFoundation/AVAudioPlayer.h>
@@ -103,22 +95,6 @@
         [recorder pause];
   	}
     
-    NSMutableArray *imageArray = [[NSMutableArray alloc] init];
-    for (int i = 0; i < MOUTH_ANIMATION_IMAGE_COUNT; i++)
-        [imageArray addObject:[UIImage imageNamed:[NSString stringWithFormat:@"mouth%d.png", i]]];
-    
-    self.animatedImages = [[UIImageView alloc] initWithFrame:CGRectMake(
-        ([UIScreen mainScreen].bounds.size.width / 2) - (IMAGE_WIDTH / 2), 
-        ([UIScreen mainScreen].bounds.size.height / 2) - (IMAGE_HEIGHT /2) + HEIGHT_OFFSET,
-        IMAGE_WIDTH, IMAGE_HEIGHT
-    )];
-    [self.animatedImages setAnimationImages:[NSArray arrayWithArray:imageArray]];
-    [self.animatedImages setAnimationDuration:0.5];
-    [self.animatedImages setAnimationRepeatCount:1];
-    [self.animatedImages setImage:[imageArray objectAtIndex:0]];
-    
-    [imageArray release];
-    
     navigationController = [[UINavigationController alloc] init];
     [navigationController setNavigationBarHidden:YES];
     [navigationController setToolbarHidden:YES];
@@ -134,13 +110,24 @@
     return YES;
 }
 
+- (void)initializeMouthWithImages:(NSMutableArray *)images dimensions:(CGRect)dimensions {   
+    self.animatedImages = [[[UIImageView alloc] initWithFrame:dimensions] autorelease];
+    
+    [self.animatedImages setAnimationImages:[NSArray arrayWithArray:images]];
+    [self.animatedImages setAnimationDuration:0.5];
+    [self.animatedImages setAnimationRepeatCount:1];
+    [self.animatedImages setImage:[images objectAtIndex:0]];
+    
+    [images release];
+}
+
 - (void)sayHodor {
     [self pauseListening];
 
     NSString *soundFile = [[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"hodor%d", arc4random() % NUMBER_OF_HODOR_SOUNDS] ofType:@"mp3"];
     NSURL *url = [[NSURL alloc] initFileURLWithPath:soundFile];
     
-    self.player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
+    self.player = [[[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil] autorelease];
     
     [url release];
         
@@ -161,9 +148,8 @@
 }
 
 - (void)hodor {
-    if (talking) {
+    if (talking)
         return;
-    }
     
     talking = true;
     [self animateMouth];

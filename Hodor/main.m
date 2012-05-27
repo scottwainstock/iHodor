@@ -1,11 +1,3 @@
-//
-//  main.m
-//  Hodor
-//
-//  Created by Scott Wainstock on 8/25/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
-//
-
 #import <UIKit/UIKit.h>
 
 int main(int argc, char *argv[])

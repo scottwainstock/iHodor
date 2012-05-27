@@ -1,16 +1,17 @@
-//
-//  TalkerViewController.h
-//  Hodor
-//
-//  Created by Scott Wainstock on 9/10/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
-//
-
-#import <UIKit/UIKit.h>
 #import "HodorViewController.h"
 
+@protocol TalkerDelegate 
+- (CGRect)mouthDimensions;
+- (int)mouthWidth;
+- (int)mouthHeight;
+- (NSString *)mouthFilename;
+@end
+
 @interface TalkerViewController : HodorViewController {
+    id <TalkerDelegate> delegate;
 }
+
+@property(nonatomic,assign)id delegate;
 
 - (IBAction)hodorPressed:(id)sender;
 - (IBAction)backButtonPressed:(id)sender;

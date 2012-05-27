@@ -1,15 +1,9 @@
-//
-//  TalkerViewController.m
-//  Hodor
-//
-//  Created by Scott Wainstock on 9/10/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
-//
-
 #import "TalkerViewController.h"
 #import "HodorAppDelegate.h"
 
 @implementation TalkerViewController
+
+@synthesize delegate;
 
 HodorAppDelegate *app;
 
@@ -18,7 +12,7 @@ HodorAppDelegate *app;
         return;
     
     [app pauseListening];
-
+    
     [super backButtonPressed:sender];
 }
 
@@ -28,8 +22,15 @@ HodorAppDelegate *app;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.delegate = self;
     
     app = (HodorAppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+    NSMutableArray *images = [[NSMutableArray alloc] init];
+    for (int i = 0; i < MOUTH_ANIMATION_IMAGE_COUNT; i++)
+        [images addObject:[UIImage imageNamed:[NSString stringWithFormat:@"%@%d.png", [delegate mouthFilename], i]]];
+        
+    [app initializeMouthWithImages:images dimensions:[delegate mouthDimensions]];
     [self.view addSubview:app.animatedImages];
     
     [app beginListening];    
