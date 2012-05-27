@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E029BA61572C5CF001AB932 /* camera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E029BA41572C5CF001AB932 /* camera@2x.png */; };
+		8E029BA71572C5CF001AB932 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E029BA51572C5CF001AB932 /* camera.png */; };
 		8E14008C14B7CCC4008A430A /* Back-Face.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E14008A14B7CCC4008A430A /* Back-Face.png */; };
 		8E14008D14B7CCC4008A430A /* Back-Face@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E14008B14B7CCC4008A430A /* Back-Face@2x.png */; };
 		8E2027C114B0FBA400185E98 /* About_Tap.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E20278214B0FBA200185E98 /* About_Tap.png */; };
@@ -154,6 +156,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8E029BA41572C5CF001AB932 /* camera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "camera@2x.png"; path = "Resources/camera@2x.png"; sourceTree = "<group>"; };
+		8E029BA51572C5CF001AB932 /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = camera.png; path = Resources/camera.png; sourceTree = "<group>"; };
 		8E14008A14B7CCC4008A430A /* Back-Face.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Back-Face.png"; path = "Resources/Back-Face.png"; sourceTree = "<group>"; };
 		8E14008B14B7CCC4008A430A /* Back-Face@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Back-Face@2x.png"; path = "Resources/Back-Face@2x.png"; sourceTree = "<group>"; };
 		8E20278214B0FBA200185E98 /* About_Tap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = About_Tap.png; path = Resources/About_Tap.png; sourceTree = "<group>"; };
@@ -501,6 +505,8 @@
 				8E2027FF14B1032B00185E98 /* sound */,
 				8E4D36DC143C15E800CB57D7 /* icons */,
 				8E20278814B0FBA200185E98 /* animation */,
+				8E029BA41572C5CF001AB932 /* camera@2x.png */,
+				8E029BA51572C5CF001AB932 /* camera.png */,
 				8EDD80561572B29800A350FC /* hodor_and_bran.jpg */,
 				8EDD80571572B29800A350FC /* hodor_and_bran@2x.jpg */,
 				8E5F5AC21571DEB30095E9BC /* Share.png */,
@@ -761,6 +767,8 @@
 				8EDD80531572A9DD00A350FC /* release_notes.txt in Resources */,
 				8EDD80581572B29800A350FC /* hodor_and_bran.jpg in Resources */,
 				8EDD80591572B29800A350FC /* hodor_and_bran@2x.jpg in Resources */,
+				8E029BA61572C5CF001AB932 /* camera@2x.png in Resources */,
+				8E029BA71572C5CF001AB932 /* camera.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
