@@ -1,5 +1,6 @@
 #import "HodorAppDelegate.h"
 #import "TalkerViewController.h"
+#import "SHK.h"
 #import <AVFoundation/AVAudioPlayer.h>
 #import <AVFoundation/AVAudioSession.h>
 #import <CoreAudio/CoreAudioTypes.h>
@@ -67,6 +68,7 @@
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [SHK flushOfflineQueue];
     [TestFlight takeOff:@"1490ac07669932a8fe9d25f54c3ef63e_OTQwNTIyMDEyLTA1LTI3IDAxOjUzOjA3LjA4OTYzMg"];
 
     NSURL *url = [NSURL fileURLWithPath:[NSTemporaryDirectory() stringByAppendingPathComponent: [NSString stringWithFormat: @"recordedSound.%@", @"caf"]]];

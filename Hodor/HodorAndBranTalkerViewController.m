@@ -1,8 +1,11 @@
 #import "HodorAndBranTalkerViewController.h"
+#import "SHK.h"
 #import <QuartzCore/QuartzCore.h>
 
 #define BRAN_WIDTH  96
 #define BRAN_HEIGHT 143
+#define BRAN_X      215
+#define BRAN_Y      105
 
 @implementation HodorAndBranTalkerViewController
 
@@ -28,7 +31,33 @@
 }
 
 - (IBAction)sharePressed:(id)sender {
-    NSLog(@"SHARE");
+    if (![[NSFileManager defaultManager] fileExistsAtPath:[self branFilename]])
+        return;
+    
+    UIImage *bran = [UIImage imageWithContentsOfFile:[self branFilename]];
+    UIImageView *branImageView = [[UIImageView alloc] initWithImage:bran];
+    UIImage *hodor = [UIImage imageNamed:@"hodor_and_bran.jpg"];
+    
+    UIGraphicsBeginImageContextWithOptions(branImageView.frame.size, NO, 1.0);
+    [[UIBezierPath bezierPathWithRoundedRect:branImageView.bounds cornerRadius:10.0] addClip];
+    [bran drawInRect:branImageView.bounds];
+    
+    UIImage *roundedBran = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    CGSize screenSize = self.view.frame.size;
+    UIGraphicsBeginImageContext(screenSize);
+
+    [hodor drawInRect:CGRectMake(0, 0, screenSize.width, screenSize.height)];
+    [roundedBran drawInRect:CGRectMake(BRAN_X, BRAN_Y + 7, BRAN_WIDTH, BRAN_HEIGHT + 1)];    
+    
+    UIImage *branAndHodor = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    SHKItem *item = [SHKItem image:branAndHodor title:@"You and Hodor!"];    
+	SHKActionSheet *actionSheet = [SHKActionSheet actionSheetForItem:item];
+    
+	[actionSheet showFromToolbar:self.navigationController.toolbar];
 }
 
 - (NSString *)branFilename {
@@ -53,7 +82,7 @@
     UIImageView *bran = [[UIImageView alloc] initWithImage:image];
     [bran.layer setMasksToBounds:YES];
     [bran.layer setCornerRadius:10.0];
-    [bran setFrame:CGRectMake(215, 105, BRAN_WIDTH, BRAN_HEIGHT)];
+    [bran setFrame:CGRectMake(BRAN_X, BRAN_Y, BRAN_WIDTH, BRAN_HEIGHT)];
     
     [self.view addSubview:bran];    
 }
