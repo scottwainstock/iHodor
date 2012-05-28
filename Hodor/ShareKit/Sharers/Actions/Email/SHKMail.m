@@ -192,6 +192,8 @@
 			[self sendDidFailWithError:nil];
 			break;
 	}
+    
+    [controller dismissModalViewControllerAnimated:YES];
 }
 
 
