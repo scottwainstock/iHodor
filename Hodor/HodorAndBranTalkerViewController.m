@@ -1,5 +1,4 @@
 #import "HodorAndBranTalkerViewController.h"
-#import "SHK.h"
 #import <QuartzCore/QuartzCore.h>
 
 #define BRAN_WIDTH  96
@@ -31,6 +30,8 @@
 }
 
 - (IBAction)sharePressed:(id)sender {
+    return;
+    /*
     if (![[NSFileManager defaultManager] fileExistsAtPath:[self branFilename]])
         return;
     
@@ -58,6 +59,7 @@
 	SHKActionSheet *actionSheet = [SHKActionSheet actionSheetForItem:item];
     
 	[actionSheet showFromToolbar:self.navigationController.toolbar];
+     */
 }
 
 - (NSString *)branFilename {
@@ -75,7 +77,6 @@
     [imagePicker setDelegate:self];
     
 	[self presentModalViewController:imagePicker animated:YES];
-	[imagePicker release];
 }
 
 - (void)setBranImage:(UIImage *)image {

@@ -1,6 +1,5 @@
 #import "HodorAppDelegate.h"
 #import "TalkerViewController.h"
-#import "SHK.h"
 #import <AVFoundation/AVAudioPlayer.h>
 #import <AVFoundation/AVAudioSession.h>
 #import <CoreAudio/CoreAudioTypes.h>
@@ -68,17 +67,13 @@
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [SHK flushOfflineQueue];
     [TestFlight takeOff:@"1490ac07669932a8fe9d25f54c3ef63e_OTQwNTIyMDEyLTA1LTI3IDAxOjUzOjA3LjA4OTYzMg"];
 
     NSURL *url = [NSURL fileURLWithPath:[NSTemporaryDirectory() stringByAppendingPathComponent: [NSString stringWithFormat: @"recordedSound.%@", @"caf"]]];
-  	NSDictionary *settings = [NSDictionary dictionaryWithObjectsAndKeys:
-        [NSNumber numberWithFloat:44100.0],                 AVSampleRateKey,
-        [NSNumber numberWithInt:kAudioFormatAppleLossless], AVFormatIDKey,
-        [NSNumber numberWithInt:1],                         AVNumberOfChannelsKey,
-        [NSNumber numberWithInt:AVAudioQualityMax],         AVEncoderAudioQualityKey,
-        nil
-    ];
+  	NSDictionary *settings = @{AVSampleRateKey: @44100.0f,
+        AVFormatIDKey: @(kAudioFormatAppleLossless),
+        AVNumberOfChannelsKey: @1,
+        AVEncoderAudioQualityKey: @(AVAudioQualityMax)};
     
     AVAudioSession *audioSession = [AVAudioSession sharedInstance];
     
@@ -117,14 +112,13 @@
 }
 
 - (void)initializeMouthWithImages:(NSMutableArray *)images dimensions:(CGRect)dimensions {   
-    self.animatedImages = [[[UIImageView alloc] initWithFrame:dimensions] autorelease];
+    self.animatedImages = [[UIImageView alloc] initWithFrame:dimensions];
     
     [self.animatedImages setAnimationImages:[NSArray arrayWithArray:images]];
     [self.animatedImages setAnimationDuration:0.5];
     [self.animatedImages setAnimationRepeatCount:1];
     [self.animatedImages setImage:[images objectAtIndex:0]];
     
-    [images release];
 }
 
 - (void)sayHodor {
@@ -133,9 +127,8 @@
     NSString *soundFile = [[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"hodor%d", arc4random() % NUMBER_OF_HODOR_SOUNDS] ofType:@"mp3"];
     NSURL *url = [[NSURL alloc] initFileURLWithPath:soundFile];
     
-    self.player = [[[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil] autorelease];
+    self.player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
     
-    [url release];
         
     [player setDelegate:self];
     [player stop];
@@ -180,14 +173,5 @@
         [self beginListening];
 }
 
-- (void)dealloc {
-    [animatedImages release];
-    [levelTimer release];
-    [recorder release];
-    [player release];
-    [_window release];
-    [_viewController release];
-    [super dealloc];
-}
 
 @end

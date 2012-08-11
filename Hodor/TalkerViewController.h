@@ -8,10 +8,10 @@
 @end
 
 @interface TalkerViewController : HodorViewController {
-    id <TalkerDelegate> delegate;
+    id <TalkerDelegate> __unsafe_unretained delegate;
 }
 
-@property(nonatomic,assign)id delegate;
+@property(nonatomic,unsafe_unretained)id delegate;
 
 - (IBAction)hodorPressed:(id)sender;
 - (IBAction)backButtonPressed:(id)sender;
