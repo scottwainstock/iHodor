@@ -30,13 +30,13 @@
 
 @property(nonatomic) bool listening;
 @property(nonatomic) bool talking;
-@property(nonatomic, retain) NSTimer *levelTimer;
-@property(nonatomic, retain) UINavigationController *navigationController;
-@property(nonatomic, retain) AVAudioRecorder *recorder;
-@property(nonatomic, retain) AVAudioPlayer *player;
-@property(nonatomic, retain) UIImageView *animatedImages;
-@property(nonatomic, retain) IBOutlet UIWindow *window;
-@property(nonatomic, retain) IBOutlet IscabAdViewController *viewController;
+@property(nonatomic, strong) NSTimer *levelTimer;
+@property(nonatomic, strong) UINavigationController *navigationController;
+@property(nonatomic, strong) AVAudioRecorder *recorder;
+@property(nonatomic, strong) AVAudioPlayer *player;
+@property(nonatomic, strong) UIImageView *animatedImages;
+@property(nonatomic, strong) IBOutlet UIWindow *window;
+@property(nonatomic, strong) IBOutlet IscabAdViewController *viewController;
 
 - (void)levelTimerCallback:(NSTimer *)timer;
 - (void)beginListening;

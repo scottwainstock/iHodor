@@ -7,7 +7,6 @@
 - (IBAction)skipButtonPressed:(id)sender {
     HodorMainMenuViewController *mainMenuController = [[HodorMainMenuViewController alloc] init];    
     [self.navigationController pushViewController:mainMenuController animated:YES];
-    [mainMenuController release];
 }
 
 - (IBAction)iscabButtonPressed:(id)sender {

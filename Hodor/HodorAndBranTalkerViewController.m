@@ -77,7 +77,6 @@
     [imagePicker setDelegate:self];
     
 	[self presentModalViewController:imagePicker animated:YES];
-	[imagePicker release];
 }
 
 - (void)setBranImage:(UIImage *)image {
