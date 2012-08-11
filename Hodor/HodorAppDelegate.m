@@ -70,13 +70,10 @@
     [TestFlight takeOff:@"1490ac07669932a8fe9d25f54c3ef63e_OTQwNTIyMDEyLTA1LTI3IDAxOjUzOjA3LjA4OTYzMg"];
 
     NSURL *url = [NSURL fileURLWithPath:[NSTemporaryDirectory() stringByAppendingPathComponent: [NSString stringWithFormat: @"recordedSound.%@", @"caf"]]];
-  	NSDictionary *settings = [NSDictionary dictionaryWithObjectsAndKeys:
-        [NSNumber numberWithFloat:44100.0],                 AVSampleRateKey,
-        [NSNumber numberWithInt:kAudioFormatAppleLossless], AVFormatIDKey,
-        [NSNumber numberWithInt:1],                         AVNumberOfChannelsKey,
-        [NSNumber numberWithInt:AVAudioQualityMax],         AVEncoderAudioQualityKey,
-        nil
-    ];
+  	NSDictionary *settings = @{AVSampleRateKey: @44100.0f,
+        AVFormatIDKey: @(kAudioFormatAppleLossless),
+        AVNumberOfChannelsKey: @1,
+        AVEncoderAudioQualityKey: @(AVAudioQualityMax)};
     
     AVAudioSession *audioSession = [AVAudioSession sharedInstance];
     
