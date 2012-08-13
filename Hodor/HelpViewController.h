@@ -1,7 +1,6 @@
 #import <UIKit/UIKit.h>
 #import "HodorViewController.h"
 
-@interface HelpViewController : HodorViewController {
-}
+@interface HelpViewController : HodorViewController
 
 @end
