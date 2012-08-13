@@ -9,7 +9,7 @@
 
 @implementation HodorAppDelegate
 
-@synthesize window=_window, viewController=_viewController, player, recorder, navigationController, levelTimer, listening, talking, animatedImages;
+@synthesize window=_window, viewController=_viewController, player, recorder, navigationController, levelTimer, listening, talking, animatedImages, mainMenuViewController;
 
 - (NSTimer *)levelTimer {
     @synchronized(levelTimer) {

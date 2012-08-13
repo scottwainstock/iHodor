@@ -4,6 +4,7 @@
 #import <AVFoundation/AVAudioSession.h>
 #import "IscabAdViewController.h"
 #import "TestFlight.h"
+#import "HodorMainMenuViewController.h"
 
 #define NUMBER_OF_HODOR_SOUNDS 5
 
@@ -21,6 +22,7 @@
     AVAudioRecorder *recorder;
     AVAudioPlayer *player;
     UINavigationController *navigationController;
+    HodorMainMenuViewController *mainMenuViewController;
     UIImageView *animatedImages;
 
     bool talking;
@@ -37,6 +39,7 @@
 @property(nonatomic, strong) UIImageView *animatedImages;
 @property(nonatomic, strong) IBOutlet UIWindow *window;
 @property(nonatomic, strong) IBOutlet IscabAdViewController *viewController;
+@property(nonatomic, strong) HodorMainMenuViewController *mainMenuViewController;
 
 - (void)levelTimerCallback:(NSTimer *)timer;
 - (void)beginListening;

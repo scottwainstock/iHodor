@@ -1,4 +1,5 @@
 #import "HodorViewController.h"
+#import "HodorMenuBar.h"
 
 @protocol TalkerDelegate 
 - (CGRect)mouthDimensions;
@@ -8,10 +9,10 @@
 @end
 
 @interface TalkerViewController : HodorViewController {
-    id <TalkerDelegate> __unsafe_unretained delegate;
+    id <TalkerDelegate> __unsafe_unretained talkerDelegate;
 }
 
-@property(nonatomic,unsafe_unretained)id delegate;
+@property(nonatomic,unsafe_unretained)id talkerDelegate;
 
 - (IBAction)hodorPressed:(id)sender;
 - (IBAction)backButtonPressed:(id)sender;

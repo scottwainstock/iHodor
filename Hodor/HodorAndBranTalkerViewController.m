@@ -11,13 +11,13 @@
 - (CGRect)mouthDimensions {
     return CGRectMake(
         75,
-        290,
+        395,
         [self mouthWidth],
         [self mouthHeight]
     );
 }
 
-- (int)mouthWidth  { return 63; }
+- (int)mouthWidth  { return 70; }
 - (int)mouthHeight { return 23; }
 
 - (NSString *)mouthFilename { return @"small_mouth"; }
@@ -27,39 +27,6 @@
 
     if ([[NSFileManager defaultManager] fileExistsAtPath:[self branFilename]])
         [self setBranImage:[UIImage imageWithContentsOfFile:[self branFilename]]];    
-}
-
-- (IBAction)sharePressed:(id)sender {
-    return;
-    /*
-    if (![[NSFileManager defaultManager] fileExistsAtPath:[self branFilename]])
-        return;
-    
-    UIImage *bran = [UIImage imageWithContentsOfFile:[self branFilename]];
-    UIImageView *branImageView = [[UIImageView alloc] initWithImage:bran];
-    UIImage *hodor = [UIImage imageNamed:@"hodor_and_bran.jpg"];
-    
-    UIGraphicsBeginImageContextWithOptions(branImageView.frame.size, NO, 1.0);
-    [[UIBezierPath bezierPathWithRoundedRect:branImageView.bounds cornerRadius:10.0] addClip];
-    [bran drawInRect:branImageView.bounds];
-    
-    UIImage *roundedBran = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    
-    CGSize screenSize = self.view.frame.size;
-    UIGraphicsBeginImageContext(screenSize);
-
-    [hodor drawInRect:CGRectMake(0, 0, screenSize.width, screenSize.height)];
-    [roundedBran drawInRect:CGRectMake(BRAN_X, BRAN_Y + 7, BRAN_WIDTH, BRAN_HEIGHT + 1)];    
-    
-    UIImage *branAndHodor = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    
-    SHKItem *item = [SHKItem image:branAndHodor title:@"You and Hodor!"];    
-	SHKActionSheet *actionSheet = [SHKActionSheet actionSheetForItem:item];
-    
-	[actionSheet showFromToolbar:self.navigationController.toolbar];
-     */
 }
 
 - (NSString *)branFilename {

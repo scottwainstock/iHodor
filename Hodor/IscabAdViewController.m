@@ -5,7 +5,11 @@
 @implementation IscabAdViewController
 
 - (IBAction)skipButtonPressed:(id)sender {
-    HodorMainMenuViewController *mainMenuController = [[HodorMainMenuViewController alloc] init];    
+    HodorMainMenuViewController *mainMenuController = [[HodorMainMenuViewController alloc] init];
+    
+    HodorAppDelegate *app = (HodorAppDelegate *)[[UIApplication sharedApplication] delegate];
+    app.mainMenuViewController = mainMenuController;
+
     [self.navigationController pushViewController:mainMenuController animated:YES];
 }
 

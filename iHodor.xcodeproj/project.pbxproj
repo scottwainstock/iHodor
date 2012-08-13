@@ -200,6 +200,8 @@
 		8EB12C3414DBA6B4005A3A4D /* hodor3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8EB12C2F14DBA6B4005A3A4D /* hodor3.mp3 */; };
 		8EB12C3514DBA6B4005A3A4D /* hodor4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8EB12C3014DBA6B4005A3A4D /* hodor4.mp3 */; };
 		8EB12C3B14DBA795005A3A4D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EB12C3A14DBA795005A3A4D /* AudioToolbox.framework */; };
+		8EC9781215D711CB00BE87F5 /* HodorMenuBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC9781115D711CB00BE87F5 /* HodorMenuBar.m */; };
+		8EC9781415D7120500BE87F5 /* HodorMenuBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EC9781315D7120500BE87F5 /* HodorMenuBar.xib */; };
 		8ECF9AD11572EDC00068C478 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ECF9AD01572EDC00068C478 /* SystemConfiguration.framework */; };
 		8ECF9AD31572EDCA0068C478 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ECF9AD21572EDCA0068C478 /* Security.framework */; };
 		8ECF9AD51572EDD10068C478 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ECF9AD41572EDD10068C478 /* MessageUI.framework */; };
@@ -420,6 +422,9 @@
 		8EB12C2F14DBA6B4005A3A4D /* hodor3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = hodor3.mp3; path = Resources/hodor3.mp3; sourceTree = "<group>"; };
 		8EB12C3014DBA6B4005A3A4D /* hodor4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = hodor4.mp3; path = Resources/hodor4.mp3; sourceTree = "<group>"; };
 		8EB12C3A14DBA795005A3A4D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		8EC9781015D711CB00BE87F5 /* HodorMenuBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HodorMenuBar.h; sourceTree = "<group>"; };
+		8EC9781115D711CB00BE87F5 /* HodorMenuBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HodorMenuBar.m; sourceTree = "<group>"; };
+		8EC9781315D7120500BE87F5 /* HodorMenuBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HodorMenuBar.xib; sourceTree = "<group>"; };
 		8ECF9AD01572EDC00068C478 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		8ECF9AD21572EDCA0068C478 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		8ECF9AD41572EDD10068C478 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
@@ -544,6 +549,8 @@
 				8EEFE0201495A62C00D3429B /* HodorViewController.m */,
 				8E20280014B109AE00185E98 /* IscabAdViewController.h */,
 				8E20280114B109AF00185E98 /* IscabAdViewController.m */,
+				8EC9781015D711CB00BE87F5 /* HodorMenuBar.h */,
+				8EC9781115D711CB00BE87F5 /* HodorMenuBar.m */,
 				8EEFE01E1495A4D800D3429B /* xibs */,
 				8E64E54C140714E500791B7B /* Resources */,
 				8EDD804A1572A9C100A350FC /* Vendor */,
@@ -773,6 +780,7 @@
 		8EEFE01E1495A4D800D3429B /* xibs */ = {
 			isa = PBXGroup;
 			children = (
+				8EC9781315D7120500BE87F5 /* HodorMenuBar.xib */,
 				8E5F5ABA1571D79A0095E9BC /* HodorAndBranTalkerViewController.xib */,
 				8E20280214B109B100185E98 /* IscabAdViewController.xib */,
 				8E64E544140713D500791B7B /* HodorMainMenuViewController.xib */,
@@ -1022,6 +1030,7 @@
 				8E9CAF4215B3AFEE0002088D /* Tap-bar@2x.png in Resources */,
 				8E9CAF4315B3AFEE0002088D /* Visit.png in Resources */,
 				8E9CAF4415B3AFEE0002088D /* Visit@2x.png in Resources */,
+				8EC9781415D7120500BE87F5 /* HodorMenuBar.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1042,6 +1051,7 @@
 				8E20280314B109B700185E98 /* IscabAdViewController.m in Sources */,
 				8E5F5ABB1571D79A0095E9BC /* HodorAndBranTalkerViewController.m in Sources */,
 				8E5F5AC01571D8420095E9BC /* TalkerViewController.m in Sources */,
+				8EC9781215D711CB00BE87F5 /* HodorMenuBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1088,7 +1098,7 @@
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PROVISIONING_PROFILE = "9DBDA858-CC87-431A-BE45-CD38E2E9E15D";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "9DBDA858-CC87-431A-BE45-CD38E2E9E15D";
 				SDKROOT = iphoneos;
@@ -1105,7 +1115,7 @@
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PROVISIONING_PROFILE = "9DBDA858-CC87-431A-BE45-CD38E2E9E15D";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "9DBDA858-CC87-431A-BE45-CD38E2E9E15D";
@@ -1128,7 +1138,7 @@
 				GCC_PREFIX_HEADER = "Hodor/iHodor-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "iHodor-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Hodor/TestFlightSDK1.0\"",
@@ -1157,7 +1167,7 @@
 				GCC_PREFIX_HEADER = "Hodor/iHodor-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "iHodor-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Hodor/TestFlightSDK1.0\"",
