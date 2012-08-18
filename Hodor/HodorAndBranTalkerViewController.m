@@ -1,36 +1,32 @@
 #import "HodorAndBranTalkerViewController.h"
+#import "HodorAppDelegate.h"
 #import <QuartzCore/QuartzCore.h>
-
-#define BRAN_WIDTH  96
-#define BRAN_HEIGHT 143
-#define BRAN_X      215
-#define BRAN_Y      105
 
 @implementation HodorAndBranTalkerViewController
 
+HodorAppDelegate *app;
+
 - (CGRect)mouthDimensions {
     return CGRectMake(
-        75,
-        395,
+        70,
+        378,
         [self mouthWidth],
         [self mouthHeight]
     );
 }
 
-- (int)mouthWidth  { return 70; }
-- (int)mouthHeight { return 23; }
+- (int)mouthWidth  { return 80; }
+- (int)mouthHeight { return 30; }
 
 - (NSString *)mouthFilename { return @"small_mouth"; }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    if ([[NSFileManager defaultManager] fileExistsAtPath:[self branFilename]])
-        [self setBranImage:[UIImage imageWithContentsOfFile:[self branFilename]]];    
-}
-
-- (NSString *)branFilename {
-    return [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:@"/you_as_bran.png"];
+    app = (HodorAppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+    if ([[NSFileManager defaultManager] fileExistsAtPath:[app branFilename]])
+        [self setBranImage:[UIImage imageWithContentsOfFile:[app branFilename]]];
 }
 
 - (IBAction)selectOrTakePicture:(id)sender {
@@ -64,7 +60,7 @@
     UIImage *resizedImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
         
-    [UIImagePNGRepresentation(resizedImage) writeToFile:[self branFilename] atomically:YES];
+    [UIImagePNGRepresentation(resizedImage) writeToFile:[app branFilename] atomically:YES];
         
     [self setBranImage:resizedImage];    
     

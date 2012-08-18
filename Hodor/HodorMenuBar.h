@@ -2,6 +2,7 @@
 - (void)backButtonPressed;
 - (void)showChat:(bool)animated;
 - (void)showPose:(bool)animated;
+- (void)showShare;
 @end
 
 @interface HodorMenuBar : UIView {

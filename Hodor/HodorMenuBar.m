@@ -24,7 +24,7 @@
 }
 
 - (IBAction)shareButtonPressed {
-    NSLog(@"SHARE");
+    [self.delegate showShare];
 }
 
 @end
