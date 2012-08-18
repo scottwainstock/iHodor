@@ -96,7 +96,7 @@ HodorAppDelegate *app;
                                                 
                         UIImage *bran = [UIImage imageWithContentsOfFile:[app branFilename]];
                         UIImageView *branImageView = [[UIImageView alloc] initWithImage:bran];
-                        UIImage *hodor = [UIImage imageNamed:@"hodor_and_bran.jpg"];
+                        UIImage *hodor = [UIImage imageNamed:@"PoseScreen2.png"];
                         
                         UIGraphicsBeginImageContextWithOptions(branImageView.frame.size, NO, 1.0);
                         [[UIBezierPath bezierPathWithRoundedRect:branImageView.bounds cornerRadius:10.0] addClip];
@@ -107,7 +107,7 @@ HodorAppDelegate *app;
                         CGSize screenSize = self.view.frame.size;
                         UIGraphicsBeginImageContext(screenSize);
                         [hodor drawInRect:CGRectMake(0, 0, screenSize.width, screenSize.height)];
-                        [roundedBran drawInRect:CGRectMake(BRAN_X, BRAN_Y - 75, BRAN_WIDTH, BRAN_HEIGHT + 1)];
+                        [roundedBran drawInRect:CGRectMake(BRAN_X + 5, BRAN_Y - 21, BRAN_WIDTH - 10, BRAN_HEIGHT + 30)];
                         UIImage *branAndHodor = UIGraphicsGetImageFromCurrentImageContext();
                         UIGraphicsEndImageContext();
 
@@ -116,7 +116,16 @@ HodorAppDelegate *app;
                             @"message" : @"Me and Hodor!",
                         };
                         
-                        [FBRequestConnection startWithGraphPath:@"me/photos" parameters:params HTTPMethod:@"POST" completionHandler:^(FBRequestConnection *connection, id result, NSError *error) {}];
+                        [FBRequestConnection startWithGraphPath:@"me/photos" parameters:params HTTPMethod:@"POST" completionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+                            UIAlertView *alertView = [[UIAlertView alloc]
+                                                      initWithTitle:@"Hodor!"
+                                                      message:@"Thanks for sharing!"
+                                                      delegate:self
+                                                      cancelButtonTitle:@"OK"
+                                                      otherButtonTitles:nil
+                                                      ];
+                            [alertView show];
+                        }];
                     }
                 }];
                     

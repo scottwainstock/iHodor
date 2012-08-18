@@ -8,15 +8,15 @@ HodorAppDelegate *app;
 
 - (CGRect)mouthDimensions {
     return CGRectMake(
-        75,
-        395,
+        70,
+        378,
         [self mouthWidth],
         [self mouthHeight]
     );
 }
 
-- (int)mouthWidth  { return 70; }
-- (int)mouthHeight { return 23; }
+- (int)mouthWidth  { return 80; }
+- (int)mouthHeight { return 30; }
 
 - (NSString *)mouthFilename { return @"small_mouth"; }
 
