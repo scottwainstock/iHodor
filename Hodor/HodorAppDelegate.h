@@ -5,6 +5,7 @@
 #import "IscabAdViewController.h"
 #import "TestFlight.h"
 #import "HodorMainMenuViewController.h"
+#import <FacebookSDK/FacebookSDK.h>
 
 #define NUMBER_OF_HODOR_SOUNDS 5
 
@@ -14,6 +15,11 @@
 #define MINIMUM_LOW_PASS_LEVEL 0.40
 #define TIMER_INTERVAL 0.01
 #define ALPHA 0.05
+
+#define BRAN_WIDTH  100
+#define BRAN_HEIGHT 150
+#define BRAN_X      214
+#define BRAN_Y      187
 
 #define ISCAB_URL @"http://itunes.apple.com/us/app/iscab/id480510644?ls=1&mt=8"
 
@@ -48,5 +54,6 @@
 - (void)hodor;
 - (void)animateMouth;
 - (void)initializeMouthWithImages:(NSMutableArray *)images dimensions:(CGRect)dimensions;
+- (NSString *)branFilename;
 
 @end

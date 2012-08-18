@@ -4,6 +4,5 @@
 
 - (IBAction)selectOrTakePicture:(id)sender;
 - (void)setBranImage:(UIImage *)image;
-- (NSString *)branFilename;
 
 @end

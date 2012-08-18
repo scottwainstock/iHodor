@@ -1,6 +1,6 @@
 #import "HodorMenuBar.h"
 
-@interface HodorViewController : UIViewController {
+@interface HodorViewController : UIViewController <UIActionSheetDelegate> {
     IBOutlet HodorMenuBar *menuBar;
     id <MenuBarDelegate> __unsafe_unretained menuBarDelegate;
 }
@@ -13,5 +13,6 @@
 - (void)showPose:(bool)animated;
 - (void)showAbout:(bool)animated;
 - (void)showHelp:(bool)animated;
+- (void)showShare;
 
 @end

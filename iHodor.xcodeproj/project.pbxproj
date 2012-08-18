@@ -200,6 +200,9 @@
 		8EDD80531572A9DD00A350FC /* release_notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8EDD804F1572A9DD00A350FC /* release_notes.txt */; };
 		8EDD80551572AA2300A350FC /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EDD80541572AA2300A350FC /* libz.dylib */; };
 		8EEFE0211495A62D00D3429B /* HodorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEFE0201495A62C00D3429B /* HodorViewController.m */; };
+		8EF1849515DC348B00A8376E /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EF1849415DC348B00A8376E /* Twitter.framework */; };
+		8EF1849815DC49EF00A8376E /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EF1849715DC49EF00A8376E /* FacebookSDK.framework */; };
+		8EF1849A15DC50A400A8376E /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8EF1849915DC50A400A8376E /* FacebookSDKResources.bundle */; };
 		8EFD9A4514E062C3001328CF /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EFD9A4314E062C3001328CF /* Icon.png */; };
 		8EFD9A4614E062C3001328CF /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EFD9A4414E062C3001328CF /* Icon@2x.png */; };
 /* End PBXBuildFile section */
@@ -412,6 +415,9 @@
 		8EDD80541572AA2300A350FC /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		8EEFE01F1495A62C00D3429B /* HodorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HodorViewController.h; sourceTree = "<group>"; };
 		8EEFE0201495A62C00D3429B /* HodorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HodorViewController.m; sourceTree = "<group>"; };
+		8EF1849415DC348B00A8376E /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		8EF1849715DC49EF00A8376E /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		8EF1849915DC50A400A8376E /* FacebookSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FacebookSDKResources.bundle; sourceTree = "<group>"; };
 		8EFD9A4314E062C3001328CF /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = SOURCE_ROOT; };
 		8EFD9A4414E062C3001328CF /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -421,6 +427,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EF1849515DC348B00A8376E /* Twitter.framework in Frameworks */,
 				8ECF9AD51572EDD10068C478 /* MessageUI.framework in Frameworks */,
 				8ECF9AD31572EDCA0068C478 /* Security.framework in Frameworks */,
 				8ECF9AD11572EDC00068C478 /* SystemConfiguration.framework in Frameworks */,
@@ -433,6 +440,7 @@
 				8E64E52F140713D500791B7B /* Foundation.framework in Frameworks */,
 				8E64E531140713D500791B7B /* CoreGraphics.framework in Frameworks */,
 				8EDD80511572A9DD00A350FC /* libTestFlight.a in Frameworks */,
+				8EF1849815DC49EF00A8376E /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,6 +489,9 @@
 		8E64E52B140713D500791B7B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8EF1849915DC50A400A8376E /* FacebookSDKResources.bundle */,
+				8EF1849715DC49EF00A8376E /* FacebookSDK.framework */,
+				8EF1849415DC348B00A8376E /* Twitter.framework */,
 				8ECF9AD41572EDD10068C478 /* MessageUI.framework */,
 				8ECF9AD21572EDCA0068C478 /* Security.framework */,
 				8ECF9AD01572EDC00068C478 /* SystemConfiguration.framework */,
@@ -967,6 +978,7 @@
 				8E9CAF4315B3AFEE0002088D /* Visit.png in Resources */,
 				8E9CAF4415B3AFEE0002088D /* Visit@2x.png in Resources */,
 				8EC9781415D7120500BE87F5 /* HodorMenuBar.xib in Resources */,
+				8EF1849A15DC50A400A8376E /* FacebookSDKResources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1034,7 +1046,7 @@
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PROVISIONING_PROFILE = "9DBDA858-CC87-431A-BE45-CD38E2E9E15D";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "9DBDA858-CC87-431A-BE45-CD38E2E9E15D";
 				SDKROOT = iphoneos;
@@ -1051,7 +1063,7 @@
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PROVISIONING_PROFILE = "9DBDA858-CC87-431A-BE45-CD38E2E9E15D";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "9DBDA858-CC87-431A-BE45-CD38E2E9E15D";
@@ -1074,11 +1086,12 @@
 				GCC_PREFIX_HEADER = "Hodor/iHodor-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "iHodor-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Hodor/TestFlightSDK1.0\"",
 				);
+				OTHER_LDFLAGS = "-lsqlite3.0";
 				PRODUCT_NAME = iHodor;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -1103,11 +1116,12 @@
 				GCC_PREFIX_HEADER = "Hodor/iHodor-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "iHodor-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Hodor/TestFlightSDK1.0\"",
 				);
+				OTHER_LDFLAGS = "-lsqlite3.0";
 				PRODUCT_NAME = iHodor;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
