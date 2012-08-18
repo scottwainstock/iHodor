@@ -57,12 +57,34 @@ HodorAppDelegate *app;
     [popupQuery showInView:self.view];
 }
 
--(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+- (UIImage *)combineHodorAndBranImages {
+    UIImage *bran = [UIImage imageWithContentsOfFile:[app branFilename]];
+    UIImageView *branImageView = [[UIImageView alloc] initWithImage:bran];
+    UIImage *hodor = [UIImage imageNamed:@"PoseScreen2.png"];
+    
+    UIGraphicsBeginImageContextWithOptions(branImageView.frame.size, NO, 1.0);
+    [[UIBezierPath bezierPathWithRoundedRect:branImageView.bounds cornerRadius:10.0] addClip];
+    [bran drawInRect:branImageView.bounds];
+    UIImage *roundedBran = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    CGSize screenSize = self.view.frame.size;
+    UIGraphicsBeginImageContext(screenSize);
+    [hodor drawInRect:CGRectMake(0, 0, screenSize.width, screenSize.height)];
+    [roundedBran drawInRect:CGRectMake(BRAN_X + 5, BRAN_Y - 21, BRAN_WIDTH - 10, BRAN_HEIGHT + 30)];
+    UIImage *branAndHodor = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return branAndHodor;
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
     switch (buttonIndex) {
         case 0:
             if ([TWTweetComposeViewController canSendTweet]) {
                 TWTweetComposeViewController *tweetSheet = [[TWTweetComposeViewController alloc] init];
                 [tweetSheet setInitialText:@"Hodor"];
+                [tweetSheet addImage:[self combineHodorAndBranImages]];
                 [self presentModalViewController:tweetSheet animated:YES];
             } else {
                 UIAlertView *alertView = [[UIAlertView alloc]
@@ -94,25 +116,8 @@ HodorAppDelegate *app;
                             return;
                         }
                                                 
-                        UIImage *bran = [UIImage imageWithContentsOfFile:[app branFilename]];
-                        UIImageView *branImageView = [[UIImageView alloc] initWithImage:bran];
-                        UIImage *hodor = [UIImage imageNamed:@"PoseScreen2.png"];
-                        
-                        UIGraphicsBeginImageContextWithOptions(branImageView.frame.size, NO, 1.0);
-                        [[UIBezierPath bezierPathWithRoundedRect:branImageView.bounds cornerRadius:10.0] addClip];
-                        [bran drawInRect:branImageView.bounds];
-                        UIImage *roundedBran = UIGraphicsGetImageFromCurrentImageContext();
-                        UIGraphicsEndImageContext();
-                        
-                        CGSize screenSize = self.view.frame.size;
-                        UIGraphicsBeginImageContext(screenSize);
-                        [hodor drawInRect:CGRectMake(0, 0, screenSize.width, screenSize.height)];
-                        [roundedBran drawInRect:CGRectMake(BRAN_X + 5, BRAN_Y - 21, BRAN_WIDTH - 10, BRAN_HEIGHT + 30)];
-                        UIImage *branAndHodor = UIGraphicsGetImageFromCurrentImageContext();
-                        UIGraphicsEndImageContext();
-
                         NSDictionary *params = @{
-                            @"source" :  branAndHodor,
+                            @"source" :  [self combineHodorAndBranImages],
                             @"message" : @"Me and Hodor!",
                         };
                         
